@@ -803,11 +803,7 @@
     </member>
     <member name="P:UnityEngine.Animator.layerCount">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.layerCount.</para>
-=======
-        <para>Returns the number of layers in the controller.</para>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
     </member>
     <member name="P:UnityEngine.Animator.layersAffectMassCenter">
@@ -827,11 +823,7 @@
     </member>
     <member name="P:UnityEngine.Animator.parameterCount">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.parameterCount.</para>
-=======
-        <para>Returns the number of parameters in the controller.</para>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
     </member>
     <member name="P:UnityEngine.Animator.parameters">
@@ -975,18 +967,9 @@
     </member>
     <member name="M:UnityEngine.Animator.GetAnimatorTransitionInfo(System.Int32)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.GetAnimatorTransitionInfo.</para>
       </summary>
       <param name="layerIndex"></param>
-=======
-        <para>Returns an AnimatorTransitionInfo with the informations on the current transition.</para>
-      </summary>
-      <param name="layerIndex">The layer's index.</param>
-      <returns>
-        <para>An AnimatorTransitionInfo with the informations on the current transition.</para>
-      </returns>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.GetBehaviour">
       <summary>
@@ -1006,7 +989,6 @@
     </member>
     <member name="M:UnityEngine.Animator.GetBool(System.String)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.GetBool.</para>
       </summary>
       <param name="name"></param>
@@ -1018,25 +1000,6 @@
       </summary>
       <param name="name"></param>
       <param name="id"></param>
-=======
-        <para>Returns the value of the given boolean parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <returns>
-        <para>The value of the parameter.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetBool(System.Int32)">
-      <summary>
-        <para>Returns the value of the given boolean parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <returns>
-        <para>The value of the parameter.</para>
-      </returns>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.GetCurrentAnimationClipState(System.Int32)">
       <summary>
@@ -1046,18 +1009,9 @@
     </member>
     <member name="M:UnityEngine.Animator.GetCurrentAnimatorClipInfo(System.Int32)">
       <summary>
-<<<<<<< HEAD
         <para>Access the current Animation clip’s information from the Animator.</para>
       </summary>
       <param name="layerIndex"></param>
-=======
-        <para>Returns an array of all the AnimatorClipInfo in the current state of the given layer.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>An array of all the AnimatorClipInfo in the current state.</para>
-      </returns>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.GetCurrentAnimatorClipInfo(System.Int32,System.Collections.Generic.List`1&lt;UnityEngine.AnimatorClipInfo&gt;)">
       <summary>
@@ -1068,7 +1022,6 @@
     </member>
     <member name="M:UnityEngine.Animator.GetCurrentAnimatorClipInfoCount(System.Int32)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.GetCurrentAnimatorClipInfoCount.</para>
       </summary>
       <param name="layerIndex"></param>
@@ -1092,43 +1045,6 @@
       </summary>
       <param name="name"></param>
       <param name="id"></param>
-=======
-        <para>Returns the number of AnimatorClipInfo in the current state.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>The number of AnimatorClipInfo in the current state.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetCurrentAnimatorStateInfo(System.Int32)">
-      <summary>
-        <para>Returns an AnimatorStateInfo with the information on the current state.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>An AnimatorStateInfo with the information on the current state.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetFloat(System.String)">
-      <summary>
-        <para>Returns the value of the given float parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <returns>
-        <para>The value of the parameter.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetFloat(System.Int32)">
-      <summary>
-        <para>Returns the value of the given float parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <returns>
-        <para>The value of the parameter.</para>
-      </returns>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.GetIKHintPosition(UnityEngine.AvatarIKHint)">
       <summary>
@@ -1177,7 +1093,6 @@
     </member>
     <member name="M:UnityEngine.Animator.GetInteger(System.String)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.GetInteger.</para>
       </summary>
       <param name="name"></param>
@@ -1207,52 +1122,6 @@
         <para>See IAnimatorControllerPlayable.GetLayerWeight.</para>
       </summary>
       <param name="layerIndex"></param>
-=======
-        <para>Returns the value of the given integer parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <returns>
-        <para>The value of the parameter.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetInteger(System.Int32)">
-      <summary>
-        <para>Returns the value of the given integer parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <returns>
-        <para>The value of the parameter.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetLayerIndex(System.String)">
-      <summary>
-        <para>Returns the index of the layer with the given name.</para>
-      </summary>
-      <param name="layerName">The layer name.</param>
-      <returns>
-        <para>The layer index.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetLayerName(System.Int32)">
-      <summary>
-        <para>Returns the layer name.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>The layer name.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetLayerWeight(System.Int32)">
-      <summary>
-        <para>Returns the weight of the layer at the specified index.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>The layer weight.</para>
-      </returns>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.GetNextAnimationClipState(System.Int32)">
       <summary>
@@ -1262,7 +1131,6 @@
     </member>
     <member name="M:UnityEngine.Animator.GetNextAnimatorClipInfo(System.Int32)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.GetNextAnimatorClipInfo.</para>
       </summary>
       <param name="layerIndex"></param>
@@ -1289,43 +1157,6 @@
     <member name="M:UnityEngine.Animator.GetParameter(System.Int32)">
       <summary>
         <para>See AnimatorController.GetParameter.</para>
-=======
-        <para>Returns an array of all the AnimatorClipInfo in the next state of the given layer.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>An array of all the AnimatorClipInfo in the next state.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetNextAnimatorClipInfo(System.Int32,System.Collections.Generic.List`1&lt;UnityEngine.AnimatorClipInfo&gt;)">
-      <summary>
-        <para>Fills clips with the list of all the AnimatorClipInfo in the next state of the given layer.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <param name="clips">The list of AnimatorClipInfo to fill.</param>
-    </member>
-    <member name="M:UnityEngine.Animator.GetNextAnimatorClipInfoCount(System.Int32)">
-      <summary>
-        <para>Returns the number of AnimatorClipInfo in the next state.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>The number of AnimatorClipInfo in the next state.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetNextAnimatorStateInfo(System.Int32)">
-      <summary>
-        <para>Returns an AnimatorStateInfo with the information on the next state.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>An AnimatorStateInfo with the information on the next state.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.GetParameter(System.Int32)">
-      <summary>
-        <para>See AnimatorController.parameters.</para>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
       <param name="index"></param>
     </member>
@@ -1355,20 +1186,10 @@
     </member>
     <member name="M:UnityEngine.Animator.HasState(System.Int32,System.Int32)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.HasState.</para>
       </summary>
       <param name="layerIndex"></param>
       <param name="stateID"></param>
-=======
-        <para>Returns true if the state exists in this layer, false otherwise.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <param name="stateID">The state ID.</param>
-      <returns>
-        <para>True if the state exists in this layer, false otherwise.</para>
-      </returns>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.InterruptMatchTarget()">
       <summary>
@@ -1390,7 +1211,6 @@
     </member>
     <member name="M:UnityEngine.Animator.IsInTransition(System.Int32)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.IsInTransition.</para>
       </summary>
       <param name="layerIndex"></param>
@@ -1408,34 +1228,6 @@
       </summary>
       <param name="name"></param>
       <param name="id"></param>
-=======
-        <para>Returns true if there is a transition on the given layer, false otherwise.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <returns>
-        <para>True if there is a transition on the given layer, false otherwise.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.IsParameterControlledByCurve(System.String)">
-      <summary>
-        <para>Returns true if the parameter is controlled by a curve, false otherwise.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <returns>
-        <para>True if the parameter is controlled by a curve, false otherwise.</para>
-      </returns>
-    </member>
-    <member name="M:UnityEngine.Animator.IsParameterControlledByCurve(System.Int32)">
-      <summary>
-        <para>Returns true if the parameter is controlled by a curve, false otherwise.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <returns>
-        <para>True if the parameter is controlled by a curve, false otherwise.</para>
-      </returns>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.MatchTarget(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.AvatarTarget,UnityEngine.MatchTargetWeightMask,System.Single,System.Single)">
       <summary>
@@ -1450,7 +1242,6 @@
     </member>
     <member name="M:UnityEngine.Animator.Play(System.String,System.Int32,System.Single)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.Play.</para>
       </summary>
       <param name="stateName"></param>
@@ -1484,41 +1275,6 @@
       <param name="layer"></param>
       <param name="fixedTime"></param>
       <param name="stateNameHash"></param>
-=======
-        <para>Plays a state.</para>
-      </summary>
-      <param name="stateName">The state name.</param>
-      <param name="stateNameHash">The state hash name. If statNameHash is 0, it changes the current state time.</param>
-      <param name="layer">The layer index. If layer is -1, it plays the first state with the given state name or hash.</param>
-      <param name="normalizedTime">The time offset (in percentage).</param>
-    </member>
-    <member name="M:UnityEngine.Animator.Play(System.Int32,System.Int32,System.Single)">
-      <summary>
-        <para>Plays a state.</para>
-      </summary>
-      <param name="stateName">The state name.</param>
-      <param name="stateNameHash">The state hash name. If statNameHash is 0, it changes the current state time.</param>
-      <param name="layer">The layer index. If layer is -1, it plays the first state with the given state name or hash.</param>
-      <param name="normalizedTime">The time offset (in percentage).</param>
-    </member>
-    <member name="M:UnityEngine.Animator.PlayInFixedTime(System.String,System.Int32,System.Single)">
-      <summary>
-        <para>Plays a state.</para>
-      </summary>
-      <param name="stateName">The state name.</param>
-      <param name="stateNameHash">The state hash name. If statNameHash is 0, it changes the current state time.</param>
-      <param name="layer">The layer index. If layer is -1, it plays the first state with the given state name or hash.</param>
-      <param name="fixedTime">The time offset (in seconds).</param>
-    </member>
-    <member name="M:UnityEngine.Animator.PlayInFixedTime(System.Int32,System.Int32,System.Single)">
-      <summary>
-        <para>Plays a state.</para>
-      </summary>
-      <param name="stateName">The state name.</param>
-      <param name="stateNameHash">The state hash name. If statNameHash is 0, it changes the current state time.</param>
-      <param name="layer">The layer index. If layer is -1, it plays the first state with the given state name or hash.</param>
-      <param name="fixedTime">The time offset (in seconds).</param>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.Rebind">
       <summary>
@@ -1527,7 +1283,6 @@
     </member>
     <member name="M:UnityEngine.Animator.ResetTrigger(System.String)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.ResetTrigger.</para>
       </summary>
       <param name="name"></param>
@@ -1539,19 +1294,6 @@
       </summary>
       <param name="name"></param>
       <param name="id"></param>
-=======
-        <para>Resets the value of the given trigger parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-    </member>
-    <member name="M:UnityEngine.Animator.ResetTrigger(System.Int32)">
-      <summary>
-        <para>Resets the value of the given trigger parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.SetBoneLocalRotation(UnityEngine.HumanBodyBones,UnityEngine.Quaternion)">
       <summary>
@@ -1660,7 +1402,6 @@
     </member>
     <member name="M:UnityEngine.Animator.SetInteger(System.String,System.Int32)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.SetInteger.</para>
       </summary>
       <param name="name"></param>
@@ -1681,28 +1422,6 @@
       </summary>
       <param name="layerIndex"></param>
       <param name="weight"></param>
-=======
-        <para>Sets the value of the given integer parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <param name="value">The new parameter value.</param>
-    </member>
-    <member name="M:UnityEngine.Animator.SetInteger(System.Int32,System.Int32)">
-      <summary>
-        <para>Sets the value of the given integer parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-      <param name="value">The new parameter value.</param>
-    </member>
-    <member name="M:UnityEngine.Animator.SetLayerWeight(System.Int32,System.Single)">
-      <summary>
-        <para>Sets the weight of the layer at the given index.</para>
-      </summary>
-      <param name="layerIndex">The layer index.</param>
-      <param name="weight">The new layer weight.</param>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.SetLookAtPosition(UnityEngine.Vector3)">
       <summary>
@@ -1783,7 +1502,6 @@
     </member>
     <member name="M:UnityEngine.Animator.SetTrigger(System.String)">
       <summary>
-<<<<<<< HEAD
         <para>See IAnimatorControllerPlayable.SetTrigger.</para>
       </summary>
       <param name="name"></param>
@@ -1795,19 +1513,6 @@
       </summary>
       <param name="name"></param>
       <param name="id"></param>
-=======
-        <para>Sets the value of the given trigger parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
-    </member>
-    <member name="M:UnityEngine.Animator.SetTrigger(System.Int32)">
-      <summary>
-        <para>Sets the value of the given trigger parameter.</para>
-      </summary>
-      <param name="name">The parameter name.</param>
-      <param name="id">The parameter ID.</param>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Animator.SetVector(System.String,UnityEngine.Vector3)">
       <summary>
@@ -2108,11 +1813,7 @@
     </member>
     <member name="P:UnityEngine.AnimatorTransitionInfo.fullPathHash">
       <summary>
-<<<<<<< HEAD
         <para>The unique name of the Transition.</para>
-=======
-        <para>The hash name of the Transition.</para>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
     </member>
     <member name="P:UnityEngine.AnimatorTransitionInfo.nameHash">

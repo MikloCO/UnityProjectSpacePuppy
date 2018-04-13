@@ -16,14 +16,5 @@
       <param name="filename">Pathname to save the screenshot file to.</param>
       <param name="superSize">Factor by which to increase resolution.</param>
     </member>
-<<<<<<< HEAD
-=======
-    <member name="M:UnityEngine.ScreenCapture.CaptureScreenshotAsTexture(System.Int32)">
-      <summary>
-        <para>Captures a screenshot of the game view into a Texture2D object.</para>
-      </summary>
-      <param name="superSize">Factor by which to increase resolution.</param>
-    </member>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
   </members>
 </doc>

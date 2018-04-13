@@ -69,19 +69,6 @@
         <para>A random, external acceleration applied to the cloth.</para>
       </summary>
     </member>
-<<<<<<< HEAD
-=======
-    <member name="P:UnityEngine.Cloth.selfCollisionDistance">
-      <summary>
-        <para>Minimum distance at which two cloth particles repel each other (default: 0.0).</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.Cloth.selfCollisionStiffness">
-      <summary>
-        <para>Self-collision stiffness defines how strong the separating impulse should be for colliding particles.</para>
-      </summary>
-    </member>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     <member name="P:UnityEngine.Cloth.sleepThreshold">
       <summary>
         <para>Cloth's sleep threshold.</para>
@@ -92,14 +79,6 @@
         <para>An array of ClothSphereColliderPairs which this Cloth instance should collide with.</para>
       </summary>
     </member>
-<<<<<<< HEAD
-=======
-    <member name="P:UnityEngine.Cloth.stiffnessFrequency">
-      <summary>
-        <para>Sets the stiffness frequency parameter.</para>
-      </summary>
-    </member>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     <member name="P:UnityEngine.Cloth.stretchingStiffness">
       <summary>
         <para>Stretching stiffness of the cloth.</para>
@@ -110,14 +89,6 @@
         <para>Should gravity affect the cloth simulation?</para>
       </summary>
     </member>
-<<<<<<< HEAD
-=======
-    <member name="P:UnityEngine.Cloth.useTethers">
-      <summary>
-        <para>Use Tether Anchors.</para>
-      </summary>
-    </member>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     <member name="P:UnityEngine.Cloth.useVirtualParticles">
       <summary>
         <para>Add one virtual particle per triangle to improve collision stability.</para>
@@ -143,27 +114,6 @@
         <para>Clear the pending transform changes from affecting the cloth simulation.</para>
       </summary>
     </member>
-<<<<<<< HEAD
-=======
-    <member name="M:UnityEngine.Cloth.GetSelfAndInterCollisionIndices(System.Collections.Generic.List`1&lt;System.UInt32&gt;)">
-      <summary>
-        <para>Get list of particles to be used for self and inter collision.</para>
-      </summary>
-      <param name="indices">List to be populated with cloth particle indices that are used for self and/or inter collision.</param>
-    </member>
-    <member name="M:UnityEngine.Cloth.GetVirtualParticleIndices(System.Collections.Generic.List`1&lt;System.UInt32&gt;)">
-      <summary>
-        <para>Get list of indices to be used when generating virtual particles.</para>
-      </summary>
-      <param name="indices">List to be populated with virtual particle indices.</param>
-    </member>
-    <member name="M:UnityEngine.Cloth.GetVirtualParticleWeights(System.Collections.Generic.List`1&lt;UnityEngine.Vector3&gt;)">
-      <summary>
-        <para>Get weights to be used when generating virtual particles for cloth.</para>
-      </summary>
-      <param name="weights">List to populate with virtual particle weights.</param>
-    </member>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     <member name="M:UnityEngine.Cloth.SetEnabledFading(System.Boolean,System.Single)">
       <summary>
         <para>Fade the cloth simulation in or out.</para>
@@ -171,27 +121,6 @@
       <param name="enabled">Fading enabled or not.</param>
       <param name="interpolationTime"></param>
     </member>
-<<<<<<< HEAD
-=======
-    <member name="M:UnityEngine.Cloth.SetSelfAndInterCollisionIndices(System.Collections.Generic.List`1&lt;System.UInt32&gt;)">
-      <summary>
-        <para>This allows you to set the cloth indices used for self and inter collision.</para>
-      </summary>
-      <param name="indices">List of cloth particles indices to use for cloth self and/or inter collision.</param>
-    </member>
-    <member name="M:UnityEngine.Cloth.SetVirtualParticleIndices(System.Collections.Generic.List`1&lt;System.UInt32&gt;)">
-      <summary>
-        <para>Set indices to use when generating virtual particles.</para>
-      </summary>
-      <param name="indices">List of cloth particle indices to use when generating virtual particles.</param>
-    </member>
-    <member name="M:UnityEngine.Cloth.SetVirtualParticleWeights(System.Collections.Generic.List`1&lt;UnityEngine.Vector3&gt;)">
-      <summary>
-        <para>Sets weights to be used when generating virtual particles for cloth.</para>
-      </summary>
-      <param name="weights">List of weights to be used when setting virutal particles for cloth.</param>
-    </member>
->>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     <member name="T:UnityEngine.ClothSkinningCoefficient">
       <summary>
         <para>The ClothSkinningCoefficient struct is used to set up how a Cloth component is allowed to move with respect to the SkinnedMeshRenderer it is attached to.</para>
