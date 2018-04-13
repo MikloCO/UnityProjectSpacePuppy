@@ -166,7 +166,11 @@ Under fragmented quality of service modes, the original message is split into fr
     </member>
     <member name="P:UnityEngine.Networking.ConnectionConfig.InitialBandwidth">
       <summary>
+<<<<<<< HEAD
         <para>Gets or sets the bandwidth in bytes per second that can be used by Unity Multiplayer. No traffic over this limit is allowed. Unity Multiplayer may internally reduce the bandwidth it uses due to flow control. The default value is 1500MB/sec (1,536,000 bytes per second). The default value is intentionally a large number to allow all traffic to pass without delay.</para>
+=======
+        <para>Gets or sets the bandwidth in bytes per second that can be used by Unity Multiplayer. No traffic over this limit is allowed. Unity Multiplayer may internally reduce the bandwidth it uses due to flow control. The default value is 1.5MB/sec (1,536,000 bytes per second). The default value is intentionally a large number to allow all traffic to pass without delay.</para>
+>>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
     </member>
     <member name="P:UnityEngine.Networking.ConnectionConfig.MaxCombinedReliableMessageCount">
@@ -1419,13 +1423,23 @@ Can only be called by the relay group owner.</para>
       <param name="subversion">Subversion part of the credentials associated with this broadcast.</param>
       <param name="error">Error (can be cast to Networking.NetworkError for more information).</param>
     </member>
+<<<<<<< HEAD
     <member name="M:UnityEngine.Networking.NetworkTransport.SetPacketStat">
+=======
+    <member name="M:UnityEngine.Networking.NetworkTransport.SetPacketStat(System.Int32,System.Int32,System.Int32,System.Int32)">
+>>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       <summary>
         <para>Used to inform the profiler of network packet statistics.</para>
       </summary>
       <param name="packetStatId">The ID of the message being reported.</param>
+<<<<<<< HEAD
       <param name="numMsgs">Number of message being reported.</param>
       <param name="numBytes">Number of bytes used by reported messages.</param>
+=======
+      <param name="numMsgs">Number of messages being reported.</param>
+      <param name="numBytes">Number of bytes used by reported messages.</param>
+      <param name="direction">Whether the packet is outgoing (-1) or incoming (0).</param>
+>>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
     </member>
     <member name="M:UnityEngine.Networking.NetworkTransport.Shutdown">
       <summary>

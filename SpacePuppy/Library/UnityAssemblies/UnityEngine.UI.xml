@@ -2402,7 +2402,11 @@ One point is 112 of a pica, and 172 of an inch.</para>
     </member>
     <member name="P:UnityEngine.UI.Dropdown.value">
       <summary>
+<<<<<<< HEAD
         <para>The index of the currently selected option. 0 is the first option, 1 is the second, and so on.</para>
+=======
+        <para>The Value is the index number of the current selection in the Dropdown. 0 is the first option in the Dropdown, 1 is the second, and so on.</para>
+>>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
     </member>
     <member name="M:UnityEngine.UI.Dropdown.AddOptions(System.Collections.Generic.List`1&lt;UnityEngine.UI.Dropdown/OptionData&gt;)">
@@ -2915,7 +2919,11 @@ If you have modified the list of options, you should call this method afterwards
     </member>
     <member name="M:UnityEngine.UI.GraphicRaycaster.Raycast(UnityEngine.EventSystems.PointerEventData,System.Collections.Generic.List`1&lt;UnityEngine.EventSystems.RaycastResult&gt;)">
       <summary>
+<<<<<<< HEAD
         <para>See: BaseRaycaster.</para>
+=======
+        <para>Determines if the cursor is over a Graphics element in the Scene. See: BaseRaycaster.</para>
+>>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
       <param name="eventData"></param>
       <param name="resultAppendList"></param>
@@ -5376,7 +5384,11 @@ Characters 0-9, . (dot), and - (dash / minus sign) are allowed. The dash is only
     </member>
     <member name="M:UnityEngine.UI.Selectable.IsHighlighted(UnityEngine.EventSystems.BaseEventData)">
       <summary>
+<<<<<<< HEAD
         <para>Is the selectable currently 'highlighted'.</para>
+=======
+        <para>Returns whether the selectable is currently 'highlighted' or not.</para>
+>>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
       <param name="eventData"></param>
     </member>
@@ -5891,7 +5903,11 @@ Characters 0-9, . (dot), and - (dash / minus sign) are allowed. The dash is only
     </member>
     <member name="P:UnityEngine.UI.Toggle.isOn">
       <summary>
+<<<<<<< HEAD
         <para>Is the toggle on.</para>
+=======
+        <para>Return or set whether the Toggle is on or not.</para>
+>>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
     </member>
     <member name="F:UnityEngine.UI.Toggle.onValueChanged">

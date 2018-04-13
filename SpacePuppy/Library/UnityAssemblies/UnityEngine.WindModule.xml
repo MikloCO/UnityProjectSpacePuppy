@@ -31,7 +31,11 @@
     </member>
     <member name="P:UnityEngine.WindZone.windPulseMagnitude">
       <summary>
+<<<<<<< HEAD
         <para>Defines ow much the wind changes over time.</para>
+=======
+        <para>Defines how much the wind changes over time.</para>
+>>>>>>> 76ee6647f4d2b906215353b924758b396e5088e6
       </summary>
     </member>
     <member name="P:UnityEngine.WindZone.windTurbulence">
