@@ -4,35 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-<<<<<<< HEAD
-  - enabled: 1
-=======
-<<<<<<< HEAD
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: c9033e8849f56544ea1406b0f59e2c90
-  - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 9b9ebb6ee85c1fa47b008a3537732d6d
-=======
-  - enabled: 0
->>>>>>> df3311cf556e3c76e0d311ba6896bbc817b0fcd1
-    path: Assets/_Scenes/Swipe 1.unity
-    guid: a7d13792435b34e419ae1316630158dc
-  - enabled: 1
-    path: Assets/_Scenes/Swipe 2.unity
-    guid: 7acd46cd9c5d688439f43890170a401a
-  - enabled: 1
-    path: Assets/_Scenes/Swipe 3.unity
-    guid: df3cd28f45a3b1a4b85ff6eeea9ab3a3
-  - enabled: 1
-    path: Assets/_Scenes/Swipe 4.unity
-    guid: 586966f791cec5a4eb53ca6ba11a10b3
-<<<<<<< HEAD
-  - enabled: 1
-    path: Assets/_Scenes/Swipe 5.unity
-    guid: eb8a1c8f2ffcbc64a92ecba5d82fa634
-=======
->>>>>>> 8c2d6ab9e92ed50f2da8bc927e62c5d7e3ccf2ba
->>>>>>> df3311cf556e3c76e0d311ba6896bbc817b0fcd1
+  m_Scenes: []
