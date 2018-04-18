@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int nextScene = 0;
         while(nextScene == currentScene)
-            nextScene = Random.Range(0, 4);
+            nextScene = Random.Range(0, 5);
         Debug.Log(nextScene);
         SceneManager.LoadScene(nextScene);
     }
