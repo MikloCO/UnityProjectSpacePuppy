@@ -1,4 +1,12 @@
 sceneSetups:
-- path: Assets/Scenes/TestScenecCurves.unity
+<<<<<<< HEAD
+- path: Assets/_Scenes/Swipe 5.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/MainMenu.unity
+=======
+- path: Assets/_Scenes/Level 1.unity
+>>>>>>> 8c2d6ab9e92ed50f2da8bc927e62c5d7e3ccf2ba
+>>>>>>> df3311cf556e3c76e0d311ba6896bbc817b0fcd1
   isLoaded: 1
   isActive: 1
