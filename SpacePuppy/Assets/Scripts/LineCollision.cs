@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LineCollision : MonoBehaviour {
 
+    public GameController gameController;
     public Collider2D startCollider;
     public Collider2D[] middleColliders;
 
@@ -29,6 +30,10 @@ public class LineCollision : MonoBehaviour {
             if (middlesCollected >= middleColliders.Length) {
                 transform.parent.GetComponent<DrawLine>().Finish();
             }
+        }
+        if (other.CompareTag("CoinCircle")) {
+            Debug.Log(other.GetComponent<Transform>().position);
+            gameController.AddCoin(other.GetComponent<Transform>().position);
         }
     }
 
