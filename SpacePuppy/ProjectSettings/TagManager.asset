@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Line
+  - EndCircle
+  - StartCircle
+  - MiddleCircle
+  - CoinCircle
   layers:
   - Default
   - TransparentFX
