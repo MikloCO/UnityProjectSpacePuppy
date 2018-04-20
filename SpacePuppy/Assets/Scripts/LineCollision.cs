@@ -32,8 +32,11 @@ public class LineCollision : MonoBehaviour {
             }
         }
         if (other.CompareTag("CoinCircle")) {
-            Debug.Log(other.GetComponent<Transform>().position);
-            gameController.AddCoin(other.GetComponent<Transform>().position);
+            Vector3 position = other.GetComponent<Transform>().position;
+            Debug.Log(position);
+            if (GetComponentInParent<DrawLine>().drawing == true && !gameController.coinPositions.Contains(position)) {
+                gameController.AddCoin(position);
+            }
         }
     }
 

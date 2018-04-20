@@ -21,7 +21,7 @@ public class DrawLine : MonoBehaviour {
     void Update () {
         if (Input.GetMouseButtonDown(0)) {
             mousePressed = true;
-            removeLine();
+            RemoveLine();
         }
 
         if (mousePressed == true && start == true) {
@@ -47,17 +47,17 @@ public class DrawLine : MonoBehaviour {
         mousePressed = false;
         start = false;
         drawing = false;
-        removeLine();
+        RemoveLine();
     }
 
     public void Finish () {
         start = false;
         drawing = false;
-        removeLine();
+        RemoveLine();
         gameController.FinishLevel();
     }
 
-    private void removeLine () {
+    private void RemoveLine () {
         lineRenderer.positionCount = 0;
         vertexList.RemoveRange(0, vertexList.Count);
     }
