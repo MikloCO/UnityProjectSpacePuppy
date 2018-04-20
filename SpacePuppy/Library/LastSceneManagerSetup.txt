@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/TestScenecCurves.unity
+=======
+- path: Assets/_Scenes/Swipe 2.unity
+>>>>>>> 554265289c70e44bca253e8facc7e2ebd6b5a8d6
   isLoaded: 1
   isActive: 1
