@@ -9,9 +9,10 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		foreach (Transform tr in transform) {
 			tr.Translate (Vector3.left * speed * Time.deltaTime);
-			if (tr.position.x < -28f) {
-				tr.position = new Vector3 (8.9F, 0F, 0F);
-				tr.GetComponent<SpriteRenderer> ().sprite = sprites [Random.Range (0, sprites.Length)];
+			if (tr.position.x < -28) {
+				Sprite sprite = sprites [Random.Range (0, sprites.Length)];
+				tr.position = new Vector3 (sprite.bounds.size.x+28F, 0F, 0F);
+				tr.GetComponent<SpriteRenderer> ().sprite = sprite;
 			}
 		}
 	}
