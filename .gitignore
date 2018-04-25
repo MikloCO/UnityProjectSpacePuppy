@@ -2,6 +2,8 @@
 Library/
 /Library/
 /[Tt]emp/
+Temp/
+/Temp/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
