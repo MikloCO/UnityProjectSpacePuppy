@@ -9,13 +9,17 @@ public class DrawLine : MonoBehaviour {
     public GameController gameController;
 
     public bool start = false;
+    public bool end = false;
     public bool drawing = false;
 
     private bool mousePressed;
     private Vector3 mousePosition;
     private List<Vector3> vertexList = new List<Vector3>();
 
+    public bool perfect = true;
+
     private void Start () {
+
     }
 
     void Update () {
@@ -24,7 +28,10 @@ public class DrawLine : MonoBehaviour {
             RemoveLine();
         }
 
-        if (mousePressed == true && start == true) {
+        if (mousePressed) {
+            if(!start) {
+                perfect = false;
+            }
             drawing = true;
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0;
@@ -38,23 +45,29 @@ public class DrawLine : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0)) {
             mousePressed = false;
-            drawing = false;
-            start = false;
+            Finish();
         }
 	}
 
-    public void SquiggleCollide (){
+    public void SquiggleCollideBig (){
         mousePressed = false;
         start = false;
         drawing = false;
         RemoveLine();
     }
 
+    public void SquiggleCollideSmall () {
+        perfect = false;
+    }
+
     public void Finish () {
+        if(!end || !gameController.AllCoins()) {
+            perfect = false;
+        }
         start = false;
         drawing = false;
         RemoveLine();
-        gameController.FinishLevel();
+        //gameController.FinishLevel();
     }
 
     private void RemoveLine () {
