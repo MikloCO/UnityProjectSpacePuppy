@@ -6,8 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
     public int score = 0;
     public List<Vector3> coinPositions = new List<Vector3>();
+    public int numberOfCoins;
+    public int coinsCollected;
 
-	void Update () {
+    public CountCoins coins;
+
+    private void Start () {
+        numberOfCoins = coins.Coins();
+    }
+    void Update () {
 		
 	}
 
@@ -22,5 +29,10 @@ public class GameController : MonoBehaviour {
 
     public void AddCoin (Vector3 position) {
         coinPositions.Add(position);
+        coinsCollected++;
+    }
+
+    public bool AllCoins () {
+        return numberOfCoins == coinsCollected;
     }
 }

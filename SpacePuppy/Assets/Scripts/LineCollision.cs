@@ -6,6 +6,7 @@ public class LineCollision : MonoBehaviour {
 
     public GameController gameController;
     public Collider2D startCollider;
+    public Collider2D endCollider;
     public Collider2D[] middleColliders;
 
     private int middlesCollected = 0;
@@ -17,6 +18,13 @@ public class LineCollision : MonoBehaviour {
         else if (!transform.parent.GetComponent<DrawLine>().drawing){
             transform.parent.GetComponent<DrawLine>().start = false;
         }
+
+        if (endCollider.OverlapPoint(mousePosition)) {
+            transform.parent.GetComponent<DrawLine>().end = true;
+        }
+        else {
+            transform.parent.GetComponent<DrawLine>().end = false;
+        }
     }
 
     private void OnTriggerEnter2D (Collider2D other) {
@@ -26,11 +34,12 @@ public class LineCollision : MonoBehaviour {
             middlesCollected++;
         }
 
-        if (other.CompareTag("EndCircle")) {
+        /*if (other.CompareTag("EndCircle")) {
             if (middlesCollected >= middleColliders.Length) {
                 transform.parent.GetComponent<DrawLine>().Finish();
             }
-        }
+        }*/
+
         if (other.CompareTag("CoinCircle")) {
             Vector3 position = other.GetComponent<Transform>().position;
             Debug.Log(position);
