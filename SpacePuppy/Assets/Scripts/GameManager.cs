@@ -1,22 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GameManager : MonoBehaviour {
 	public Sprite[] sprites;
 	public float speed = 2f;
-	public float endPosition = 36f;
-	public float resetPosition = 72f;
+	public float endPosition = -30f;
+	public float resetPosition = 30f;
+	public float background;
+
+	private Transform[] childs;
+	int leadingSprite = 0;
+
+	void Start () {
+		childs = UtilityExtensions.GetComponentsOnlyInChildren<Transform>(this); 
+	}
+
 
 	void Update () {
-		foreach (Transform tr in transform) {
-			tr.Translate (Vector3.left * speed * Time.deltaTime);
-			if (tr.position.x < -endPosition) {
-				Sprite sprite = sprites [Random.Range (0, sprites.Length)];
-				//tr.position = new Vector3 (sprite.bounds.size.x+endPosition, 0F, 0F);
-				tr.position = new Vector3 (resetPosition, 0F, 0F);
-				tr.GetComponent<SpriteRenderer> ().sprite = sprite;
+		int i = 0;
+		for (int x=0;x<2;x++) {
+			if (childs[i].position.x < endPosition) {
+				childs[i].position = new Vector3 (resetPosition, 0, 0);
+
+				childs [i].GetComponent<SpriteRenderer> ().sprite = sprites [Random.Range (0, sprites.Length)];
+
+				if (leadingSprite == 0)
+					leadingSprite = 1;
+				else
+					leadingSprite = 0;
 			}
+
+			childs[leadingSprite].Translate (Vector3.left * speed * Time.deltaTime);
+
+			if(leadingSprite==0)
+				childs [1].position = childs [leadingSprite].position + Vector3.right * 30f;
+			else 
+				childs [0].position = childs [leadingSprite].position + Vector3.right * 30f;
+
+			i++;
 		}
 	}
 }
