@@ -12,7 +12,6 @@ public class Pause : MonoBehaviour {
     }
 
     void Update () {
-        Debug.Log(paused);
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (!paused) {
                 PauseGame();
@@ -24,13 +23,13 @@ public class Pause : MonoBehaviour {
     }
 
     private void PauseGame () {
-        Debug.Log("Paused");
+        swipe.SetActive(true);
         Time.timeScale = 0;
         paused = true;
     }
 
     private void ContinueGame () {
-        Debug.Log("Unpaused");
+        swipe.SetActive(false);
         Time.timeScale = 1;
         paused = false;
     }
