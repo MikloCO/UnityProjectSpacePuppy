@@ -6,7 +6,7 @@ public class DrawLine : MonoBehaviour {
 
     public LineRenderer lineRenderer;
     public CircleCollider2D lineCollider;
-    public GameController gameController;
+    public SwipeController swipeController;
 
     public bool start = false;
     public bool end = false;
@@ -23,6 +23,7 @@ public class DrawLine : MonoBehaviour {
     }
 
     void Update () {
+        Debug.Log(perfect);
         if (Input.GetMouseButtonDown(0)) {
             mousePressed = true;
             RemoveLine();
@@ -61,13 +62,17 @@ public class DrawLine : MonoBehaviour {
     }
 
     public void Finish () {
-        if(!end || !gameController.AllCoins()) {
+        if(!end || !swipeController.AllCoins()) {
             perfect = false;
         }
         start = false;
         drawing = false;
         RemoveLine();
-        //gameController.FinishLevel();
+        Invoke("NextLevel", 1);
+    }
+
+    private void NextLevel () {
+        swipeController.NextLevel();
     }
 
     private void RemoveLine () {

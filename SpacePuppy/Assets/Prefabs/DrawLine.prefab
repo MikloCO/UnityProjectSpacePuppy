@@ -123,7 +123,9 @@ MonoBehaviour:
   lineCollider: {fileID: 58930634145912798}
   gameController: {fileID: 0}
   start: 0
+  end: 0
   drawing: 0
+  perfect: 1
 --- !u!114 &114618573857811214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 0}
   startCollider: {fileID: 0}
+  endCollider: {fileID: 0}
   middleColliders: []
 --- !u!120 &120718173859991132
 LineRenderer:
@@ -171,7 +174,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}

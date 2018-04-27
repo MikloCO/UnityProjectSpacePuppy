@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4370989390909510}
   - component: {fileID: 114091555264027500}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: SwipeController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,3 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   coinPositions: []
+  numberOfCoins: 0
+  coinsCollected: 0
+  coins: {fileID: 0}

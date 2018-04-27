@@ -38,7 +38,8 @@ GameObject:
   - component: {fileID: 4330428613525108}
   - component: {fileID: 212007910878105786}
   - component: {fileID: 60698416574289732}
-  - component: {fileID: 114970044792388746}
+  - component: {fileID: 114596421975670136}
+  - component: {fileID: 114937081950979228}
   m_Layer: 0
   m_Name: Squiggle
   m_TagString: Untagged
@@ -448,7 +449,7 @@ PolygonCollider2D:
       - {x: -0.71999997, y: -0.56}
       - {x: -0.82, y: -0.59999996}
       - {x: -0.96999997, y: -0.65}
---- !u!114 &114970044792388746
+--- !u!114 &114596421975670136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -456,7 +457,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1644402494548456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2828181a410302448818588c43a5af5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e24fb9a21488da42a4abc5bbceb17d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114937081950979228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644402494548456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92810e2a2ceeb004690050d308c8ca19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212007910878105786
@@ -492,7 +504,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ac81e3094f8c94c4e92f902cb3d465da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -545,7 +557,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212912552974148360
 SpriteRenderer:
@@ -589,5 +601,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

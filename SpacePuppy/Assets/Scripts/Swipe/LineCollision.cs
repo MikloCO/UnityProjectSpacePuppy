@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LineCollision : MonoBehaviour {
 
-    public GameController gameController;
+    public SwipeController swipeController;
     public Collider2D startCollider;
     public Collider2D endCollider;
     public Collider2D[] middleColliders;
@@ -43,8 +43,8 @@ public class LineCollision : MonoBehaviour {
         if (other.CompareTag("CoinCircle")) {
             Vector3 position = other.GetComponent<Transform>().position;
             Debug.Log(position);
-            if (GetComponentInParent<DrawLine>().drawing == true && !gameController.coinPositions.Contains(position)) {
-                gameController.AddCoin(position);
+            if (GetComponentInParent<DrawLine>().drawing == true && !swipeController.coinPositions.Contains(position)) {
+                swipeController.AddCoin(position);
             }
         }
     }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b9ce326f843681946a4008620e152643
-timeCreated: 1524781249
+guid: 584008d987c54a14fbc15be646df7e64
+timeCreated: 1524823613
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,20 +18,6 @@ TextureImporter:
     21300022: space_11
     21300024: space_12
     21300026: space_13
-    21300028: space_14
-    21300030: space_15
-    21300032: space_16
-    21300034: space_17
-    21300036: space_18
-    21300038: space_19
-    21300040: space_20
-    21300042: space_21
-    21300044: space_22
-    21300046: space_23
-    21300048: space_24
-    21300050: space_25
-    21300052: space_26
-    21300054: space_27
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -105,26 +91,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -132,10 +98,10 @@ TextureImporter:
       name: space_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 693
-        width: 380
-        height: 373
+        x: 31
+        y: 687
+        width: 411
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +112,10 @@ TextureImporter:
       name: space_1
       rect:
         serializedVersion: 2
-        x: 513
-        y: 836
-        width: 195
-        height: 106
+        x: 12
+        y: 345
+        width: 463
+        height: 338
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +126,10 @@ TextureImporter:
       name: space_2
       rect:
         serializedVersion: 2
-        x: 812
-        y: 675
-        width: 536
-        height: 257
+        x: 39
+        y: 18
+        width: 312
+        height: 324
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +140,10 @@ TextureImporter:
       name: space_3
       rect:
         serializedVersion: 2
-        x: 12
-        y: 371
-        width: 460
-        height: 332
+        x: 510
+        y: 833
+        width: 200
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +154,10 @@ TextureImporter:
       name: space_4
       rect:
         serializedVersion: 2
-        x: 513
-        y: 684
-        width: 195
-        height: 106
+        x: 509
+        y: 679
+        width: 204
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +168,10 @@ TextureImporter:
       name: space_5
       rect:
         serializedVersion: 2
-        x: 512
-        y: 524
-        width: 196
-        height: 108
+        x: 510
+        y: 523
+        width: 200
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +182,10 @@ TextureImporter:
       name: space_6
       rect:
         serializedVersion: 2
-        x: 796
-        y: 319
-        width: 229
-        height: 207
+        x: 809
+        y: 665
+        width: 544
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +196,10 @@ TextureImporter:
       name: space_7
       rect:
         serializedVersion: 2
-        x: 40
-        y: 23
-        width: 306
-        height: 314
+        x: 503
+        y: 61
+        width: 214
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +210,10 @@ TextureImporter:
       name: space_8
       rect:
         serializedVersion: 2
-        x: 1112
-        y: 324
-        width: 212
-        height: 192
+        x: 792
+        y: 317
+        width: 238
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,10 +224,10 @@ TextureImporter:
       name: space_9
       rect:
         serializedVersion: 2
-        x: 512
-        y: 71
-        width: 197
-        height: 197
+        x: 1107
+        y: 319
+        width: 224
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +238,10 @@ TextureImporter:
       name: space_10
       rect:
         serializedVersion: 2
-        x: 805
-        y: 62
-        width: 223
-        height: 217
+        x: 802
+        y: 58
+        width: 231
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +252,10 @@ TextureImporter:
       name: space_11
       rect:
         serializedVersion: 2
-        x: 1121
-        y: 50
-        width: 207
-        height: 217
+        x: 1119
+        y: 46
+        width: 211
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,10 +266,10 @@ TextureImporter:
       name: space_12
       rect:
         serializedVersion: 2
-        x: 1688
-        y: 244
-        width: 24
-        height: 22
+        x: 1411
+        y: 40
+        width: 266
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,206 +280,10 @@ TextureImporter:
       name: space_13
       rect:
         serializedVersion: 2
-        x: 1415
-        y: 143
-        width: 61
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_14
-      rect:
-        serializedVersion: 2
-        x: 1472
-        y: 188
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_15
-      rect:
-        serializedVersion: 2
-        x: 1707
-        y: 156
-        width: 91
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_16
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 139
-        width: 22
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_17
-      rect:
-        serializedVersion: 2
-        x: 1805
-        y: 156
-        width: 23
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_18
-      rect:
-        serializedVersion: 2
-        x: 1466
-        y: 119
-        width: 22
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_19
-      rect:
-        serializedVersion: 2
-        x: 1559
-        y: 124
-        width: 23
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_20
-      rect:
-        serializedVersion: 2
-        x: 1642
-        y: 130
-        width: 23
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_21
-      rect:
-        serializedVersion: 2
-        x: 1767
-        y: 127
-        width: 22
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_22
-      rect:
-        serializedVersion: 2
-        x: 1462
-        y: 77
-        width: 22
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_23
-      rect:
-        serializedVersion: 2
-        x: 1500
-        y: 70
-        width: 60
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_24
-      rect:
-        serializedVersion: 2
-        x: 1616
-        y: 48
-        width: 60
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_25
-      rect:
-        serializedVersion: 2
-        x: 1712
-        y: 66
-        width: 24
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_26
-      rect:
-        serializedVersion: 2
-        x: 1818
-        y: 58
-        width: 55
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: space_27
-      rect:
-        serializedVersion: 2
-        x: 1592
-        y: 44
-        width: 21
-        height: 20
+        x: 1685
+        y: 55
+        width: 191
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

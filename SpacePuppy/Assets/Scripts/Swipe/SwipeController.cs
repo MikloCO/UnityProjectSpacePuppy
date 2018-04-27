@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour {
+public class SwipeController : MonoBehaviour {
     public int score = 0;
     public List<Vector3> coinPositions = new List<Vector3>();
     public int numberOfCoins;
@@ -18,11 +18,11 @@ public class GameController : MonoBehaviour {
 		
 	}
 
-    public void FinishLevel () {
+    public void NextLevel () {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int nextScene = 0;
         while(nextScene == currentScene)
-            nextScene = Random.Range(0, 5);
+            nextScene = Random.Range(0, 3);
         Debug.Log(nextScene);
         SceneManager.LoadScene(nextScene);
     }
