@@ -7,6 +7,7 @@ public class DrawLine : MonoBehaviour {
     public LineRenderer lineRenderer;
     public CircleCollider2D lineCollider;
     public SwipeController swipeController;
+    public Pause pause;
 
     public bool start = false;
     public bool end = false;
@@ -68,7 +69,8 @@ public class DrawLine : MonoBehaviour {
         start = false;
         drawing = false;
         RemoveLine();
-        Invoke("NextLevel", 1);
+
+        pause.Resume();
     }
 
     private void NextLevel () {

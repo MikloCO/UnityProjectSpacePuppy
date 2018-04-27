@@ -24,7 +24,7 @@ public class SwipeController : MonoBehaviour {
         while(nextScene == currentScene)
             nextScene = Random.Range(0, 3);
         Debug.Log(nextScene);
-        SceneManager.LoadScene(nextScene);
+        //SceneManager.LoadScene(nextScene);
     }
 
     public void AddCoin (Vector3 position) {
