@@ -9,6 +9,7 @@ TagManager:
   - StartCircle
   - MiddleCircle
   - CoinCircle
+  - KillZone
   layers:
   - Default
   - TransparentFX

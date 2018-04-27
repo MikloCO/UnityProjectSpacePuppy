@@ -6,6 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
+    path: Assets/_Scenes/PointSystem.unity
+    guid: 1e6e3edb0f4ae9a438ef8c663acee20c
+=======
     path: Assets/_Scenes/Swipe/Swipe 1.unity
     guid: a7d13792435b34e419ae1316630158dc
   - enabled: 1
@@ -14,3 +18,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Swipe/Swipe 3.unity
     guid: df3cd28f45a3b1a4b85ff6eeea9ab3a3
+>>>>>>> 536cf7e25b797d1ed8ea23912da37231a4de17e4

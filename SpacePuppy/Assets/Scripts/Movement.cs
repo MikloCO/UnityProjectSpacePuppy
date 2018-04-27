@@ -38,6 +38,16 @@ public class Movement : MonoBehaviour
 
             }
         }
+	}
 
-    }
+
+private void OnTriggerEnter2D(Collider2D collision) {
+	if(collision.name == "KillZone") {
+		Application.LoadLevel("PointSystem");
+	}
+}
+	void OnCollisionEnter2D (Collision2D other)
+	{
+	//	if(other.gameObject.tag
+	}
 }
