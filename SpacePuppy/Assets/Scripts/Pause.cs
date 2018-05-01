@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour {
     public Movement mov;
     public ScreenDeath scr;
     public PlaceholderMove[] plhm;
+    public ScoreManager scoreM;
 
     public GameObject[] swipes;
 
@@ -43,6 +44,7 @@ public class Pause : MonoBehaviour {
         curv2.paused = true;
         mov.paused = true;
         scr.paused = true;
+        scoreM.paused = true;
         nextSwipe.SetActive(true);
         for(int i = 0; i < plhm.Length; i++) {
             plhm[i].paused = true;
@@ -63,6 +65,7 @@ public class Pause : MonoBehaviour {
         curv2.paused = false;
         mov.paused = false;
         scr.paused = false;
+        scoreM.paused = false;
         for (int i = 0; i < plhm.Length; i++) {
             plhm[i].paused = false;
         }
