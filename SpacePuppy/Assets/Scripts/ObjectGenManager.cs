@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectGenManager : MonoBehaviour {
-
+    public bool paused = false;
     float timer = 0f;
 	public Camera camera;
 	public Transform[] Placeholders;
@@ -14,10 +14,13 @@ public class ObjectGenManager : MonoBehaviour {
 
 
 	void Update () {
+        if (!paused) { 
         timer += Time.deltaTime;
-        if (timer > 4) {
-            SpawnObjects();
-            timer = 0f;
+            if (timer > 8)
+            {
+                SpawnObjects();
+                timer = 0f;
+            }
         }
 	}
 
@@ -28,7 +31,7 @@ public class ObjectGenManager : MonoBehaviour {
             int y = Random.Range(0, camera.pixelHeight);
 
             Vector3 position = camera.ScreenToWorldPoint(new Vector3(x, y, 0));
-            position.Set(position.x+30, position.y, 0);
+            position.Set(position.x+20, position.y, 0);
 
             Placeholders[i].SetPositionAndRotation(position, new Quaternion());
         }

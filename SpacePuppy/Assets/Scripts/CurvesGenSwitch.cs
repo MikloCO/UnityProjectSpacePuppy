@@ -6,12 +6,12 @@ using System.Linq;
 public class CurvesGenSwitch : MonoBehaviour {
     public bool paused = false;
     
-    public GameObject[] asteroids;
-    
+    public GameObject[] asteroids;   
+
 	public float speed = 2f;
 	public float endPosition = -30f;
 	public float resetPosition = 30f;
-	public float background;
+	//public float background;
     
 	void Start () {
 
@@ -33,7 +33,7 @@ public class CurvesGenSwitch : MonoBehaviour {
                 thisChild.Translate(Vector3.left * speed * Time.deltaTime);
 
                 if(thisChild.position.x < endPosition) {
-                    Destroy(thisChild.gameObject);
+                    Destroy(thisChild.gameObject); // Byta ut destroy
                     Instantiate(asteroids[Random.Range(0, 3)], (otherChild.position + Vector3.right * resetPosition), new Quaternion(), this.transform);
                 }
             }

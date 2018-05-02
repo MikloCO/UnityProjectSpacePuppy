@@ -17,9 +17,9 @@ public class ScoreController : MonoBehaviour {
 		
 	}
 
-	public float getHighScore()
-	{
-		return allHighScore[];
-	}
+//	public float getHighScore()
+//	{
+//		return allHighScore[];
+//	}
 
 }
