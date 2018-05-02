@@ -30,9 +30,20 @@ public class CurvesGenSwitch : MonoBehaviour {
                 }
                 Transform thisChild = this.gameObject.transform.GetChild(i);
                 Transform otherChild = this.gameObject.transform.GetChild(j);
-                thisChild.Translate(Vector3.left * speed * Time.deltaTime);
 
-                if(thisChild.position.x < endPosition) {
+                if(thisChild.transform.position.x < otherChild.transform.position.x)
+                {
+                    thisChild.Translate(Vector3.left * speed * Time.deltaTime);
+                    otherChild.transform.position = new Vector3(thisChild.transform.position.x + 30f, otherChild.transform.position.y, otherChild.transform.position.z);
+                }
+                else
+                {
+                    otherChild.Translate(Vector3.left * speed * Time.deltaTime);
+                    thisChild.transform.position = new Vector3(otherChild.transform.position.x + 30f, thisChild.transform.position.y, thisChild.transform.position.z);
+                }
+
+
+                if (thisChild.position.x < endPosition) {
                     Destroy(thisChild.gameObject); // Byta ut destroy
                     Instantiate(asteroids[Random.Range(0, 3)], (otherChild.position + Vector3.right * resetPosition), new Quaternion(), this.transform);
                 }

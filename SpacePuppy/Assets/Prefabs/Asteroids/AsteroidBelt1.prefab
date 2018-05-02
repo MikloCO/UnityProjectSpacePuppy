@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212035288604741348}
   - component: {fileID: 60420534063151666}
   - component: {fileID: 60415548281214290}
+  - component: {fileID: 114296738153774092}
   m_Layer: 0
   m_Name: AsteroidBelt1
   m_TagString: Untagged
@@ -51,7 +52,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -100,7 +101,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -150,6 +151,17 @@ PolygonCollider2D:
       - {x: 14.849303, y: -9.692075}
       - {x: 14.945327, y: -4.324313}
       - {x: 14.530781, y: -4.486666}
+--- !u!114 &114296738153774092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092586953131642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230b14f934aeaf84080bf3ee2482c256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212035288604741348
 SpriteRenderer:
   m_ObjectHideFlags: 1
