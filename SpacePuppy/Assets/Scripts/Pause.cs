@@ -8,7 +8,7 @@ public class Pause : MonoBehaviour {
     public CurvesGenSwitch curv2;
     public Movement mov;
     public ScreenDeath scr;
-    public PlaceholderMove[] plhm;
+    public List<PlaceholderMove> plhm;
     public ScoreManager scoreM;
 
     public GameObject[] swipes;
@@ -38,6 +38,10 @@ public class Pause : MonoBehaviour {
         }
     }
 
+    public void AddPlhm (PlaceholderMove pl) {
+        plhm.Add(pl);
+    }
+
     private void PauseGame () {
         rot.paused = true;
         curv1.paused = true;
@@ -46,8 +50,8 @@ public class Pause : MonoBehaviour {
         scr.paused = true;
         scoreM.paused = true;
         nextSwipe.SetActive(true);
-        for(int i = 0; i < plhm.Length; i++) {
-            plhm[i].paused = true;
+        foreach (PlaceholderMove pl in plhm) {
+            pl.paused = true;
         }
         paused = true;
     }
@@ -66,8 +70,8 @@ public class Pause : MonoBehaviour {
         mov.paused = false;
         scr.paused = false;
         scoreM.paused = false;
-        for (int i = 0; i < plhm.Length; i++) {
-            plhm[i].paused = false;
+        foreach (PlaceholderMove pl in plhm) {
+            pl.paused = false;
         }
         paused = false;
     }

@@ -28,7 +28,6 @@ public class DrawLine : MonoBehaviour {
     }
 
     void Update () {
-        Debug.Log(perfect);
         if (Input.GetMouseButtonDown(0)) {
             mousePressed = true;
             RemoveLine();

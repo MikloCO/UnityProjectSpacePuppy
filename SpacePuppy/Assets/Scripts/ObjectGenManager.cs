@@ -4,37 +4,40 @@ using UnityEngine;
 
 public class ObjectGenManager : MonoBehaviour {
     public bool paused = false;
-    float timer = 0f;
-	public Camera camera;
-	public Transform[] Placeholders;
+    public Camera cam;
+    public Pause pause;
+    public GameObject[] Objects;
+    public float[] timeBetweenSpawns = { 4, 8 };
 
-	void Start () {
-        SpawnObjects();
-		}
+    private float timer = 0f;
+    private float timeUntilSpawn;
+
+    void Start () {
+        timeUntilSpawn = Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]);
+        SpawnObject();
+    }
 
 
-	void Update () {
-        if (!paused) { 
-        timer += Time.deltaTime;
-            if (timer > 8)
-            {
-                SpawnObjects();
+    void Update () {
+        if (!paused) {
+            timer += Time.deltaTime;
+            if (timer > timeUntilSpawn) {
+                SpawnObject();
                 timer = 0f;
+                timeUntilSpawn = Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]);
             }
         }
-	}
+    }
 
-    void SpawnObjects() {
-        for (int i = 0; i < Placeholders.Length; i++)
-        {
-            int x = Random.Range(0, camera.pixelWidth);
-            int y = Random.Range(0, camera.pixelHeight);
+    void SpawnObject () {
+        int x = Random.Range(0, cam.pixelWidth);
+        int y = Random.Range(0, cam.pixelHeight);
 
-            Vector3 position = camera.ScreenToWorldPoint(new Vector3(x, y, 0));
-            position.Set(position.x+20, position.y, 0);
-
-            Placeholders[i].SetPositionAndRotation(position, new Quaternion());
-        }
+        Vector3 position = cam.ScreenToWorldPoint(new Vector3(x, y, 0));
+        position.Set(position.x + 30f, position.y, 0);
+        GameObject gO = Objects[Random.Range(0, 6)];
+        pause.AddPlhm(gO.GetComponent<PlaceholderMove>());
+        Instantiate(gO, position, new Quaternion(), this.transform);
     }
 
 }

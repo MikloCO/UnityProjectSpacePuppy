@@ -10,6 +10,8 @@ TagManager:
   - MiddleCircle
   - CoinCircle
   - KillZone
+  - Curve
+  - Asteroid
   layers:
   - Default
   - TransparentFX

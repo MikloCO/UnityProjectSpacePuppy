@@ -397,6 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  paused: 0
 --- !u!114 &114265757173095606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,6 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  paused: 0
 --- !u!114 &114276287508988626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -420,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4dcf54ab92e7c048aabb30131b9e49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &114331127256512746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,6 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  paused: 0
 --- !u!114 &114389889818795720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -444,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4dcf54ab92e7c048aabb30131b9e49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &114428756884450304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -457,6 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  paused: 0
 --- !u!114 &114582745725589292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4dcf54ab92e7c048aabb30131b9e49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &114723341854360648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -481,6 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  paused: 0
 --- !u!114 &114772419884846494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -492,7 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4dcf54ab92e7c048aabb30131b9e49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &114939738101244678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -504,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4dcf54ab92e7c048aabb30131b9e49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &114944738616969622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -516,13 +521,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf84c91c88cd994ba33053fb1d51dc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
-  Placeholders:
-  - {fileID: 0}
-  - {fileID: 4781259298957154}
-  - {fileID: 4397244401205130}
-  - {fileID: 4752943794232034}
-  - {fileID: 4069901891121086}
+  paused: 0
+  cam: {fileID: 20544750027604142, guid: 3339fed5654e76e44a22f851f1a5ca55, type: 2}
+  pause: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
+  Objects: []
+  timeBetweenSpawns:
+  - 4
+  - 8
 --- !u!212 &212044718878974536
 SpriteRenderer:
   m_ObjectHideFlags: 1
