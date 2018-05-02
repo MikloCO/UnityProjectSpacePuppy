@@ -9,6 +9,8 @@ public class DrawLine : MonoBehaviour {
     public SwipeController swipeController;
     public Pause pause;
 
+    public float timeToDraw = 0.4f;
+
     public bool start = false;
     public bool end = false;
     public bool drawing = false;
@@ -16,6 +18,8 @@ public class DrawLine : MonoBehaviour {
     private bool mousePressed;
     private Vector3 mousePosition;
     private List<Vector3> vertexList = new List<Vector3>();
+
+    private float drawTimer = 0f;
 
     public bool perfect = true;
 
@@ -31,6 +35,7 @@ public class DrawLine : MonoBehaviour {
         }
 
         if (mousePressed) {
+            drawTimer += Time.deltaTime;
             if(!start) {
                 perfect = false;
             }
@@ -46,8 +51,11 @@ public class DrawLine : MonoBehaviour {
         }
 
         if (Input.GetMouseButtonUp(0)) {
+            if(drawTimer >= timeToDraw) {
+                Finish();
+            }
             mousePressed = false;
-            Finish();
+            drawTimer = 0;
         }
 	}
 

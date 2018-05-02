@@ -1787,6 +1787,7 @@ MonoBehaviour:
   lineCollider: {fileID: 58413547394281462}
   swipeController: {fileID: 114481581930010220}
   pause: {fileID: 0}
+  timeToDraw: 0.4
   start: 0
   end: 0
   drawing: 0
