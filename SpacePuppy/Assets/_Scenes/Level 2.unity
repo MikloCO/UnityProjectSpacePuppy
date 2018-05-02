@@ -233,11 +233,7 @@ MonoBehaviour:
   - {fileID: 1092586953131642, guid: 15476a14f22a66841bde11c244cdc99f, type: 2}
   - {fileID: 1210856969931058, guid: e44a6693265ce7546b41ee22a51f235e, type: 2}
   - {fileID: 1700727111154868, guid: f2a7f97ffa6abad40a51fd948f818b7f, type: 2}
-  sprites:
-  - {fileID: 21300000, guid: 7769029476c6766409cd9df888dd5d85, type: 3}
-  - {fileID: 21300000, guid: fe0947685fe37c64fb6a07adcdbe171c, type: 3}
-  - {fileID: 21300000, guid: 78b7cd5901a9eb147b4efeba4e6de056, type: 3}
-  speed: 2
+  speed: 10
   endPosition: -30
   resetPosition: 30
   background: 0
@@ -702,8 +698,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   asteroids: []
-  sprites:
-  - {fileID: 21300000, guid: 50c7021e353b5df4aa9e7f1e82e16d36, type: 3}
   speed: 0.1
   endPosition: -30
   resetPosition: 30
@@ -906,7 +900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1334030988
 Transform:
   m_ObjectHideFlags: 0
@@ -1544,6 +1538,10 @@ Prefab:
       propertyPath: scoreM
       value: 
       objectReference: {fileID: 1343278413}
+    - target: {fileID: 1558622805770860, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   m_IsPrefabParent: 0
