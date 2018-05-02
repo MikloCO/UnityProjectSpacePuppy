@@ -28,7 +28,7 @@ public class Pause : MonoBehaviour {
     }
 
     void Update () {
-        Debug.Log(timeUntilSwipe);
+        //Debug.Log(timeUntilSwipe);
         if (!paused) {
             if(timer > timeUntilSwipe) {
                 timer = 0;
