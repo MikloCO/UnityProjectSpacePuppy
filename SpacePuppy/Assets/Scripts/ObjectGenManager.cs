@@ -4,23 +4,34 @@ using UnityEngine;
 
 public class ObjectGenManager : MonoBehaviour {
 
+    float timer = 0f;
 	public Camera camera;
 	public Transform[] Placeholders;
 
 	void Start () {
-		for (int i = 0; i < Placeholders.Length; i++){
-			int x = Random.Range (0, camera.pixelWidth);
-			int y = Random.Range (0, camera.pixelHeight);
-
-			Vector3 position = camera.ScreenToWorldPoint(new Vector3(x,y,0));
-			position.Set (position.x, position.y, 0);
-
-			Placeholders[i].SetPositionAndRotation(position, new Quaternion());
-		}
+        SpawnObjects();
 		}
 
 
 	void Update () {
-
+        timer += Time.deltaTime;
+        if (timer > 4) {
+            SpawnObjects();
+            timer = 0f;
+        }
 	}
+
+    void SpawnObjects() {
+        for (int i = 0; i < Placeholders.Length; i++)
+        {
+            int x = Random.Range(0, camera.pixelWidth);
+            int y = Random.Range(0, camera.pixelHeight);
+
+            Vector3 position = camera.ScreenToWorldPoint(new Vector3(x, y, 0));
+            position.Set(position.x+30, position.y, 0);
+
+            Placeholders[i].SetPositionAndRotation(position, new Quaternion());
+        }
+    }
+
 }

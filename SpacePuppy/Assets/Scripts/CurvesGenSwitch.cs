@@ -6,7 +6,9 @@ using System.Linq;
 public class CurvesGenSwitch : MonoBehaviour {
     public bool paused = false;
 
-    public Sprite[] sprites;
+    public GameObject[] astroids;
+
+    public Sprite[] sprites;//Ta bort
 	public float speed = 2f;
 	public float endPosition = -30f;
 	public float resetPosition = 30f;
@@ -27,7 +29,11 @@ public class CurvesGenSwitch : MonoBehaviour {
                 if (childs[i].position.x < endPosition) {
                     childs[i].position = new Vector3(resetPosition, 0, 0);
 
+                    //Ta bort det här
                     childs[i].GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
+
+                    //Lägg till att ni enablar ett gameobject från astroids och tar bort den som åkt ut ur bild
+                    //Sätt det nya gameobjektet till rätt position och att den följer leadingsprite
 
                     if (leadingSprite == 0)
                         leadingSprite = 1;
