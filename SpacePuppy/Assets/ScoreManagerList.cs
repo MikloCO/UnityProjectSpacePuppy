@@ -5,17 +5,17 @@ using UnityEngine;
 public class ScoreManagerList : MonoBehaviour {
 
 
-	myText=GameObject.Find("MainText").GetComponent<Text>(); 
+	//myText=GameObject.Find("MainText").GetComponent<Text>(); 
 
-	Text text = highScoreArrays;
+	//Text text = highScoreArrays;
 
-	public highScoreArray[] highScoreArrays;
+	//public highScoreArray[] highScoreArrays;
 
-	void Update() {
+	//void Update() {
 		
-	}
+	//}
 
-	void StoreScoreInArray() {
-		text = GetComponent <Text> ();
-	}
+	//void StoreScoreInArray() {
+	//	text = GetComponent <Text> ();
+	//}
 }
