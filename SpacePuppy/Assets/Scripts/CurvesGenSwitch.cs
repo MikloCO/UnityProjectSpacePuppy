@@ -45,7 +45,7 @@ public class CurvesGenSwitch : MonoBehaviour {
 
                 if (thisChild.position.x < endPosition) {
                     Destroy(thisChild.gameObject);
-                    Instantiate(asteroids[Random.Range(0, 3)], (otherChild.position + Vector3.right * resetPosition), new Quaternion(), this.transform);
+                    Instantiate(asteroids[Random.Range(0, 4)], (otherChild.position + Vector3.right * resetPosition), new Quaternion(), this.transform);
                 }
             }
         }
