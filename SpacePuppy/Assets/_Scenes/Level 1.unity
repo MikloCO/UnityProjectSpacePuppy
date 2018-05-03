@@ -233,6 +233,8 @@ MonoBehaviour:
   - {fileID: 1092586953131642, guid: 15476a14f22a66841bde11c244cdc99f, type: 2}
   - {fileID: 1210856969931058, guid: e44a6693265ce7546b41ee22a51f235e, type: 2}
   - {fileID: 1700727111154868, guid: f2a7f97ffa6abad40a51fd948f818b7f, type: 2}
+  - {fileID: 1673595582304410, guid: 05af3ffae0fb7cc46a477f3156b376d2, type: 2}
+  - {fileID: 1065796396603992, guid: b486ef8db2d7ec54e9144a7ad934923c, type: 2}
   speed: 5
   endPosition: -30
   resetPosition: 30
@@ -1192,6 +1194,10 @@ Prefab:
       propertyPath: pause
       value: 
       objectReference: {fileID: 2117806932}
+    - target: {fileID: 1051545764172172, guid: 0ca73bbe90144e04bac5cbe32bc8c858, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ca73bbe90144e04bac5cbe32bc8c858, type: 2}
   m_IsPrefabParent: 0
