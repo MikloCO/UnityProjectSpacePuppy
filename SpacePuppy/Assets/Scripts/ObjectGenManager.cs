@@ -6,7 +6,7 @@ public class ObjectGenManager : MonoBehaviour {
     public bool paused = false;
     public Camera cam;
     public Pause pause;
-    public GameObject[] Objects;
+    public GameObject[] objects;
     public float[] timeBetweenSpawns = { 4, 8 };
 
     private float timer = 0f;
@@ -29,14 +29,27 @@ public class ObjectGenManager : MonoBehaviour {
         }
     }
 
-    void SpawnObject () {
+    public void Pause () {
+        paused = true;
+        foreach (Transform child in transform) {
+            child.GetComponent<PlaceholderMove>().paused = true;
+        }
+    }
+
+    public void Resume () {
+        paused = false;
+        foreach (Transform child in transform) {
+            child.GetComponent<PlaceholderMove>().paused = false;
+        }
+    }
+
+    private void SpawnObject () {
         int x = Random.Range(0, cam.pixelWidth);
         int y = Random.Range(0, cam.pixelHeight);
 
         Vector3 position = cam.ScreenToWorldPoint(new Vector3(x, y, 0));
         position.Set(position.x + 30f, position.y, 0);
-        GameObject gO = Objects[Random.Range(0, 6)];
-        pause.AddPlhm(gO.GetComponent<PlaceholderMove>());
+        GameObject gO = objects[Random.Range(0, objects.Length)];
         Instantiate(gO, position, new Quaternion(), this.transform);
     }
 

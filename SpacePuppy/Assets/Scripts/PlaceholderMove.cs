@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlaceholderMove : MonoBehaviour {
 	public float speed = 2f;
     public bool paused = false;
+
 	// Use this for initialization
 	void Start () {
 		Transform transform = GetComponent<Transform> ();

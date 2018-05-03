@@ -8,8 +8,8 @@ public class Pause : MonoBehaviour {
     public CurvesGenSwitch curv2;
     public Movement mov;
     public ScreenDeath scr;
-    public List<PlaceholderMove> plhm;
     public ScoreManager scoreM;
+    public ObjectGenManager ogm;
 
     public GameObject[] swipes;
 
@@ -28,18 +28,13 @@ public class Pause : MonoBehaviour {
     }
 
     void Update () {
-        //Debug.Log(timeUntilSwipe);
         if (!paused) {
-            if(timer > timeUntilSwipe) {
+            if (timer > timeUntilSwipe) {
                 timer = 0;
                 PauseGame();
             }
             timer += Time.deltaTime;
         }
-    }
-
-    public void AddPlhm (PlaceholderMove pl) {
-        plhm.Add(pl);
     }
 
     private void PauseGame () {
@@ -49,10 +44,8 @@ public class Pause : MonoBehaviour {
         mov.paused = true;
         scr.paused = true;
         scoreM.paused = true;
+        ogm.Pause();
         nextSwipe.SetActive(true);
-        foreach (PlaceholderMove pl in plhm) {
-            pl.paused = true;
-        }
         paused = true;
     }
 
@@ -70,9 +63,7 @@ public class Pause : MonoBehaviour {
         mov.paused = false;
         scr.paused = false;
         scoreM.paused = false;
-        foreach (PlaceholderMove pl in plhm) {
-            pl.paused = false;
-        }
+        ogm.Resume();
         paused = false;
     }
 }

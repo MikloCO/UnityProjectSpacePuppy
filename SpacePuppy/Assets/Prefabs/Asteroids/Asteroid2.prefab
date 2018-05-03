@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  paused: 1
+  paused: 0
 --- !u!212 &212970893550513484
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -42,7 +42,6 @@ public class LineCollision : MonoBehaviour {
 
         if (other.CompareTag("CoinCircle")) {
             Vector3 position = other.GetComponent<Transform>().position;
-            Debug.Log(position);
             if (GetComponentInParent<DrawLine>().drawing == true && !swipeController.coinPositions.Contains(position)) {
                 swipeController.AddCoin(position);
             }

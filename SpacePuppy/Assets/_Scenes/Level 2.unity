@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a7391b4894e7943a8e8a92501a12aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pause: {fileID: 2117806932}
 --- !u!61 &18529019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -667,7 +668,7 @@ MonoBehaviour:
   paused: 0
   cam: {fileID: 46984768}
   pause: {fileID: 2117806932}
-  Objects:
+  objects:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
@@ -1345,7 +1346,7 @@ Prefab:
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: plhm.Array.size
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474365819265270, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1472,12 +1473,12 @@ Prefab:
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[0]
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[1]
-      value: 20
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
@@ -1494,6 +1495,11 @@ Prefab:
       value: 
       objectReference: {fileID: 114708240182570370, guid: 5e6494dec4496d34aa9c042a518323e7,
         type: 2}
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: ogm
+      value: 
+      objectReference: {fileID: 820946788}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   m_IsPrefabParent: 0
@@ -1644,12 +1650,12 @@ Prefab:
     - target: {fileID: 224843250098580676, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1035.9
+      value: 872
       objectReference: {fileID: 0}
     - target: {fileID: 224843250098580676, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 465.6
+      value: 483.05
       objectReference: {fileID: 0}
     - target: {fileID: 224843250098580676, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
