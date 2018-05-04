@@ -32,14 +32,14 @@ public class ObjectGenManager : MonoBehaviour {
     public void Pause () {
         paused = true;
         foreach (Transform child in transform) {
-            child.GetComponent<PlaceholderMove>().paused = true;
+                child.GetComponent<AsteroidMove>().paused = true;
         }
     }
 
     public void Resume () {
         paused = false;
         foreach (Transform child in transform) {
-            child.GetComponent<PlaceholderMove>().paused = false;
+            child.GetComponent<AsteroidMove>().paused = false;
         }
     }
 
