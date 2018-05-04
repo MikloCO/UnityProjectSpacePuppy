@@ -17,8 +17,29 @@ public class CurvesGenSwitch : MonoBehaviour {
 
 	}
 
+    public void Pause () {
+        paused = true;
+        foreach (Transform child in transform) {
+            foreach (Transform grandChild in child.transform) {
+                foreach (Transform greatGrandChild in grandChild.transform) {
+                    greatGrandChild.GetComponent<AsteroidMove>().paused = true;
+                }
+            }
+        }
+    }
 
-	void Update () {
+    public void Resume () {
+        paused = false;
+        foreach (Transform child in transform) {
+            foreach (Transform grandChild in child.transform) {
+                foreach (Transform greatGrandChild in grandChild.transform) {
+                    greatGrandChild.GetComponent<AsteroidMove>().paused = false;
+                }
+            }
+        }
+    }
+
+    void Update () {
         if (!paused) {
             for (int i = 0; i < 2; i++) {
                 int j;

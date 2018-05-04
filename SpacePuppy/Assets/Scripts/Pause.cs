@@ -5,11 +5,11 @@ using UnityEngine;
 public class Pause : MonoBehaviour {
     public RotatingScript rot;
     public CurvesGenSwitch curv1;
-    public CurvesGenSwitch curv2;
+    public BackgroundGenSwitch bg;
     public Movement mov;
     public ScreenDeath scr;
     public ScoreManager scoreM;
-    public ObjectGenManager ogm;
+    public ObjectGenManager ogm; //ta bort
 
     public GameObject[] swipes;
 
@@ -39,8 +39,8 @@ public class Pause : MonoBehaviour {
 
     private void PauseGame () {
         rot.paused = true;
-        curv1.paused = true;
-        curv2.paused = true;
+        curv1.Pause();
+        bg.paused = true;
         mov.paused = true;
         scr.paused = true;
         scoreM.paused = true;
@@ -58,8 +58,8 @@ public class Pause : MonoBehaviour {
     private void ContinueGame () {
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         rot.paused = false;
-        curv1.paused = false;
-        curv2.paused = false;
+        curv1.Resume();
+        bg.paused = false;
         mov.paused = false;
         scr.paused = false;
         scoreM.paused = false;
