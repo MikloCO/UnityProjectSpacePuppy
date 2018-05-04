@@ -235,7 +235,7 @@ MonoBehaviour:
   - {fileID: 1700727111154868, guid: f2a7f97ffa6abad40a51fd948f818b7f, type: 2}
   - {fileID: 1673595582304410, guid: 05af3ffae0fb7cc46a477f3156b376d2, type: 2}
   - {fileID: 1065796396603992, guid: b486ef8db2d7ec54e9144a7ad934923c, type: 2}
-  speed: 2
+  speed: 4
   endPosition: -30
   resetPosition: 30
 --- !u!1 &46984765
@@ -1245,14 +1245,23 @@ Prefab:
     - target: {fileID: 224662355397920562, guid: 9d80241f848bd8846adbacdc73acb8e0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 488
+      value: 466.8
       objectReference: {fileID: 0}
     - target: {fileID: 114819228074055592, guid: 9d80241f848bd8846adbacdc73acb8e0,
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300006, guid: 584008d987c54a14fbc15be646df7e64,
+      objectReference: {fileID: 21300014, guid: 584008d987c54a14fbc15be646df7e64,
         type: 3}
+    - target: {fileID: 1197715832575552, guid: 9d80241f848bd8846adbacdc73acb8e0, type: 2}
+      propertyPath: m_Name
+      value: CD
+      objectReference: {fileID: 0}
+    - target: {fileID: 224662355397920562, guid: 9d80241f848bd8846adbacdc73acb8e0,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114717423166898778, guid: 9d80241f848bd8846adbacdc73acb8e0, type: 2}
     - {fileID: 114233060611360490, guid: 9d80241f848bd8846adbacdc73acb8e0, type: 2}
@@ -1456,12 +1465,12 @@ Prefab:
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[0]
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[1]
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
@@ -1623,22 +1632,22 @@ Prefab:
     - target: {fileID: 224843250098580676, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 843.55005
+      value: 903
       objectReference: {fileID: 0}
     - target: {fileID: 224843250098580676, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 494.95
+      value: 483.6
       objectReference: {fileID: 0}
     - target: {fileID: 224843250098580676, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 113.1
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 224843250098580676, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 90.1
+      value: 62.8
       objectReference: {fileID: 0}
     - target: {fileID: 224843250098580676, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
@@ -1672,7 +1681,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1452048842650372, guid: 51bf7dcba0c64594caf21476e67eca7d, type: 2}
       propertyPath: m_Name
-      value: InGameMenuKnapp
+      value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 114714728734110092, guid: 51bf7dcba0c64594caf21476e67eca7d,
         type: 2}
@@ -1715,6 +1724,23 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114940242612429418, guid: 51bf7dcba0c64594caf21476e67eca7d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300004, guid: 74eee18d6aff6cc4fb8cd5fec6484aa1,
+        type: 3}
+    - target: {fileID: 114714728734110092, guid: 51bf7dcba0c64594caf21476e67eca7d,
+        type: 2}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714728734110092, guid: 51bf7dcba0c64594caf21476e67eca7d,
+        type: 2}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300006, guid: 74eee18d6aff6cc4fb8cd5fec6484aa1,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51bf7dcba0c64594caf21476e67eca7d, type: 2}
   m_IsPrefabParent: 0
