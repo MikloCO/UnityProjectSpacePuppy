@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class PlaceholderMove : MonoBehaviour {
 	public float speed = 2f;
-    private Pause paused;
+    public bool paused = false;
 
 	// Use this for initialization
 	void Start () {
-        paused = FindObjectOfType<Pause>();
 		Transform transform = GetComponent<Transform> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (!paused) {
-            transform.Translate(Vector3.left * speed * paused.gameSpeed * 2f * Time.deltaTime);
+            transform.Translate(Vector3.left * speed * 2f * Time.deltaTime);
         }
 	}
 }
