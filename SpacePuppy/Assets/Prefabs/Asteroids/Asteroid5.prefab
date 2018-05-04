@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4815912804261866}
   - component: {fileID: 212071597953434220}
   - component: {fileID: 50584269897576546}
-  - component: {fileID: 114221902133710980}
-  - component: {fileID: 114134179705980556}
   - component: {fileID: 60765683611367908}
+  - component: {fileID: 114134179705980556}
+  - component: {fileID: 114017975978207328}
   m_Layer: 0
   m_Name: Asteroid5
   m_TagString: Asteroid
@@ -152,6 +152,17 @@ PolygonCollider2D:
       - {x: -0.775, y: 0.805}
       - {x: -0.695, y: 0.875}
       - {x: -0.695, y: 0.97499996}
+--- !u!114 &114017975978207328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612394150306138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230b14f934aeaf84080bf3ee2482c256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114134179705980556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,20 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885bca151880fc643b4afbd694c02b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  paused: 1
---- !u!114 &114221902133710980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1612394150306138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4dcf54ab92e7c048aabb30131b9e49a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   cam: {fileID: 20544750027604142, guid: 3339fed5654e76e44a22f851f1a5ca55, type: 2}
+  speed: 0.4
+  paused: 0
 --- !u!212 &212071597953434220
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class CurvesGenSwitch : MonoBehaviour {
+public class BackgroundGenSwitch : MonoBehaviour {
     public bool paused = false;
     
     public GameObject[] asteroids;   
@@ -17,27 +17,6 @@ public class CurvesGenSwitch : MonoBehaviour {
 
 	}
 
-    public void Pause () {
-        paused = true;
-        foreach (Transform child in transform) {
-            foreach (Transform grandChild in child.transform) {
-                foreach (Transform greatGrandChild in grandChild.transform) {
-                    greatGrandChild.GetComponent<AsteroidMove>().paused = true;
-                }
-            }
-        }
-    }
-
-    public void Resume () {
-        paused = false;
-        foreach (Transform child in transform) {
-            foreach (Transform grandChild in child.transform) {
-                foreach (Transform greatGrandChild in grandChild.transform) {
-                    greatGrandChild.GetComponent<AsteroidMove>().paused = false;
-                }
-            }
-        }
-    }
 
     void Update () {
         if (!paused) {
