@@ -3,19 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pause : MonoBehaviour {
-    public RotatingScript rot;
-    public CurvesGenSwitch curv1;
-    public CurvesGenSwitch curv2;
-    public Movement mov;
-    public ScreenDeath scr;
-    public ScoreManager scoreM;
-    public ObjectGenManager ogm;
 
     public GameObject[] swipes;
 
     public float[] timeUntilSwipeInterval = { 10f, 15f };
 
-    private bool paused = false;
+    public float gameSpeed = 0.0f;
     private float timer = 0f;
     private float timeUntilSwipe;
     private GameObject nextSwipe;
@@ -23,30 +16,21 @@ public class Pause : MonoBehaviour {
     void Start () {
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         nextSwipe = swipes[Random.Range(0, swipes.Length)];
-        paused = false;
+        gameSpeed = 1f;
         timer = 0f;
     }
 
     void Update () {
-        if (!paused) {
-            if (timer > timeUntilSwipe) {
-                timer = 0;
-                PauseGame();
-            }
-            timer += Time.deltaTime;
+        if (timer > timeUntilSwipe) {
+            timer = 0;
+            PauseGame();
         }
+        timer += Time.deltaTime * gameSpeed;
     }
 
     private void PauseGame () {
-        rot.paused = true;
-        curv1.paused = true;
-        curv2.paused = true;
-        mov.paused = true;
-        scr.paused = true;
-        scoreM.paused = true;
-        ogm.Pause();
         nextSwipe.SetActive(true);
-        paused = true;
+        gameSpeed = 0f;
     }
 
     public void Resume () {
@@ -57,13 +41,6 @@ public class Pause : MonoBehaviour {
 
     private void ContinueGame () {
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
-        rot.paused = false;
-        curv1.paused = false;
-        curv2.paused = false;
-        mov.paused = false;
-        scr.paused = false;
-        scoreM.paused = false;
-        ogm.Resume();
-        paused = false;
+        gameSpeed = 1f;
     }
 }
