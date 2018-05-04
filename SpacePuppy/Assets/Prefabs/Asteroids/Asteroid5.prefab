@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  paused: 1
+  paused: 0
 --- !u!114 &114221902133710980
 MonoBehaviour:
   m_ObjectHideFlags: 1
