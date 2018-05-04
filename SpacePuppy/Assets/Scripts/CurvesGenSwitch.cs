@@ -22,29 +22,7 @@ public class CurvesGenSwitch : MonoBehaviour {
         // hur långt har spelaren kommit i x-led från första punktens x-led
     }
 
-    public void Pause () {
-        paused = true;
-        foreach (Transform child in transform) {
-            foreach (Transform grandChild in child.transform) {
-                foreach (Transform greatGrandChild in grandChild.transform) {
-                    greatGrandChild.GetComponent<AsteroidMove>().paused = true;
-                }
-            }
-        }
-    }
 
-    public void Resume () {
-        paused = false;
-        foreach (Transform child in transform) {
-            foreach (Transform grandChild in child.transform) {
-                foreach (Transform greatGrandChild in grandChild.transform) {
-                    greatGrandChild.GetComponent<AsteroidMove>().paused = false;
-                }
-            }
-        }
-    }
-
-<<<<<<< HEAD
 	void Update () {
         for (int i = 0; i < 2; i++) {
             int j;
@@ -72,37 +50,6 @@ public class CurvesGenSwitch : MonoBehaviour {
             if (thisChild.position.x < endPosition) {
                 Destroy(thisChild.gameObject);
                 Instantiate(asteroids[Random.Range(0, 5)], (otherChild.position + Vector3.right * resetPosition), new Quaternion(), this.transform);
-=======
-    void Update () {
-        if (!paused) {
-            for (int i = 0; i < 2; i++) {
-                int j;
-                if(i == 0) {
-                    j = 1;
-                }
-                else {
-                    j = 0;
-                }
-                Transform thisChild = this.gameObject.transform.GetChild(i);
-                Transform otherChild = this.gameObject.transform.GetChild(j);
-
-                if(thisChild.transform.position.x < otherChild.transform.position.x)
-                {
-                    thisChild.Translate(Vector3.left * speed * Time.deltaTime);
-                    otherChild.transform.position = new Vector3(thisChild.transform.position.x + 30f, otherChild.transform.position.y, otherChild.transform.position.z);
-                }
-                else
-                {
-                    otherChild.Translate(Vector3.left * speed * Time.deltaTime);
-                    thisChild.transform.position = new Vector3(otherChild.transform.position.x + 30f, thisChild.transform.position.y, thisChild.transform.position.z);
-                }
-
-
-                if (thisChild.position.x < endPosition) {
-                    Destroy(thisChild.gameObject);
-                    Instantiate(asteroids[Random.Range(0, 5)], (otherChild.position + Vector3.right * resetPosition), new Quaternion(), this.transform);
-                }
->>>>>>> 6590b89a7c7500336969f76b77c80992fa8e519c
             }
         }
 	}

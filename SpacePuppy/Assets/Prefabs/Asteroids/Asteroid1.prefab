@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4598962375110844}
   - component: {fileID: 212505626902902542}
   - component: {fileID: 50232346018877438}
-  - component: {fileID: 60610914050938572}
+  - component: {fileID: 114729207490914036}
   - component: {fileID: 114380885730989112}
-  - component: {fileID: 114279781253633724}
+  - component: {fileID: 60610914050938572}
   m_Layer: 0
   m_Name: Asteroid1
   m_TagString: Asteroid
@@ -37,7 +37,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1500632204896304}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
@@ -125,17 +125,6 @@ PolygonCollider2D:
       - {x: 0.14, y: -1.035}
       - {x: 0.29999998, y: -1.005}
       - {x: 0.41, y: -0.98499995}
---- !u!114 &114279781253633724
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1500632204896304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 230b14f934aeaf84080bf3ee2482c256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114380885730989112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,9 +136,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885bca151880fc643b4afbd694c02b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 20544750027604142, guid: 3339fed5654e76e44a22f851f1a5ca55, type: 2}
-  speed: 0.4
+  speed: 2
   paused: 0
+--- !u!114 &114729207490914036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1500632204896304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4dcf54ab92e7c048aabb30131b9e49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 20544750027604142, guid: 3339fed5654e76e44a22f851f1a5ca55, type: 2}
 --- !u!212 &212505626902902542
 SpriteRenderer:
   m_ObjectHideFlags: 1
