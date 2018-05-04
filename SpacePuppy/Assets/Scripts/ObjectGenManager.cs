@@ -29,6 +29,23 @@ public class ObjectGenManager : MonoBehaviour {
         }
     }
 
+<<<<<<< HEAD
+=======
+    public void Pause () {
+        paused = true;
+        foreach (Transform child in transform) {
+                child.GetComponent<AsteroidMove>().paused = true;
+        }
+    }
+
+    public void Resume () {
+        paused = false;
+        foreach (Transform child in transform) {
+            child.GetComponent<AsteroidMove>().paused = false;
+        }
+    }
+
+>>>>>>> 6590b89a7c7500336969f76b77c80992fa8e519c
     private void SpawnObject () {
         int x = Random.Range(0, cam.pixelWidth);
         int y = Random.Range(0, cam.pixelHeight);

@@ -3,6 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pause : MonoBehaviour {
+<<<<<<< HEAD
+=======
+    public RotatingScript rot;
+    public CurvesGenSwitch curv1;
+    public BackgroundGenSwitch bg;
+    public Movement mov;
+    public ScreenDeath scr;
+    public ScoreManager scoreM;
+    public ObjectGenManager ogm; //ta bort
+>>>>>>> 6590b89a7c7500336969f76b77c80992fa8e519c
 
     public GameObject[] swipes;
 
@@ -29,6 +39,16 @@ public class Pause : MonoBehaviour {
     }
 
     private void PauseGame () {
+<<<<<<< HEAD
+=======
+        rot.paused = true;
+        curv1.Pause();
+        bg.paused = true;
+        mov.paused = true;
+        scr.paused = true;
+        scoreM.paused = true;
+        ogm.Pause();
+>>>>>>> 6590b89a7c7500336969f76b77c80992fa8e519c
         nextSwipe.SetActive(true);
         gameSpeed = 0f;
     }
@@ -41,6 +61,17 @@ public class Pause : MonoBehaviour {
 
     private void ContinueGame () {
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
+<<<<<<< HEAD
         gameSpeed = 1f;
+=======
+        rot.paused = false;
+        curv1.Resume();
+        bg.paused = false;
+        mov.paused = false;
+        scr.paused = false;
+        scoreM.paused = false;
+        ogm.Resume();
+        paused = false;
+>>>>>>> 6590b89a7c7500336969f76b77c80992fa8e519c
     }
 }
