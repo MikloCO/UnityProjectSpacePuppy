@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectGenManager : MonoBehaviour {
+public class ObjectGenManager : MonoBehaviour
+{
     public bool paused = false;
     public Camera cam;
     public Pause pause;
@@ -12,16 +13,20 @@ public class ObjectGenManager : MonoBehaviour {
     private float timer = 0f;
     private float timeUntilSpawn;
 
-    void Start () {
+    void Start()
+    {
         timeUntilSpawn = Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]);
         SpawnObject();
     }
 
 
-    void Update () {
-        if (!paused) {
+    void Update()
+    {
+        if (!paused)
+        {
             timer += Time.deltaTime;
-            if (timer > timeUntilSpawn) {
+            if (timer > timeUntilSpawn)
+            {
                 SpawnObject();
                 timer = 0f;
                 timeUntilSpawn = Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]);
@@ -29,21 +34,8 @@ public class ObjectGenManager : MonoBehaviour {
         }
     }
 
-    public void Pause () {
-        paused = true;
-        foreach (Transform child in transform) {
-            child.GetComponent<PlaceholderMove>().paused = true;
-        }
-    }
-
-    public void Resume () {
-        paused = false;
-        foreach (Transform child in transform) {
-            child.GetComponent<PlaceholderMove>().paused = false;
-        }
-    }
-
-    private void SpawnObject () {
+    private void SpawnObject()
+    {
         int x = Random.Range(0, cam.pixelWidth);
         int y = Random.Range(0, cam.pixelHeight);
 

@@ -3,35 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour {
+public class ScoreManager : MonoBehaviour
+{
 
-    public bool paused = false;
+    public Pause paus;
 
     public Text scoreText;
-	public Text hiScoreText;
+    public Text hiScoreText;
 
-	public float scoreCount;
-	public float hiScoreCount;
+    public float scoreCount;
+    public float hiScoreCount;
 
-	public float pointsPerSecond;
+    public float pointsPerSecond;
 
-	public bool scoreIncreasing;
+    public bool scoreIncreasing;
 
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (!paused) {
-            if (scoreIncreasing) {
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (paus)
+        {
+            if (scoreIncreasing)
+            {
                 scoreCount += pointsPerSecond * Time.deltaTime;
             }
 
             //Ersätt med detltatime
-            scoreCount += pointsPerSecond * Time.deltaTime;
+            scoreCount += pointsPerSecond * Time.deltaTime * paus.gameSpeed;
 
-            if (scoreCount > hiScoreCount) {
+            if (scoreCount > hiScoreCount)
+            {
                 hiScoreCount = scoreCount;
             }
 
@@ -39,5 +45,5 @@ public class ScoreManager : MonoBehaviour {
             scoreText.text = "Score: " + Mathf.Round(scoreCount);
             hiScoreText.text = "High Score: " + Mathf.Round(hiScoreCount);
         }
-	}
+    }
 }
