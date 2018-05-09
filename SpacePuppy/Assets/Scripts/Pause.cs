@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
 
+    public Transform swipeCountdown;
     public GameObject[] swipes;
 
     public float[] timeUntilSwipeInterval = { 10f, 15f };
