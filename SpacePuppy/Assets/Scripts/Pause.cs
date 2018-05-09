@@ -38,31 +38,31 @@ public class Pause : MonoBehaviour {
 
     private void Activate3 () {
         countdowns[0].SetActive(true);
-        Invoke("Activate2", 0.5f);
+        Invoke("Activate2", 1f);
     }
 
     private void Activate2 () {
         countdowns[0].SetActive(false);
         countdowns[1].SetActive(true);
-        Invoke("Activate1", 0.5f);
+        Invoke("Activate1", 1f);
     }
 
     private void Activate1 () {
         countdowns[1].SetActive(false);
         countdowns[2].SetActive(true);
-        Invoke("ActivateSwipe", 0.5f);
+        Invoke("ActivateSwipe", 1f);
     }
 
     private void ActivateSwipe () {
         countdowns[2].SetActive(false);
         countdowns[3].SetActive(true);
-        Invoke("PauseGame", 0.5f);
+        gameSpeed = 0.2f;
+        Invoke("PauseGame", 1f);
     }
 
     private void PauseGame () {
         countdowns[3].SetActive(false);
         nextSwipe.SetActive(true);
-        gameSpeed = 0.3f;
     }
 
     public void Resume () {

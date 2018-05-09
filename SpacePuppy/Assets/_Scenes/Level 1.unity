@@ -711,10 +711,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 680774958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac223d5c16655eb479968e4ffb276375, type: 3}
+  m_Script: {fileID: 11500000, guid: 230b14f934aeaf84080bf3ee2482c256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paused: 0
 --- !u!114 &680774966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
+  playerHealth: 3
   speed: 35
   ctrl: 0
 --- !u!1 &756198866
@@ -1231,7 +1231,7 @@ Prefab:
     - target: {fileID: 224773318694169024, guid: 9d80241f848bd8846adbacdc73acb8e0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 537
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 114685445217434410, guid: 9d80241f848bd8846adbacdc73acb8e0,
         type: 2}
@@ -1278,6 +1278,16 @@ Prefab:
       propertyPath: pause
       value: 
       objectReference: {fileID: 2117806932}
+    - target: {fileID: 224077316819199780, guid: 9d80241f848bd8846adbacdc73acb8e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224455926257456468, guid: 9d80241f848bd8846adbacdc73acb8e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114717423166898778, guid: 9d80241f848bd8846adbacdc73acb8e0, type: 2}
     - {fileID: 114233060611360490, guid: 9d80241f848bd8846adbacdc73acb8e0, type: 2}
@@ -1324,7 +1334,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1092586953131642, guid: 15476a14f22a66841bde11c244cdc99f, type: 2}
       propertyPath: m_TagString
-      value: KillZone
+      value: Curve
       objectReference: {fileID: 0}
     - target: {fileID: 60415548281214290, guid: 15476a14f22a66841bde11c244cdc99f,
         type: 2}
@@ -1402,7 +1412,7 @@ Prefab:
         type: 2}
       propertyPath: scr
       value: 
-      objectReference: {fileID: 680774965}
+      objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: curv1
@@ -1503,9 +1513,19 @@ Prefab:
       propertyPath: gameSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: swipeCountdown
+      value: 
+      objectReference: {fileID: 1682730262}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1682730262 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224077316819199780, guid: 9d80241f848bd8846adbacdc73acb8e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1564236552}
 --- !u!4 &1685714584 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4323460599115322, guid: e44a6693265ce7546b41ee22a51f235e,
@@ -5254,7 +5274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
-  cam: {fileID: 0}
   pause: {fileID: 0}
   objects: []
   timeBetweenSpawns:

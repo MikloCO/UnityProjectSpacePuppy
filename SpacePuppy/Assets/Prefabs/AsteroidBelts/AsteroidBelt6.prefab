@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212680376026518138}
   - component: {fileID: 60997039773504710}
   - component: {fileID: 60813360665418622}
-  - component: {fileID: 114337057903543304}
   m_Layer: 0
   m_Name: AsteroidBelt6
   m_TagString: Curve
@@ -148,17 +147,6 @@ PolygonCollider2D:
       - {x: 15.199532, y: -11.179243}
       - {x: 14.965157, y: -4.3720255}
       - {x: 14.697361, y: -4.3863897}
---- !u!114 &114337057903543304
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1937155210341060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 230b14f934aeaf84080bf3ee2482c256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212680376026518138
 SpriteRenderer:
   m_ObjectHideFlags: 1

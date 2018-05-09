@@ -5,7 +5,6 @@ using UnityEngine;
 public class ObjectGenManager : MonoBehaviour
 {
     public bool paused = false;
-    public Camera cam;
     public Pause pause;
     public GameObject[] objects;
     public float[] timeBetweenSpawns = { 4, 8 };
@@ -36,10 +35,10 @@ public class ObjectGenManager : MonoBehaviour
 
     private void SpawnObject()
     {
-        int x = Random.Range(0, cam.pixelWidth);
-        int y = Random.Range(0, cam.pixelHeight);
+        int x = Random.Range(0, Camera.main.pixelWidth);
+        int y = Random.Range(0, Camera.main.pixelHeight);
 
-        Vector3 position = cam.ScreenToWorldPoint(new Vector3(x, y, 0));
+        Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(x, y, 0));
         position.Set(position.x + 30f, position.y, 0);
         GameObject gO = objects[Random.Range(0, objects.Length)];
         Instantiate(gO, position, new Quaternion(), this.transform);

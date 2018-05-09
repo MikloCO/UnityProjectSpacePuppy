@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AsteroidMove : MonoBehaviour
 {
-    public Camera cam;
     public float speed = 2f;
 
     private SpriteRenderer sprite;
