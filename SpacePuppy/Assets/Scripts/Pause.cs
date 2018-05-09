@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pause : MonoBehaviour
-{
+public class Pause : MonoBehaviour {
 
     public Transform swipeCountdown;
     public GameObject[] swipes;
@@ -14,23 +13,29 @@ public class Pause : MonoBehaviour
     private float timer = 0f;
     private float timeUntilSwipe;
     private GameObject nextSwipe;
+    private List<Transform> countdowns;
 
-    void Start()
-    {
+    void Start () {
+        foreach (Transform child in swipeCountdown) {
+            countdowns.Add(child);
+        }
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         nextSwipe = swipes[Random.Range(0, swipes.Length)];
         gameSpeed = 1f;
         timer = 0f;
     }
 
-    void Update()
-    {
-        if (timer > timeUntilSwipe)
-        {
+    void Update () {
+        if (timer > timeUntilSwipe) {
             timer = 0;
+            activate3();
             PauseGame();
         }
         timer += Time.deltaTime * gameSpeed;
+    }
+
+    private void activate3(){
+
     }
 
     private void PauseGame()
