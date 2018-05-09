@@ -61,12 +61,12 @@ public class ScoreManager : MonoBehaviour {
 		LoadPlayerProgress ();
 		playerScore = 0;
 
-		if (PlayerPrefs.GetInt ("highscore") < myScore) {
-			PlayerPrefs.SetInt ("highscore", myScore);
-		}
+		//if (PlayerPrefs.GetInt ("highscore") < myScore) {
+		//	PlayerPrefs.SetInt ("highscore", myScore);
+		//}
 
 
-		mittTextGameObject.text = "Highscore är: " + PlayerPrefs.GetInt ("highscore");
+		//mittTextGameObject.text = "Highscore är: " + PlayerPrefs.GetInt ("highscore");
 
 
 
@@ -120,7 +120,7 @@ public class ScoreManager : MonoBehaviour {
 	private void SaveGameData() {
 
 		string filePath = Application.dataPath + gameDataProjectFilePath;
-		File.WriteAllText (filePath, dataAsJson);
+		//File.WriteAllText (filePath, dataAsJson);
 	}
 
 

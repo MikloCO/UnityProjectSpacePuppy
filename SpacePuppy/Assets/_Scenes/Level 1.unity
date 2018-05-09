@@ -235,7 +235,10 @@ MonoBehaviour:
   - {fileID: 1700727111154868, guid: f2a7f97ffa6abad40a51fd948f818b7f, type: 2}
   - {fileID: 1673595582304410, guid: 05af3ffae0fb7cc46a477f3156b376d2, type: 2}
   - {fileID: 1065796396603992, guid: b486ef8db2d7ec54e9144a7ad934923c, type: 2}
-  speed: 4
+  - {fileID: 1937155210341060, guid: 65f9b4c8a55374247b683ecda7ace3a0, type: 2}
+  - {fileID: 1488085289219764, guid: d1ea8afd21a5a8747afb2b69684b9cb8, type: 2}
+  - {fileID: 1216277158958622, guid: 4466bd033326e2f49944d4007918b18a, type: 2}
+  speed: 2
   endPosition: -30
   resetPosition: 30
 --- !u!1 &46984765
@@ -769,8 +772,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
-  asteroids: []
-  speed: 0.1
+  asteroids:
+  - {fileID: 6093230}
+  - {fileID: 598864432}
+  speed: 2
   endPosition: -30
   resetPosition: 30
 --- !u!1001 &971095418
@@ -1759,7 +1764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
-  speed: 3
+  speed: 1
 --- !u!1 &1924589874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +1896,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1252742264
+  randomSeed: 1940286458
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5249,15 +5254,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
-  cam: {fileID: 20544750027604142, guid: 3339fed5654e76e44a22f851f1a5ca55, type: 2}
-  pause: {fileID: 2117806932}
-  objects:
-  - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
-  - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
-  - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
-  - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
-  - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
+  cam: {fileID: 0}
+  pause: {fileID: 0}
+  objects: []
   timeBetweenSpawns:
   - 4
   - 8
