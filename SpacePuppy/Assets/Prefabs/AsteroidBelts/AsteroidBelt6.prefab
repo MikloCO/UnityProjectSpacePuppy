@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4127555693814772}
   - component: {fileID: 212680376026518138}
-  - component: {fileID: 114337057903543304}
   - component: {fileID: 60997039773504710}
   - component: {fileID: 60813360665418622}
+  - component: {fileID: 114337057903543304}
   m_Layer: 0
   m_Name: AsteroidBelt6
   m_TagString: Curve

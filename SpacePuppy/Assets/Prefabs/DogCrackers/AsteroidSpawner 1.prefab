@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212141245396890818}
   - component: {fileID: 114264476993659836}
   m_Layer: 0
-  m_Name: AsteroidSpawner
+  m_Name: AsteroidSpawner 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,12 +53,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroids:
-  - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
-  - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
-  - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
-  - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
-  - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
+  - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
+  - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
+  - {fileID: 1399155875016816, guid: 1cdf01ae2442a924aa89f6ac1b58e8b9, type: 2}
   chanceToSpawn: 50
 --- !u!212 &212141245396890818
 SpriteRenderer:
