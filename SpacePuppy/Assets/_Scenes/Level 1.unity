@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619acfbb746a34340b107fcdb84155d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paus: {fileID: 2117806932}
+  pause: {fileID: 2117806932}
   asteroids:
   - {fileID: 1092586953131642, guid: 15476a14f22a66841bde11c244cdc99f, type: 2}
   - {fileID: 1210856969931058, guid: e44a6693265ce7546b41ee22a51f235e, type: 2}
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac40865e39c1fb4fafc4a7e716a3d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paus: {fileID: 2117806932}
+  pause: {fileID: 2117806932}
   speed: 35
   ctrl: 0
 --- !u!1 &756198866
@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619acfbb746a34340b107fcdb84155d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paus: {fileID: 2117806932}
+  pause: {fileID: 2117806932}
   asteroids: []
   speed: 0.1
   endPosition: -30
@@ -1268,6 +1268,11 @@ Prefab:
       propertyPath: paus
       value: 
       objectReference: {fileID: 2117806932}
+    - target: {fileID: 114685445217434410, guid: 9d80241f848bd8846adbacdc73acb8e0,
+        type: 2}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 2117806932}
     m_RemovedComponents:
     - {fileID: 114717423166898778, guid: 9d80241f848bd8846adbacdc73acb8e0, type: 2}
     - {fileID: 114233060611360490, guid: 9d80241f848bd8846adbacdc73acb8e0, type: 2}
@@ -1679,7 +1684,7 @@ GameObject:
   - component: {fileID: 1923708250}
   - component: {fileID: 1923708251}
   m_Layer: 0
-  m_Name: ForGround
+  m_Name: ForeGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1753,7 +1758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fa22f0ff374bb48a8c8e82bb955467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paus: {fileID: 2117806932}
+  pause: {fileID: 2117806932}
   speed: 3
 --- !u!1 &1924589874
 GameObject:

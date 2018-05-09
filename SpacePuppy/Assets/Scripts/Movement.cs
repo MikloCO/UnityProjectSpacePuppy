@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     //public bool paused = false;
-    public Pause paus;
+    public Pause pause;
     public float speed = 2.0f;
 
     private float verticalDirection;
@@ -29,11 +29,11 @@ public class Movement : MonoBehaviour
             if (Input.mousePosition.x > Screen.width / 2)
             {
                 //transform.Translate(Vector3.up * speed * Time.deltaTime, Camera.main.transform);
-                rb2d.AddForce(Vector3.up * speed * paus.gameSpeed);
+                rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
             }
             else
             {
-                rb2d.AddForce(Vector3.down * speed * paus.gameSpeed);
+                rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
                 // transform.Translate(Vector3.down * speed * Time.deltaTime, Camera.main.transform);
             }
         }
@@ -42,15 +42,15 @@ public class Movement : MonoBehaviour
         {
             if (Input.mousePosition.y > Screen.height / 2)
             {
-                rb2d.AddForce(Vector3.up * speed * paus.gameSpeed);
+                rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
             }
             else
             {
-                rb2d.AddForce(Vector3.down * speed * paus.gameSpeed);
+                rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
             }
         }
 
-        rb2d.velocity = Vector3.Lerp(Vector3.zero, rb2d.velocity, paus.gameSpeed);
+        rb2d.velocity = Vector3.Lerp(Vector3.zero, rb2d.velocity, pause.gameSpeed);
 
     }
 

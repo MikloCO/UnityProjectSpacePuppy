@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
 
-    public Pause paus;
+    public Pause pause;
 
     public Text scoreText;
     public Text hiScoreText;
@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (paus)
+        if (pause)
         {
             if (scoreIncreasing)
             {
@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
             }
 
             //Ersätt med detltatime
-            scoreCount += pointsPerSecond * Time.deltaTime * paus.gameSpeed;
+            scoreCount += pointsPerSecond * Time.deltaTime * pause.gameSpeed;
 
             if (scoreCount > hiScoreCount)
             {
