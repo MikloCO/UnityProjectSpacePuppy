@@ -12,6 +12,7 @@ TagManager:
   - KillZone
   - Curve
   - Asteroid
+  - PlayerRespawnPoint
   layers:
   - Default
   - TransparentFX
