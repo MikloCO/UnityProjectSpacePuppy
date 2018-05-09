@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 6474928}
   - component: {fileID: 6474929}
   m_Layer: 0
-  m_Name: AstroidBelt
+  m_Name: AsteroidBelt
   m_TagString: KillZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5221,7 +5221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1973617310
 Transform:
   m_ObjectHideFlags: 0
