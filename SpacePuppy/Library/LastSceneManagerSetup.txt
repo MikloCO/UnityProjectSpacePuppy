@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/OLIVIASBANA.unity
+=======
+- path: Assets/_Scenes/Level 4.unity
+>>>>>>> 8c99dc97d972c6e9d6a5efca7cd71980f7daa9a5
   isLoaded: 1
   isActive: 1
