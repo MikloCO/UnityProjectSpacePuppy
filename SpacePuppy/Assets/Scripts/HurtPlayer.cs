@@ -8,6 +8,7 @@ public class HurtPlayer : MonoBehaviour {
 
     private float damageTimer = 0;
     private bool damaged = false;
+    public float respawnPosition;
 
     private void Start () {
         player = GetComponent<Movement>();
@@ -26,7 +27,9 @@ public class HurtPlayer : MonoBehaviour {
     void OnTriggerEnter2D (Collider2D other) {
         if (!damaged) {
             if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
-                transform.position = new Vector3(transform.position.x, 0f, 0f);
+                Debug.Log(respawnPosition);
+                transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
+
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 damaged = true;
                 player.playerHealth--;
