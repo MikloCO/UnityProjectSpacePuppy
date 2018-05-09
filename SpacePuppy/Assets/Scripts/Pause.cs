@@ -11,13 +11,14 @@ public class Pause : MonoBehaviour {
 
     public float gameSpeed = 0.0f;
     private float timer = 0f;
+    private bool swipeActive = false;
     private float timeUntilSwipe;
     private GameObject nextSwipe;
-    private List<Transform> countdowns;
+    private List<GameObject> countdowns = new List<GameObject>();
 
     void Start () {
         foreach (Transform child in swipeCountdown) {
-            countdowns.Add(child);
+            countdowns.Add(child.gameObject);
         }
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         nextSwipe = swipes[Random.Range(0, swipes.Length)];
@@ -26,33 +27,53 @@ public class Pause : MonoBehaviour {
     }
 
     void Update () {
-        if (timer > timeUntilSwipe) {
-            timer = 0;
-            activate3();
-            PauseGame();
+        if (!swipeActive) {
+            if (timer > timeUntilSwipe) {
+                Activate3();
+                swipeActive = true;
+            }
+            timer += Time.deltaTime * gameSpeed;
         }
-        timer += Time.deltaTime * gameSpeed;
     }
 
-    private void activate3(){
-
+    private void Activate3 () {
+        countdowns[0].SetActive(true);
+        Invoke("Activate2", 0.5f);
     }
 
-    private void PauseGame()
-    {
+    private void Activate2 () {
+        countdowns[0].SetActive(false);
+        countdowns[1].SetActive(true);
+        Invoke("Activate1", 0.5f);
+    }
+
+    private void Activate1 () {
+        countdowns[1].SetActive(false);
+        countdowns[2].SetActive(true);
+        Invoke("ActivateSwipe", 0.5f);
+    }
+
+    private void ActivateSwipe () {
+        countdowns[2].SetActive(false);
+        countdowns[3].SetActive(true);
+        Invoke("PauseGame", 0.5f);
+    }
+
+    private void PauseGame () {
+        countdowns[3].SetActive(false);
         nextSwipe.SetActive(true);
         gameSpeed = 0.3f;
     }
 
-    public void Resume()
-    {
+    public void Resume () {
+        timer = 0;
+        swipeActive = false;
         nextSwipe.SetActive(false);
         nextSwipe = swipes[Random.Range(0, swipes.Length)];
-        Invoke("ContinueGame", 1);
+        Invoke("ContinueGame", 1f);
     }
 
-    private void ContinueGame()
-    {
+    private void ContinueGame () {
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         gameSpeed = 1f;
     }

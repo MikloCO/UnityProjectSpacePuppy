@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
     //public bool paused = false;
     public Pause pause;
+    public int playerHealth = 3;
     public float speed = 2.0f;
 
     private float verticalDirection;
@@ -52,6 +54,9 @@ public class Movement : MonoBehaviour
 
         rb2d.velocity = Vector3.Lerp(Vector3.zero, rb2d.velocity, pause.gameSpeed);
 
+        if (playerHealth <= 0) {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
 
