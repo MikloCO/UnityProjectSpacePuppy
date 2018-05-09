@@ -1,0 +1,12 @@
+sceneSetups:
+<<<<<<< HEAD
+- path: Assets/_Scenes/Level 4.unity
+=======
+<<<<<<< HEAD
+- path: Assets/_Scenes/Level 2.unity
+=======
+- path: Assets/_Scenes/Ljud.unity
+>>>>>>> 95ac5c3c30a439c627f69b26afe5028846a16c21
+>>>>>>> cea98b2669cfe4a6aee0e9abdf7327880a8f593f
+  isLoaded: 1
+  isActive: 1
