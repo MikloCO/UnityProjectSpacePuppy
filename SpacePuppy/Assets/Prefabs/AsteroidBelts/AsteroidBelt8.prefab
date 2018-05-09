@@ -19,10 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4998223148797444}
-  - component: {fileID: 114185612986146672}
   - component: {fileID: 212057677297176994}
   - component: {fileID: 60157996902727492}
   - component: {fileID: 60109559344869414}
+  - component: {fileID: 114185612986146672}
   m_Layer: 0
   m_Name: AsteroidBelt8
   m_TagString: Curve
