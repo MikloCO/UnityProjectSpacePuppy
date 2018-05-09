@@ -795,7 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
   playerHealth: 3
-  speed: 35
+  speed: 25
   ctrl: 2
 --- !u!1 &756198866
 GameObject:
@@ -1344,12 +1344,12 @@ Prefab:
     - target: {fileID: 224077316819199780, guid: 9d80241f848bd8846adbacdc73acb8e0,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224455926257456468, guid: 9d80241f848bd8846adbacdc73acb8e0,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114717423166898778, guid: 9d80241f848bd8846adbacdc73acb8e0, type: 2}
@@ -1493,12 +1493,12 @@ Prefab:
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[0]
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[1]
-      value: 30
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
@@ -1982,7 +1982,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1940286458
+  randomSeed: 1548116876
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2134,7 +2134,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.02
+      scalar: 0.03
       minScalar: 0.01
       maxCurve:
         serializedVersion: 2

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 58239663938498256}
   m_Layer: 8
   m_Name: Respawn (11)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 58176251960005404}
   m_Layer: 8
   m_Name: Respawn (2)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 58194044087073572}
   m_Layer: 8
   m_Name: Respawn
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 58784225341420946}
   m_Layer: 8
   m_Name: Respawn (1)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 58805345542838774}
   m_Layer: 8
   m_Name: Respawn (4)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 58462661853375430}
   m_Layer: 8
   m_Name: Respawn (3)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 58784808350182442}
   m_Layer: 8
   m_Name: Respawn (10)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 58858608177035690}
   m_Layer: 8
   m_Name: Respawn (9)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 58822895343045360}
   m_Layer: 8
   m_Name: Respawn (6)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 58371747258064248}
   m_Layer: 8
   m_Name: Respawn (7)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 58383522344077858}
   m_Layer: 8
   m_Name: Respawn (13)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 58303811490429854}
   m_Layer: 8
   m_Name: Respawn (15)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 58669253408239894}
   m_Layer: 8
   m_Name: Respawn (14)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 58777674489445294}
   m_Layer: 8
   m_Name: Respawn (12)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 58750257965546458}
   m_Layer: 8
   m_Name: Respawn (8)
-  m_TagString: Untagged
+  m_TagString: PlayerRespawnPoint
   m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

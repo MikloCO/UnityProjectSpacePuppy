@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
         rb2d.AddForce(Vector3.up * speed * verticalDirection);
        // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime * verticalDirection, Camera.main.transform);
 
-        if (ctrl == ControllerType.HorizontalTouchRH && Input.GetMouseButton(0)) //sköld knappen på höger sida
+        if (ctrl == ControllerType.HorizontalTouchRH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0)) //sköld knappen på höger sida
         {
             if (Input.mousePosition.x > Screen.width / 2)
             {
@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if (ctrl == ControllerType.HorizontalTouchLH && Input.GetMouseButton(0)) //Sköld knappen på vänster sida
+        if (ctrl == ControllerType.HorizontalTouchLH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0)) //Sköld knappen på vänster sida
         {
             if (Input.mousePosition.x < Screen.width / 2)
             {
@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if (ctrl == ControllerType.VerticalTouchRH && Input.GetMouseButton(0))
+        if (ctrl == ControllerType.VerticalTouchRH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0))
         {
             if (Input.mousePosition.y > Screen.height / 2)
             {
@@ -65,7 +65,7 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if (ctrl == ControllerType.VerticalTouchLH && Input.GetMouseButton(0))
+        if (ctrl == ControllerType.VerticalTouchLH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0))
         {
             if (Input.mousePosition.y > Screen.height / 2)
             {
