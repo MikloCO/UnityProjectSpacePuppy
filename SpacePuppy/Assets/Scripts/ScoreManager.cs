@@ -61,6 +61,38 @@ public class ScoreManager : MonoBehaviour {
 		LoadPlayerProgress ();
 		playerScore = 0;
 
+		if (PlayerPrefs.GetInt ("highscore") < myScore) {
+			PlayerPrefs.SetInt ("highscore", myScore);
+		}
+
+
+		mittTextGameObject.text = "Highscore är: " + PlayerPrefs.GetInt ("highscore");
+
+
+
+
+
+
+
+//		int[] minaHighscores;
+//		for (int i = 0; i < 10; i++) {
+//		}
+//		minaHighscores [i] = PlayerPrefs.GetInt ("highscore" + i);
+
+
+
+//		PlayerPrefs.SetString ("highscore1", "David");
+//
+//
+//
+//		if(myScore > PlayerPrefs.GetInt("highscore1")
+//			PlayerPrefs.SetInt ("highscore1", myScore);
+//		
+//		int highestScore = PlayerPrefs.GetInt("highscore1");
+
+
+
+
 	}
 
 
@@ -82,12 +114,10 @@ public class ScoreManager : MonoBehaviour {
 			hiScoreText.text = "High Score: " + Mathf.Round (hiScoreCount);
 		}
 	}
-	// ***************************************************************//
+	// ***************************************************************\\
 
 
 	private void SaveGameData() {
-
-		string dataAsJson = JsonUtility.ToJson (gameData);
 
 		string filePath = Application.dataPath + gameDataProjectFilePath;
 		File.WriteAllText (filePath, dataAsJson);
