@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Options : MonoBehaviour {
 
-    public void ReturnMenu()
+   public void ReturnMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+       SceneManager.LoadScene("MainMenu");
+   }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
     }
 }
