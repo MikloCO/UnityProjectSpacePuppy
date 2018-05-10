@@ -2,30 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidMove : MonoBehaviour {
-    public Camera cam;
-	public float speed = 2f;
-    public bool paused = false;
-    
+public class AsteroidMove : MonoBehaviour
+{
+    public float speed = 2f;
 
-	// Use this for initialization
-	void Start () {
+    private SpriteRenderer sprite;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (!paused) {
-            transform.Translate(Vector3.left * speed * 2f * Time.deltaTime);
+    // Use this for initialization
+    void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (sprite.isVisible) {
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
-	}
-    void CameraSize () { //Inte klar
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = cam.pixelWidth;
-        int y2 = cam.pixelWidth;
-
-        Vector3 position = cam.ScreenToWorldPoint(new Vector3(x1, y1, 0));
-        position.Set(position.x + 30f, position.y, 0);
     }
 }

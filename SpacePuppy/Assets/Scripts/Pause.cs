@@ -3,67 +3,78 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pause : MonoBehaviour {
-    public RotatingScript rot;
-    public CurvesGenSwitch curv1;
-    public BackgroundGenSwitch bg;
-    public Movement mov;
-    public ScreenDeath scr;
-    public ScoreManager scoreM;
-    public ObjectGenManager ogm; //ta bort
 
+    public Transform swipeCountdown;
     public GameObject[] swipes;
 
     public float[] timeUntilSwipeInterval = { 10f, 15f };
 
-    private bool paused = false;
+    public float gameSpeed = 0.0f;
     private float timer = 0f;
+    private bool swipeActive = false;
     private float timeUntilSwipe;
     private GameObject nextSwipe;
+    private List<GameObject> countdowns = new List<GameObject>();
 
     void Start () {
+        foreach (Transform child in swipeCountdown) {
+            countdowns.Add(child.gameObject);
+        }
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         nextSwipe = swipes[Random.Range(0, swipes.Length)];
-        paused = false;
+        gameSpeed = 1f;
         timer = 0f;
     }
 
     void Update () {
-        if (!paused) {
+        if (!swipeActive) {
             if (timer > timeUntilSwipe) {
-                timer = 0;
-                PauseGame();
+                Activate3();
+                swipeActive = true;
             }
-            timer += Time.deltaTime;
+            timer += Time.deltaTime * gameSpeed;
         }
     }
 
+    private void Activate3 () {
+        countdowns[0].SetActive(true);
+        Invoke("Activate2", 1f);
+    }
+
+    private void Activate2 () {
+        countdowns[0].SetActive(false);
+        countdowns[1].SetActive(true);
+        Invoke("Activate1", 1f);
+    }
+
+    private void Activate1 () {
+        countdowns[1].SetActive(false);
+        countdowns[2].SetActive(true);
+        Invoke("ActivateSwipe", 1f);
+    }
+
+    private void ActivateSwipe () {
+        countdowns[2].SetActive(false);
+        countdowns[3].SetActive(true);
+        gameSpeed = 0.2f;
+        Invoke("PauseGame", 1f);
+    }
+
     private void PauseGame () {
-        rot.paused = true;
-        curv1.Pause();
-        bg.paused = true;
-        mov.paused = true;
-        scr.paused = true;
-        scoreM.paused = true;
-        ogm.Pause();
+        countdowns[3].SetActive(false);
         nextSwipe.SetActive(true);
-        paused = true;
     }
 
     public void Resume () {
+        timer = 0;
+        swipeActive = false;
         nextSwipe.SetActive(false);
         nextSwipe = swipes[Random.Range(0, swipes.Length)];
-        Invoke("ContinueGame", 1);
+        Invoke("ContinueGame", 1f);
     }
 
     private void ContinueGame () {
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
-        rot.paused = false;
-        curv1.Resume();
-        bg.paused = false;
-        mov.paused = false;
-        scr.paused = false;
-        scoreM.paused = false;
-        ogm.Resume();
-        paused = false;
+        gameSpeed = 1f;
     }
 }

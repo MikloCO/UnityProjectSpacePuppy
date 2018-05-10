@@ -7,20 +7,20 @@ public class SpawnAsteroid : MonoBehaviour {
     public GameObject[] asteroids;
     public float chanceToSpawn = 50F;
 
-	// Use this for initialization
-	void Start () {
-        float random = Random.Range(1F, 101F);
-        if(random >= chanceToSpawn) {
+    // Use this for initialization
+    void Start () {
+        float random = Random.Range(0F, 100F);
+        if (random < chanceToSpawn) {
             Spawn();
         }
         else {
             Destroy(gameObject);
         }
-	}
+    }
 
     private void Spawn () {
         Instantiate(asteroids[Random.Range(0, asteroids.Length)], transform);
         //Destroy(gameObject);
     }
-	
+
 }

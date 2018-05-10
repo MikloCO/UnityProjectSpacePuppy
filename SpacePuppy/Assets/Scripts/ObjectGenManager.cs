@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectGenManager : MonoBehaviour {
+public class ObjectGenManager : MonoBehaviour
+{
     public bool paused = false;
-    public Camera cam;
     public Pause pause;
     public GameObject[] objects;
     public float[] timeBetweenSpawns = { 4, 8 };
@@ -12,16 +12,20 @@ public class ObjectGenManager : MonoBehaviour {
     private float timer = 0f;
     private float timeUntilSpawn;
 
-    void Start () {
+    void Start()
+    {
         timeUntilSpawn = Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]);
         SpawnObject();
     }
 
 
-    void Update () {
-        if (!paused) {
+    void Update()
+    {
+        if (!paused)
+        {
             timer += Time.deltaTime;
-            if (timer > timeUntilSpawn) {
+            if (timer > timeUntilSpawn)
+            {
                 SpawnObject();
                 timer = 0f;
                 timeUntilSpawn = Random.Range(timeBetweenSpawns[0], timeBetweenSpawns[1]);
@@ -29,25 +33,12 @@ public class ObjectGenManager : MonoBehaviour {
         }
     }
 
-    public void Pause () {
-        paused = true;
-        foreach (Transform child in transform) {
-                child.GetComponent<AsteroidMove>().paused = true;
-        }
-    }
+    private void SpawnObject()
+    {
+        int x = Random.Range(0, Camera.main.pixelWidth);
+        int y = Random.Range(0, Camera.main.pixelHeight);
 
-    public void Resume () {
-        paused = false;
-        foreach (Transform child in transform) {
-            child.GetComponent<AsteroidMove>().paused = false;
-        }
-    }
-
-    private void SpawnObject () {
-        int x = Random.Range(0, cam.pixelWidth);
-        int y = Random.Range(0, cam.pixelHeight);
-
-        Vector3 position = cam.ScreenToWorldPoint(new Vector3(x, y, 0));
+        Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(x, y, 0));
         position.Set(position.x + 30f, position.y, 0);
         GameObject gO = objects[Random.Range(0, objects.Length)];
         Instantiate(gO, position, new Quaternion(), this.transform);

@@ -12,6 +12,8 @@ TagManager:
   - KillZone
   - Curve
   - Asteroid
+  - PlayerRespawnPoint
+  - DogCrackers
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - RespawnTriggers
   - 
   - 
   - 
@@ -54,4 +56,7 @@ TagManager:
     locked: 0
   - name: Line
     uniqueID: 2366105527
+    locked: 0
+  - name: 6
+    uniqueID: 1713725559
     locked: 0
