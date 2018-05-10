@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:SpacePuppy/Assets/Sprites/TheRealDeal/Pug/Idle/Idle2.png.meta
+guid: 67e81e0f368454948b4ce14ccb932bfc
+timeCreated: 1525441483
+licenseType: Free
+=======
 guid: 0c46ce8f03558924a93b14c5977f1ff3
 timeCreated: 1510130252
 licenseType: Pro
+>>>>>>> 2265a6f1c9d87828925d9909b97c78c1a2f4ae8d:SpacePuppy/Assets/Materials/ParticleFXMaterials/DouDouUi/Texture/Anim7_Electricity 1.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 4

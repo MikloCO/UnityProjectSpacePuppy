@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:SpacePuppy/Assets/Sprites/TheRealDeal/Pug/Idle/Idle1.png.meta
+guid: b42812be872712847a441a131f81c24c
+timeCreated: 1525441484
+licenseType: Free
+=======
 guid: 97b0f924f71eb934abbf606b2dc94275
 timeCreated: 18446744011573954816
+>>>>>>> 2265a6f1c9d87828925d9909b97c78c1a2f4ae8d:SpacePuppy/Assets/Materials/ParticleFXMaterials/FX_Kandol_Pack/FX_effect_sprite_image01/FX_fire_effects_free/Textures/fx_fire/fx_fire_g.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 4

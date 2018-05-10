@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:SpacePuppy/Assets/Sprites/TheRealDeal/Pug/Idle/Idle4.png.meta
+guid: ab6ba67db3f83ad48abbc8433dac3f0b
+timeCreated: 1525441484
+=======
 guid: 497f94d7f027ec84683fde3e8b6f8291
 timeCreated: 1525719500
+>>>>>>> 2265a6f1c9d87828925d9909b97c78c1a2f4ae8d:SpacePuppy/Assets/Sprites/TheRealDeal/asteroids_f10.png.meta
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
