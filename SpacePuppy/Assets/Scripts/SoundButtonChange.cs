@@ -5,7 +5,17 @@ using UnityEngine.UI;
 
 public class SoundButtonChange : MonoBehaviour {
 
-    public Button currentButton;
+
+    /*
+    public Sprite soundOnSprite;
+    public Sprite soundOffSprite;
+
+    public Button soundButton;
+
+    private bool soundOn = false;
+    private SpriteRenderer spr;
+
+   public Button currentButton;
     public Sprite musicOff;
     public Sprite musicOn;
     bool buttonPressed = false;
@@ -15,17 +25,33 @@ public class SoundButtonChange : MonoBehaviour {
 
     void Start () {
 
+        spr = GetComponent<SpriteRenderer>();
+        soundButton = GetComponent<Button>();
+
+        spr.sprite = soundOnSprite;
+
         musicOn = GetComponent<Sprite>();
         musicOff = GetComponent<Sprite>();
-		
-	}
+
+    }
 	
 	
 	void Update () {
-        
-        if(buttonPressed == true)
-        {
 
+        soundButton.onClick.ChangeSprite();
+
+    }
+
+    public void ChangeSprite()
+    {
+        if(spr.sprite == soundOnSprite)
+        {
+            spr.sprite = soundOffSprite;
+        }
+        else
+        {
+            spr.sprite = soundOnSprite;
         }
     }
+    */
 }
