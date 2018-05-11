@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     //public bool paused = false;
     public Pause pause;
+	public ScoreManager scoreManager;
     public int playerHealth = 3;
     public float speed = 2.0f;
 
@@ -83,6 +84,7 @@ public class Movement : MonoBehaviour
 
         if (playerHealth <= 0)
         {
+			scoreManager.scoreVsHighScore();
             SceneManager.LoadScene("MainMenu");
         }
     }
