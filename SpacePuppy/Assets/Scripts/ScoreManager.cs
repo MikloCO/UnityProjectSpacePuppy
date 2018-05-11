@@ -6,17 +6,14 @@ using System.IO;
 
 public class ScoreManager : MonoBehaviour {
 	//Alla texter och floats och bools e deklaraerade nedan
+
+	public Pause pause;
 	public bool paused = false;
 	public Text scoreText;
 	public Text hiScoreText;
 	public float scoreCount;
-	public float hiScoreCount;
-	public float pointsPerSecond;
-	private int playerScore;
-	public int highestScore = 0;
-    public Text highScoreText;
-    public int myScore;
-    public float speed;
+	public int hiScoreCount;
+	public int pointsPerSecond;
 
 	
 
@@ -25,27 +22,11 @@ public class ScoreManager : MonoBehaviour {
 
 	public void scoreVsHighScore()
     {
-
-		if (PlayerPrefs.GetInt ("highscore") > playerScore) {
-			PlayerPrefs.SetInt ("highscore", playerScore);
+		Debug.Log (scoreCount);
+		if (PlayerPrefs.GetInt ("highscore") < (int)scoreCount) {
+			PlayerPrefs.SetInt ("highscore", (int)scoreCount);
 		}
-
-
-		highScoreText.text = "Highscore är: " + PlayerPrefs.GetInt ("highscore");
-        storeTopTenHighScore();
-
-    }
-
-    public void isPlayerDead()
-    {
-        //Om spelaren är i spelläget (inte swipen), och hastigheten är 0 eller mindre: gör jämföringen scoreVsHighScore
-        if (GameObject.FindWithTag("Player").Equals(speed == 0))
-        {
-
-            scoreVsHighScore();
-        }
-        else
-            return;
+        //storeTopTenHighScore();
 
     }
 
@@ -59,10 +40,15 @@ public class ScoreManager : MonoBehaviour {
 
 
 	void Start () {
+		Debug.Log(PlayerPrefs.GetInt("highscore"));
 		DontDestroyOnLoad (gameObject);
+		scoreVsHighScore();
 		//LoadGameData ();
 		//LoadPlayerProgress ();
-		playerScore = 0;
+		scoreCount = 0;
+		hiScoreCount = PlayerPrefs.GetInt ("highscore");
+		hiScoreText.text = "High Score: " + Mathf.Round (hiScoreCount);
+
 
         //Gör kod som visar högsta highscore som funnts, och den börjar inte räkna upp förens man nått den
 
@@ -73,14 +59,11 @@ public class ScoreManager : MonoBehaviour {
 		if (!paused) {
 			
 			//Ersätt med detltatime
-			scoreCount += pointsPerSecond * Time.deltaTime; //ändra t gamespeed
+			scoreCount += pointsPerSecond * Time.deltaTime * pause.gameSpeed; //ändra t gamespeed
 
             // John vill add crack 
 
 			scoreText.text = "Score: " + Mathf.Round (scoreCount);
-			hiScoreText.text = "High Score: " + Mathf.Round (hiScoreCount);
-
-            isPlayerDead();
 
             //När man dör så kollar den om highscore än större än score. Om ja: lagra nytt highScore.
 		}
