@@ -12,48 +12,51 @@ public class ScoreManager : MonoBehaviour {
 	public float scoreCount;
 	public float hiScoreCount;
 	public float pointsPerSecond;
-	public bool scoreIncreasing;
 	private int playerScore;
 	public int highestScore = 0;
+    public Text highScoreText;
+    public int myScore;
+    public float speed;
 
-	//Nedan är array, spelobjektet playerProgress och GameData
-
-	private GameObject playerProgress;
-
-
-	private string gameDataFileName = "data.json";
-
-	//Första metoden, hämta float datan
+	
 
 
-	public void SubmitNewPlayerScore(int newScore) {
-		//	if(newScore &guiText, PlayerProgress()) {
-		//		newScore = PlayerProgress(); //Kan inte göra left hand operations
+    // ******************************* OLIVIAS IDE TILL EN LÖSNING *******************************************************************************
 
-		//}
-	}
-	//	public int GetHighestPlayerScore() {
-	/*		if (scoreText > hiScoreText) < kan ej appliceras på text. Får göra om till int eller nåt
-		{
-			SaveGameData(); 
+	public void scoreVsHighScore()
+    {
+
+		if (PlayerPrefs.GetInt ("highscore") > playerScore) {
+			PlayerPrefs.SetInt ("highscore", playerScore);
 		}
-		return PlayerProgress(); */
 
-	//	} Måste returnera s#it
 
-	private void LoadPlayerProgress() {
-		//	playerProgress = new PlayerProgress();
+		highScoreText.text = "Highscore är: " + PlayerPrefs.GetInt ("highscore");
+        storeTopTenHighScore();
 
-		if(PlayerPrefs.HasKey("highestScore")) {
-			// 					PlayerProgress() = PlayerPrefs.GetInt("highestScore"); --left hand side assigment not allowed
-		}
-	}
-	private void SavePlayerProgress() {
-		//		PlayerPrefs.SetInt("highestScore", PlayerProgress()); --invalid metod
-	}
+    }
 
-	// **************************************************************//
+    public void isPlayerDead()
+    {
+        //Om spelaren är i spelläget (inte swipen), och hastigheten är 0 eller mindre: gör jämföringen scoreVsHighScore
+        if (GameObject.FindWithTag("Player").Equals(speed == 0))
+        {
+
+            scoreVsHighScore();
+        }
+        else
+            return;
+
+    }
+
+    public void storeTopTenHighScore()
+    {
+
+    }
+    //*********************** OLIVIAS IDE TILL EN LÖSNING ***********************************************************************************
+    // **************************************************************//
 	/* START OCH UPDATE */
+
 
 	void Start () {
 		DontDestroyOnLoad (gameObject);
@@ -61,82 +64,29 @@ public class ScoreManager : MonoBehaviour {
 		LoadPlayerProgress ();
 		playerScore = 0;
 
-		//if (PlayerPrefs.GetInt ("highscore") < myScore) {
-		//	PlayerPrefs.SetInt ("highscore", myScore);
-		//}
+        //Gör kod som visar högsta highscore som funnts, och den börjar inte räkna upp förens man nått den
 
-
-		//mittTextGameObject.text = "Highscore är: " + PlayerPrefs.GetInt ("highscore");
-
-
-
-
-
-
-
-//		int[] minaHighscores;
-//		for (int i = 0; i < 10; i++) {
-//		}
-//		minaHighscores [i] = PlayerPrefs.GetInt ("highscore" + i);
-
-
-
-//		PlayerPrefs.SetString ("highscore1", "David");
-//
-//
-//
-//		if(myScore > PlayerPrefs.GetInt("highscore1")
-//			PlayerPrefs.SetInt ("highscore1", myScore);
-//		
-//		int highestScore = PlayerPrefs.GetInt("highscore1");
-
-
-
-
-	}
+        }
 
 
 	void Update () {
 		if (!paused) {
-			if (scoreIncreasing) {
-				scoreCount += pointsPerSecond * Time.deltaTime;
-			}
-
+			
 			//Ersätt med detltatime
-			scoreCount += pointsPerSecond * Time.deltaTime;
+			scoreCount += pointsPerSecond * Time.deltaTime; //ändra t gamespeed
 
-			if (scoreCount > hiScoreCount) {
-				hiScoreCount = scoreCount;
-			}
-
+            // John vill add crack 
 
 			scoreText.text = "Score: " + Mathf.Round (scoreCount);
 			hiScoreText.text = "High Score: " + Mathf.Round (hiScoreCount);
+
+            isPlayerDead();
+
+            //När man dör så kollar den om highscore än större än score. Om ja: lagra nytt highScore.
 		}
 	}
-	// ***************************************************************\\
+	
 
 
-	private void SaveGameData() {
-
-		string filePath = Application.dataPath + gameDataProjectFilePath;
-		//File.WriteAllText (filePath, dataAsJson);
-	}
-
-
-	private void LoadGameData()
-	{
-		string filePath = Application.dataPath + gameDataProjectFilePath;
-
-		if (File.Exists (filePath)) {
-			string dataAsJson = File.ReadAllText (filePath);
-			// 				gameData = JsonUtility.FromJson (dataAsJson); -cannot be inferred fr usage
-		} 
-		}
-
-	private string gameDataProjectFilePath = "/StreamingAssets/data.json";
-
-	private void PlayerProgress() {
-		//				return highestScore; Return keyword w expression needed
-	}
+	
 }
