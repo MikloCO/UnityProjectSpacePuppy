@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
-  scoreManager: {fileID: 0}
+  scoreManager: {fileID: 1343278413}
   playerHealth: 3
   speed: 25
   ctrl: 2
@@ -1626,7 +1626,8 @@ Prefab:
       propertyPath: particles
       value: 
       objectReference: {fileID: 1752133667}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 120622175205262234, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &971095419 stripped
