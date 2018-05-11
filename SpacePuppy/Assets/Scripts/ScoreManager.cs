@@ -60,8 +60,8 @@ public class ScoreManager : MonoBehaviour {
 
 	void Start () {
 		DontDestroyOnLoad (gameObject);
-		LoadGameData ();
-		LoadPlayerProgress ();
+		//LoadGameData ();
+		//LoadPlayerProgress ();
 		playerScore = 0;
 
         //Gör kod som visar högsta highscore som funnts, och den börjar inte räkna upp förens man nått den

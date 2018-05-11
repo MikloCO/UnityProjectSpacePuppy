@@ -5,7 +5,7 @@ using UnityEngine;
 public class AsteroidMove : MonoBehaviour
 {
     public float speed = 2f;
-
+    public Pause pause;
     private SpriteRenderer sprite;
 
     // Use this for initialization
@@ -17,7 +17,7 @@ public class AsteroidMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sprite.isVisible) {
+        if (sprite.isVisible && pause.gameSpeed < 1f) {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
     }

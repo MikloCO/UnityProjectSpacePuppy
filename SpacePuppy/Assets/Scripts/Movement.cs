@@ -76,7 +76,9 @@ public class Movement : MonoBehaviour
                 rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
             }
         }
-
+        if(pause.gameSpeed < 1f) {
+            rb2d.velocity = new Vector2(0,0);
+        }
         //rb2d.velocity = Vector3.Lerp(Vector3.zero, rb2d.velocity, pause.gameSpeed);
 
         if (playerHealth <= 0)

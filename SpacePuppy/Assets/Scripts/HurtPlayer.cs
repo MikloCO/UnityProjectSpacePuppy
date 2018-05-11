@@ -27,13 +27,13 @@ public class HurtPlayer : MonoBehaviour {
     void OnTriggerEnter2D (Collider2D other) {
         if (!damaged) {
             if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
-                Debug.Log(respawnPosition);
+                //Debug.Log(respawnPosition);
                 transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
 
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 damaged = true;
                 player.playerHealth--;
-                Debug.Log(player.playerHealth);
+                //Debug.Log(player.playerHealth);
             }
             
         }

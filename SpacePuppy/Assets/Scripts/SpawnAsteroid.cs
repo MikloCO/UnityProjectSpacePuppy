@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnAsteroid : MonoBehaviour {
 
+    public Pause pause;
     public GameObject[] asteroids;
     public float chanceToSpawn = 50F;
 
@@ -20,7 +21,6 @@ public class SpawnAsteroid : MonoBehaviour {
 
     private void Spawn () {
         Instantiate(asteroids[Random.Range(0, asteroids.Length)], transform);
-        //Destroy(gameObject);
     }
 
 }
