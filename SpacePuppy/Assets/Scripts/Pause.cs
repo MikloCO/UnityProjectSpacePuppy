@@ -6,6 +6,7 @@ public class Pause : MonoBehaviour {
 
     public Transform swipeCountdown;
     public GameObject[] swipes;
+    public GameObject pauseMenu;
 
     public float[] timeUntilSwipeInterval = { 10f, 15f };
 
@@ -63,6 +64,11 @@ public class Pause : MonoBehaviour {
     private void PauseGame () {
         countdowns[3].SetActive(false);
         nextSwipe.SetActive(true);
+    }
+
+    public void ActualPause () {
+        gameSpeed = 0f;
+        pauseMenu.SetActive(true);
     }
 
     public void Resume () {
