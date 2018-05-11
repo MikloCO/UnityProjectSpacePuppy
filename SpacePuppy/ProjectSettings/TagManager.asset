@@ -13,7 +13,7 @@ TagManager:
   - Curve
   - Asteroid
   - PlayerRespawnPoint
-  - DogCrackers
+  - DogCracker
   layers:
   - Default
   - TransparentFX
