@@ -753,6 +753,7 @@ GameObject:
   - component: {fileID: 680774962}
   - component: {fileID: 680774966}
   - component: {fileID: 680774965}
+  - component: {fileID: 680774968}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -916,6 +917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPosition: 0
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!114 &680774966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,9 +930,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
+  scoreManager: {fileID: 1343278413}
   playerHealth: 3
   speed: 25
   ctrl: 2
+--- !u!81 &680774968
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680774958}
+  m_Enabled: 1
 --- !u!1 &687196371
 GameObject:
   m_ObjectHideFlags: 0

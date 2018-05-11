@@ -10,12 +10,15 @@ public class Movement : MonoBehaviour
 	public ScoreManager scoreManager;
     public int playerHealth = 3;
     public float speed = 2.0f;
+    //bool isDead = false;
+    //public AudioClip deathClip;
 
     private float verticalDirection;
     private Rigidbody2D rb2d;
 
     public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouchRH, VerticalTouchLH };
     public ControllerType ctrl;
+   // AudioSource playerAudio;
 
     void Start()
     {
@@ -24,6 +27,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(playerHealth);
         verticalDirection = Input.GetAxis("Vertical");
         rb2d.AddForce(Vector3.up * speed * verticalDirection);
        // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime * verticalDirection, Camera.main.transform);
@@ -85,7 +89,18 @@ public class Movement : MonoBehaviour
         if (playerHealth <= 0)
         {
 			scoreManager.scoreVsHighScore();
+            //Death();
             SceneManager.LoadScene("MainMenu");
         }
+
     }
+
+   //void Death()
+   // {
+   //     isDead = true;
+   //     playerAudio.clip = deathClip;
+   //     playerAudio.Play();
+
+   // }
+
 }
