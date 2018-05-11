@@ -620,7 +620,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swipeCountdown: {fileID: 0}
   swipes: []
-  pauseMenu: {fileID: 233663758}
   timeUntilSwipeInterval:
   - 10
   - 15
@@ -636,6 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f83bba25b5e4948a3dbb6de0362167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pause: {fileID: 0}
 --- !u!224 &233663761
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1148,6 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f83bba25b5e4948a3dbb6de0362167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pause: {fileID: 0}
 --- !u!1 &680774958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
+  scoreManager: {fileID: 1343278413}
   playerHealth: 3
   speed: 25
   ctrl: 2
@@ -1380,13 +1382,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 756198866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 619acfbb746a34340b107fcdb84155d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 563ae201fc4d6894bbf5548036cea4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
-  asteroids:
-  - {fileID: 6093230}
-  - {fileID: 598864432}
   speed: 2
   endPosition: -30
   resetPosition: 30
@@ -9064,7 +9063,7 @@ Prefab:
         type: 2}
       propertyPath: curv2
       value: 
-      objectReference: {fileID: 756198868}
+      objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: rot
