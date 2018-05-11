@@ -23,40 +23,46 @@ public class DrawLine : MonoBehaviour {
 
     public bool perfect = true;
 
+	public GameObject particles;
+
     private void Start () {
 
     }
+	void Update () {
+		if (Input.GetMouseButtonDown(0)) {
+			mousePressed = true;
+			//RemoveLine();
+		}
 
-    void Update () {
-        if (Input.GetMouseButtonDown(0)) {
-            mousePressed = true;
-            RemoveLine();
-        }
+		if (mousePressed) {
+			drawTimer += Time.deltaTime;
+			if(!start) {
+				perfect = false;
+			}
+			drawing = true;
+			mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			mousePosition.z = -1.3f;
 
-        if (mousePressed) {
-            drawTimer += Time.deltaTime;
-            if(!start) {
-                perfect = false;
-            }
-            drawing = true;
-            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0;
-            if (!vertexList.Contains(mousePosition)) {
-                vertexList.Add(mousePosition);
-                lineRenderer.positionCount = vertexList.Count;
-                lineRenderer.SetPosition(vertexList.Count - 1, vertexList[vertexList.Count - 1]);
-                lineCollider.transform.position = vertexList[vertexList.Count - 1];
-            }
-        }
+			particles.SetActive(true);
+			particles.transform.position = mousePosition;
+			//if (!vertexList.Contains(mousePosition)) {
+			//    vertexList.Add(mousePosition);
+			//    lineRenderer.positionCount = vertexList.Count;
+			//    lineRenderer.SetPosition(vertexList.Count - 1, vertexList[vertexList.Count - 1]);
+			//    lineCollider.transform.position = vertexList[vertexList.Count - 1];
+			//}
+		}
 
-        if (Input.GetMouseButtonUp(0)) {
-            if(drawTimer >= timeToDraw) {
-                Finish();
-            }
-            mousePressed = false;
-            drawTimer = 0;
-        }
+		if (Input.GetMouseButtonUp(0)) {
+			if(drawTimer >= timeToDraw) {
+				particles.SetActive(false);
+				//Finish();
+			}
+			mousePressed = false;
+			drawTimer = 0;
+		}
 	}
+
 
     public void SquiggleCollideBig (){
         mousePressed = false;

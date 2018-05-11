@@ -57,15 +57,12 @@ public class ScoreManager : MonoBehaviour {
 
 	void Update () {
 		if (!paused) {
-			
-			//Ersätt med detltatime
-			scoreCount += pointsPerSecond * Time.deltaTime * pause.gameSpeed; //ändra t gamespeed
+			scoreCount += pointsPerSecond * Time.deltaTime * pause.gameSpeed;
 
             // John vill add crack 
 
 			scoreText.text = "Score: " + Mathf.Round (scoreCount);
 
-            //När man dör så kollar den om highscore än större än score. Om ja: lagra nytt highScore.
 		}
 	}
 	
