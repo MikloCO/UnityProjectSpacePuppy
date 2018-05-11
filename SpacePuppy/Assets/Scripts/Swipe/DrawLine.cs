@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DrawLine : MonoBehaviour {
-
-    public LineRenderer lineRenderer;
+    
     public CircleCollider2D lineCollider;
     public SwipeController swipeController;
     public Pause pause;
@@ -31,7 +30,6 @@ public class DrawLine : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) {
 			mousePressed = true;
-			//RemoveLine();
 		}
 
 		if (mousePressed) {
@@ -45,18 +43,11 @@ public class DrawLine : MonoBehaviour {
 
 			particles.SetActive(true);
 			particles.transform.position = mousePosition;
-			//if (!vertexList.Contains(mousePosition)) {
-			//    vertexList.Add(mousePosition);
-			//    lineRenderer.positionCount = vertexList.Count;
-			//    lineRenderer.SetPosition(vertexList.Count - 1, vertexList[vertexList.Count - 1]);
-			//    lineCollider.transform.position = vertexList[vertexList.Count - 1];
-			//}
 		}
 
 		if (Input.GetMouseButtonUp(0)) {
 			if(drawTimer >= timeToDraw) {
-				particles.SetActive(false);
-				//Finish();
+				Finish();
 			}
 			mousePressed = false;
 			drawTimer = 0;
@@ -68,7 +59,7 @@ public class DrawLine : MonoBehaviour {
         mousePressed = false;
         start = false;
         drawing = false;
-        RemoveLine();
+        particles.SetActive(false);
     }
 
     public void SquiggleCollideSmall () {
@@ -81,17 +72,12 @@ public class DrawLine : MonoBehaviour {
         }
         start = false;
         drawing = false;
-        RemoveLine();
+        particles.SetActive(false);
 
         pause.Resume();
     }
 
     private void NextLevel () {
         swipeController.NextLevel();
-    }
-
-    private void RemoveLine () {
-        lineRenderer.positionCount = 0;
-        vertexList.RemoveRange(0, vertexList.Count);
     }
 }
