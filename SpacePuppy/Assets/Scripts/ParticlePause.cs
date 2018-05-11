@@ -8,13 +8,12 @@ public class ParticlePause : MonoBehaviour {
 
     private bool paused = false;
 
-	// Update is called once per frame
 	void Update () {
-        if (pause.gameSpeed == 0 && !paused){
+        if (pause.gameSpeed < 0.3 && !paused){
             GetComponent<ParticleSystem>().Pause();
             paused = true;
         }
-        if (pause.gameSpeed != 0 && paused) {
+        if (pause.gameSpeed > 0.3 && paused) {
             GetComponent<ParticleSystem>().Play();
             paused = false;
         }
