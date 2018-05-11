@@ -4,23 +4,17 @@ using UnityEngine;
 
 public class ClickBurst : MonoBehaviour {
 
-    /*   GameObject gO;
-       GameObject mousePos; */
+    public GameObject clickBurst;
 
-    public ParticleSystem clickBurst;
-    
-    
+    private Vector3 mousePos;
+    private Vector3 worldPos;
 
-	// Use this for initialization
-	void Start () {
-
-        clickBurst.gameObject.SetActive(false);
+    private GameObject particles;
 
 
+    void Start () {
 
-
-
-
+        //mousePos = Input.mousePosition.x + Input.mousePosition.y;
 
         //        GetComponent<ParticleSystem>().emissionRate = 0;
 
@@ -29,33 +23,20 @@ public class ClickBurst : MonoBehaviour {
 
     } 
 	
-	// Update is called once per frame
 	void Update () {
 
-       if (Input.GetMouseButtonDown(0))
+       if (Input.GetMouseButton(0))
         {
-            //pS.emissionRate = 10;
-                clickBurst.gameObject.SetActive(true);
+            mousePos = Input.mousePosition;
+            mousePos.z = 2;
 
-            Invoke("setFalse", 1f);
+            worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+            particles = (GameObject)Instantiate(clickBurst, worldPos, Quaternion.identity);
+
+            Destroy(particles, 2f);
         }
 
-
-
- //       if(pS.enableEmission && Input.getMouseButton(0))
-
- //       if (Input.GetMouseButton(0))
-   //     {
-    //        GetComponent<ParticleSystem>().Emit(10);
-     //   }
 		
 	}
-
-    void setFalse()
-    {
-        if (clickBurst.gameObject.active)
-        {
-            clickBurst.gameObject.SetActive(false);
-        }
-    }
 }

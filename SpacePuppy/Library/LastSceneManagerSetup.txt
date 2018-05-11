@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/_Scenes/ParticleMainMenu.unity
+=======
 - path: "Assets/_Scenes/M\xC4RTAS.unity"
+>>>>>>> cb5507fe05f5dab7388975abd0efa19aa7e35c0b
   isLoaded: 1
   isActive: 1

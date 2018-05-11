@@ -6,22 +6,22 @@ using UnityEngine;
 
 public class PickUpPoints : MonoBehaviour {
 
-	public int scoreToGive;
+	public int scoreToGive = 20;
 
-	private ScoreManager theScoreManager;
+	private ScoreManager scoreManager;
 
 	void Start () {
-		theScoreManager = FindObjectOfType<ScoreManager> ();		
+		scoreManager = FindObjectOfType<ScoreManager> ();		
 	}
 	
 	void Update () {
 		
 	}
 	void OnTriggerEnter2D(Collider2D other) {
-	//Döp hunden i hierarkin till Player
-		if (other.gameObject.name == "Player") 
+		if (other.CompareTag("DogCracker")) 
 		{	//takes current points and adds the dogbones bonus points. 
-			theScoreManager.scoreCount += scoreToGive;
+			scoreManager.scoreCount += scoreToGive;
+			Destroy (other.gameObject);
 		}
 	}
 }
