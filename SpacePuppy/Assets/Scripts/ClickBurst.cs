@@ -34,7 +34,7 @@ public class ClickBurst : MonoBehaviour {
 
             particles = (GameObject)Instantiate(clickBurst, worldPos, Quaternion.identity);
 
-            Destroy(particles, 2f);
+            Destroy(particles, .5f);
         }
 
 		
