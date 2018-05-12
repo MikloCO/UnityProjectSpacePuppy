@@ -14,6 +14,7 @@ TagManager:
   - Asteroid
   - PlayerRespawnPoint
   - DogCracker
+  - CD
   layers:
   - Default
   - TransparentFX
