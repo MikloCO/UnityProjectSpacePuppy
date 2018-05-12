@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4607340812737380}
   - component: {fileID: 212799794646366280}
   - component: {fileID: 60788718410002522}
+  - component: {fileID: 95800998370117204}
   m_Layer: 0
   m_Name: DogCrackersGreen
   m_TagString: DogCracker
@@ -107,6 +108,23 @@ PolygonCollider2D:
       - {x: 0.07, y: 0.024999999}
       - {x: 0.049999997, y: -0.035}
       - {x: 0, y: -0.044999998}
+--- !u!95 &95800998370117204
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399155875016816}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a963e5393c199d54bb354057fb6a2111, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212799794646366280
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -116,7 +134,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -132,7 +149,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
