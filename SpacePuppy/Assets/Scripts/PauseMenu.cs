@@ -6,24 +6,20 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour {
     public Pause pause;
 
-   public void ReturnMenu()
-   {
-       SceneManager.LoadScene("MainMenu");
-   }
+    public void ReturnMenu () {
+        SceneManager.LoadScene("MainMenu");
+    }
 
-    public void QuitGame()
-    {
+    public void QuitGame () {
         Debug.Log("Quit");
         Application.Quit();
     }
 
-    public void Pause()
-    {
+    public void Pause () {
         pause.gameSpeed = 0f;
     }
 
-    public void Resume()
-    {
+    public void Resume () {
         pause.gameSpeed = 1f;
     }
 }

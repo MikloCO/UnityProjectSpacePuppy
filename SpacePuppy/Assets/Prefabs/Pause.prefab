@@ -51,22 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02007c3044309114f82e5d33221b961b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: {fileID: 0}
-  curv1: {fileID: 0}
-  curv2: {fileID: 0}
-  mov: {fileID: 0}
-  scr: {fileID: 0}
-  plhm:
-  - {fileID: 114380885730989112, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
-  - {fileID: 114987264001064864, guid: cd543f02765312e43b01de4833190148, type: 2}
-  - {fileID: 114722345336896212, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
-  - {fileID: 114915760629070266, guid: 77a5752a7909fc848907a7171645019d, type: 2}
-  - {fileID: 114134179705980556, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 114708240182570370, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
-  scoreM: {fileID: 0}
+  swipeCountdown: {fileID: 0}
   swipes:
   - {fileID: 0}
   - {fileID: 0}
   timeUntilSwipeInterval:
-  - 1
-  - 3
+  - 5
+  - 6
+  gameSpeed: 1
