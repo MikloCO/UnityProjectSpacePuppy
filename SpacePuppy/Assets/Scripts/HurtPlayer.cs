@@ -11,7 +11,8 @@ public class HurtPlayer : MonoBehaviour {
     private bool damaged = false;
     public float respawnPosition;
     //public image damageImage;
-   
+    private Animator hurtAnim;
+
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
 
     AudioSource playerAudio;
@@ -24,11 +25,13 @@ public class HurtPlayer : MonoBehaviour {
     {
         player = GetComponent<Movement>();
         playerAudio = GetComponent<AudioSource>();
+        hurtAnim = GetComponent<Animator>();
     }
 
     private void Update() {
         if (damaged) {
             damageTimer += Time.deltaTime;
+            hurtAnim.SetInteger("state", 3);
             
        //     damageImage.color = flashColour;
         }
