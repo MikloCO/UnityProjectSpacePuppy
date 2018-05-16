@@ -1922,7 +1922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -757, y: 65}
+  m_AnchoredPosition: {x: 7.7, y: 1000.6}
   m_SizeDelta: {x: 341.9, y: 61.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &637590431 stripped
@@ -1946,6 +1946,7 @@ GameObject:
   - component: {fileID: 680774966}
   - component: {fileID: 680774965}
   - component: {fileID: 680774967}
+  - component: {fileID: 680774968}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2139,6 +2140,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToGive: 20
+--- !u!95 &680774968
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680774958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a3c732484049324990fdca783fe665c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &720414637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,7 +3110,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1415637050
+  randomSeed: -1797456027
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6577,7 +6595,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1515914743}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.818972, y: 1.4060346, z: 0}
+  m_LocalPosition: {x: -2.2, y: 0.8, z: 0}
   m_LocalScale: {x: -1, y: 1.0375016, z: 1}
   m_Children:
   - {fileID: 1441305722}
@@ -6699,7 +6717,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -173019765
+  randomSeed: 393515726
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7164,7 +7182,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.3330841
+      value: 0.31
       mode: 0
       spread: 0
       speed:
@@ -7352,7 +7370,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 2
           time: 0
-          value: 1
+          value: 0.32432175
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -14567,7 +14585,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 199178486
+  randomSeed: 211159847
   InitialModule:
     serializedVersion: 3
     enabled: 1
