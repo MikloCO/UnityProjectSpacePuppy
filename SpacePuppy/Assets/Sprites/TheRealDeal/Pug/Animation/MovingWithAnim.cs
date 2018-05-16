@@ -99,7 +99,7 @@ public class MovingWithAnim : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-            scoreManager.scoreVsHighScore();
+            scoreManager.ScoreVsHighScore();
             //Death();
             SceneManager.LoadScene("MainMenu");
         }

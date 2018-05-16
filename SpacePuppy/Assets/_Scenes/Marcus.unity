@@ -1392,6 +1392,11 @@ Prefab:
       propertyPath: m_Time
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 96830156295330338, guid: 7d9b3e7e9f5fe404ba998994c42291e7,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 493c0a7ce620e5f4d9273f91389f7507, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d9b3e7e9f5fe404ba998994c42291e7, type: 2}
   m_IsPrefabParent: 0
@@ -1426,8 +1431,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 521573036}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.549869, y: 0.47141615, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.549869, y: 0.47141635, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1924589877}
@@ -2103,7 +2108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230b14f934aeaf84080bf3ee2482c256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
   respawnPosition: 0
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  camShake: {fileID: 0}
 --- !u!114 &680774966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,7 +2125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
   scoreManager: {fileID: 1343278413}
-  playerHealth: 3
+  playerHealth: 9000
   speed: 25
   ctrl: 2
 --- !u!114 &680774967
@@ -2131,7 +2139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f449a064928164baeffaecd4481162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreToGive: 20
 --- !u!1 &720414637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2432,17 +2439,12 @@ Prefab:
       propertyPath: pause
       value: 
       objectReference: {fileID: 2117806932}
-    - target: {fileID: 1591727989638192, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114790976523621252, guid: 0c6b5bdc7d364c041b5244a0b65b7412,
         type: 2}
       propertyPath: particles
       value: 
       objectReference: {fileID: 1752133667}
-    m_RemovedComponents:
-    - {fileID: 120622175205262234, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &971095419 stripped
@@ -2796,6 +2798,9 @@ MonoBehaviour:
   scoreCount: 0
   hiScoreCount: 0
   pointsPerSecond: 1
+  pointsPerSwipePart: 10
+  pointsPerBone: 20
+  speedMultiplier: 1
 --- !u!1 &1374691448
 GameObject:
   m_ObjectHideFlags: 0
@@ -6492,10 +6497,6 @@ Prefab:
       propertyPath: pause
       value: 
       objectReference: {fileID: 2117806932}
-    - target: {fileID: 1051545764172172, guid: 0ca73bbe90144e04bac5cbe32bc8c858, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114563486486107070, guid: 0ca73bbe90144e04bac5cbe32bc8c858,
         type: 2}
       propertyPath: particles
@@ -10257,6 +10258,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: swipes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4474365819265270, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10304,6 +10310,16 @@ Prefab:
       propertyPath: swipes.Array.data[1]
       value: 
       objectReference: {fileID: 1978019799}
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: timeUntilSwipeInterval.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: timeUntilSwipeInterval.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   m_IsPrefabParent: 0

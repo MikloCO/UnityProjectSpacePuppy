@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(playerHealth);
+        //Debug.Log(playerHealth);
         verticalDirection = Input.GetAxis("Vertical");
         rb2d.AddForce(Vector3.up * speed * verticalDirection);
        // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime * verticalDirection, Camera.main.transform);
@@ -99,7 +99,7 @@ public class Movement : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-			scoreManager.scoreVsHighScore();
+			scoreManager.ScoreVsHighScore();
           //  Death();
            SceneManager.LoadScene("MainMenu");
         }

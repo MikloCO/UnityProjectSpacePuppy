@@ -14,8 +14,10 @@ public class HurtPlayer : MonoBehaviour {
    
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
 
-   AudioSource playerAudio;
-   Movement movement;
+    AudioSource playerAudio;
+    Movement movement;
+
+    public CameraShakePuppyDamage camShake;
 
 
     private void Start()
@@ -27,6 +29,7 @@ public class HurtPlayer : MonoBehaviour {
     private void Update() {
         if (damaged) {
             damageTimer += Time.deltaTime;
+            
        //     damageImage.color = flashColour;
         }
         if (damageTimer > 0.5f) {
@@ -49,13 +52,19 @@ public class HurtPlayer : MonoBehaviour {
             if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
                 //Debug.Log(respawnPosition);
                 transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
-                healthBar.Damage();
+                //healthBar.Damage();
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 damaged = true;
                 player.playerHealth--;
-                 // healthbar.value = player.playerHealth; //<-- detta kommer sedan för att ändra healthbar (hundhuvuden)//Märta
+
+
+                camShake.shakeDuration = 0.5f;
+
+
+
+                // healthbar.value = player.playerHealth; //<-- detta kommer sedan för att ändra healthbar (hundhuvuden)//Märta
                 //Debug.Log(player.playerHealth);'
-               // playerAudio.Play();
+                // playerAudio.Play();
             }
             
         }
