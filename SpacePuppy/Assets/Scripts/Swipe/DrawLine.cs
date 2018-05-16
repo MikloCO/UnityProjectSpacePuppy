@@ -42,7 +42,8 @@ public class DrawLine : MonoBehaviour {
 			drawing = true;
 			mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			mousePosition.z = -1.3f;
-            
+
+            transform.position = mousePosition;
 			particles.transform.position = mousePosition;
 		}
 

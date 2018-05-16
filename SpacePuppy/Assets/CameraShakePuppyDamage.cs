@@ -6,16 +6,12 @@ using System.Collections;
 public class CameraShakePuppyDamage : MonoBehaviour {
 
     public Transform camTransform;
-    public GameObject pupper;
 
-    public float shakeDuration = 0.5f;
-    public float shakeAmount = 0.7f;
+    public float shakeDuration = 0f;
+    public float shakeAmount = 0.1f;
     public float decreaseFactor = 1.0f;
 
     Vector3 originalPos;
-
-    public CameraShakePuppyDamage camShake;
-
 
 	void Awake ()
     {

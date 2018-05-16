@@ -2111,6 +2111,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   respawnPosition: 0
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  camShake: {fileID: 0}
 --- !u!114 &680774966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2124,7 +2125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
   scoreManager: {fileID: 1343278413}
-  playerHealth: 3
+  playerHealth: 9000
   speed: 25
   ctrl: 2
 --- !u!114 &680774967
@@ -10257,6 +10258,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: swipes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4474365819265270, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10304,6 +10310,16 @@ Prefab:
       propertyPath: swipes.Array.data[1]
       value: 
       objectReference: {fileID: 1978019799}
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: timeUntilSwipeInterval.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: timeUntilSwipeInterval.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   m_IsPrefabParent: 0

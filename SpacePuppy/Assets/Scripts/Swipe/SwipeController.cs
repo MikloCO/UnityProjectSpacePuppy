@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SwipeController : MonoBehaviour {
-
-    public int pointsPerCollected = 10;
-
+    
     public List<Vector3> coinPositions = new List<Vector3>();
 
     public int numberOfCoins;

@@ -58,7 +58,7 @@ public class HurtPlayer : MonoBehaviour {
                 player.playerHealth--;
 
 
-                //camShake.Invoke("update", 1f);
+                camShake.shakeDuration = 0.5f;
 
 
 

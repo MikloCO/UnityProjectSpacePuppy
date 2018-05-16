@@ -543,8 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTransform: {fileID: 46984769}
-  pupper: {fileID: 680774958}
-  shakeDuration: 0.5
+  shakeDuration: 0
   shakeAmount: 0.1
   decreaseFactor: 1
 --- !u!1 &61466043
@@ -2156,7 +2155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f449a064928164baeffaecd4481162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreToGive: 20
 --- !u!1 &720414637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2821,6 +2819,9 @@ MonoBehaviour:
   scoreCount: 0
   hiScoreCount: 0
   pointsPerSecond: 1
+  pointsPerSwipePart: 10
+  pointsPerBone: 20
+  speedMultiplier: 1
 --- !u!1 &1374691448
 GameObject:
   m_ObjectHideFlags: 0
