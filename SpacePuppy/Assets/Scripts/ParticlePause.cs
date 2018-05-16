@@ -9,11 +9,11 @@ public class ParticlePause : MonoBehaviour {
     private bool paused = false;
 
 	void Update () {
-        if (pause.gameSpeed < 0.3 && !paused){
+        if (pause.gameSpeed  == 0 && !paused){
             GetComponent<ParticleSystem>().Pause();
             paused = true;
         }
-        if (pause.gameSpeed > 0.3 && paused) {
+        if (pause.gameSpeed != 0 && paused) {
             GetComponent<ParticleSystem>().Play();
             paused = false;
         }
