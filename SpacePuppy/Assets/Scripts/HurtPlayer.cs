@@ -15,7 +15,7 @@ public class HurtPlayer : MonoBehaviour {
 
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
 
-    AudioSource playerAudio;
+    public AudioSource playerAudio;
     Movement movement;
 
     public CameraShakePuppyDamage camShake;
@@ -67,7 +67,7 @@ public class HurtPlayer : MonoBehaviour {
 
                 // healthbar.value = player.playerHealth; //<-- detta kommer sedan för att ändra healthbar (hundhuvuden)//Märta
                 //Debug.Log(player.playerHealth);'
-                // playerAudio.Play();
+                 playerAudio.Play();
             }
             
         }
