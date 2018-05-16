@@ -2439,17 +2439,12 @@ Prefab:
       propertyPath: pause
       value: 
       objectReference: {fileID: 2117806932}
-    - target: {fileID: 1591727989638192, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114790976523621252, guid: 0c6b5bdc7d364c041b5244a0b65b7412,
         type: 2}
       propertyPath: particles
       value: 
       objectReference: {fileID: 1752133667}
-    m_RemovedComponents:
-    - {fileID: 120622175205262234, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &971095419 stripped
@@ -6499,10 +6494,6 @@ Prefab:
       propertyPath: pause
       value: 
       objectReference: {fileID: 2117806932}
-    - target: {fileID: 1051545764172172, guid: 0ca73bbe90144e04bac5cbe32bc8c858, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114563486486107070, guid: 0ca73bbe90144e04bac5cbe32bc8c858,
         type: 2}
       propertyPath: particles

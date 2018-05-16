@@ -8,7 +8,7 @@ public class DrawLine : MonoBehaviour {
     public SwipeController swipeController;
     public Pause pause;
 
-    public float timeToDraw = 0.4f;
+    public float timeToDraw = 0.2f;
 
     public bool start = false;
     public bool end = false;
@@ -75,9 +75,5 @@ public class DrawLine : MonoBehaviour {
         particles.SetActive(false);
 
         pause.Resume();
-    }
-
-    private void NextLevel () {
-        swipeController.NextLevel();
     }
 }

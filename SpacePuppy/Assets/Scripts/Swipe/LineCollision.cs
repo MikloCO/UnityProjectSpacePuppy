@@ -7,9 +7,6 @@ public class LineCollision : MonoBehaviour {
     public SwipeController swipeController;
     public Collider2D startCollider;
     public Collider2D endCollider;
-    public Collider2D[] middleColliders;
-
-    private int middlesCollected = 0;
 
     private void Update () {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -28,18 +25,6 @@ public class LineCollision : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D (Collider2D other) {
-        if (other.CompareTag("MiddleCircle")) {
-            Debug.Log("middlecollide");
-            other.gameObject.SetActive(false);
-            middlesCollected++;
-        }
-
-        /*if (other.CompareTag("EndCircle")) {
-            if (middlesCollected >= middleColliders.Length) {
-                transform.parent.GetComponent<DrawLine>().Finish();
-            }
-        }*/
-
         if (other.CompareTag("CoinCircle")) {
             Vector3 position = other.GetComponent<Transform>().position;
             if (GetComponentInParent<DrawLine>().drawing == true && !swipeController.coinPositions.Contains(position)) {
