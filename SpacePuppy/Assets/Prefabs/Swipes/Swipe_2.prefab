@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840d6afb4ff936943a224b58e46facc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  pointsPerCollected: 10
   coinPositions: []
   numberOfCoins: 0
   coinsCollected: 0
@@ -1813,13 +1813,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineCollider: {fileID: 58413547394281462}
   swipeController: {fileID: 114481581930010220}
-  pause: {fileID: 0}
+  pause: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   timeToDraw: 0.2
   start: 0
   end: 0
   drawing: 0
   perfect: 1
-  particles: {fileID: 0}
+  particles: {fileID: 1883178594899406, guid: 7d9b3e7e9f5fe404ba998994c42291e7, type: 2}
 --- !u!114 &114840003350523564
 MonoBehaviour:
   m_ObjectHideFlags: 1

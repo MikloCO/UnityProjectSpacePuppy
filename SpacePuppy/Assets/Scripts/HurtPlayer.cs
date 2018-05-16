@@ -49,7 +49,7 @@ public class HurtPlayer : MonoBehaviour {
             if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
                 //Debug.Log(respawnPosition);
                 transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
-                healthBar.Damage();
+                //healthBar.Damage();
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 damaged = true;
                 player.playerHealth--;

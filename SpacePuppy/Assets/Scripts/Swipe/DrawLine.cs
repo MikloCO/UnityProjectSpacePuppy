@@ -25,12 +25,14 @@ public class DrawLine : MonoBehaviour {
 	public GameObject particles;
 
     private void Start () {
-
+        particles.SetActive(false);
     }
+
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) {
 			mousePressed = true;
-		}
+            particles.SetActive(true);
+        }
 
 		if (mousePressed) {
 			drawTimer += Time.deltaTime;
@@ -40,8 +42,7 @@ public class DrawLine : MonoBehaviour {
 			drawing = true;
 			mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			mousePosition.z = -1.3f;
-
-			particles.SetActive(true);
+            
 			particles.transform.position = mousePosition;
 		}
 
@@ -73,6 +74,7 @@ public class DrawLine : MonoBehaviour {
         start = false;
         drawing = false;
         particles.SetActive(false);
+        swipeController.Finish(perfect);
 
         pause.Resume();
     }

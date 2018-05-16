@@ -12,46 +12,39 @@ public class ScoreManager : MonoBehaviour {
     public Text hiScoreText;
     public float scoreCount;
     public int hiScoreCount;
-    public int pointsPerSecond;
-
-
-
-
-    // ******************************* OLIVIAS IDE TILL EN LÖSNING *******************************************************************************
-
-    public void scoreVsHighScore () {
+    public int pointsPerSecond = 5;
+    public int pointsPerSwipePart = 10;
+    public int pointsPerBone = 20;
+    public int speedMultiplier = 1;
+    
+    public void ScoreVsHighScore () {
         if (PlayerPrefs.GetInt("highscore") < (int)scoreCount) {
             PlayerPrefs.SetInt("highscore", (int)scoreCount);
         }
-        //storeTopTenHighScore();
-
+    }
+    
+    public void SwipeScore (int points, bool perfect) {
+        int pointsToAdd = points * speedMultiplier;
+        if (perfect) {
+            pointsToAdd *= 2;
+        }
+        scoreCount += pointsToAdd;
     }
 
-    public void storeTopTenHighScore () {
-
+    public void BoneScore() {
+        scoreCount += pointsPerBone * speedMultiplier;
     }
-    //*********************** OLIVIAS IDE TILL EN LÖSNING ***********************************************************************************
-    // **************************************************************//
-    /* START OCH UPDATE */
-
 
     void Start () {
         DontDestroyOnLoad(gameObject);
-        scoreVsHighScore();
-        //LoadGameData ();
-        //LoadPlayerProgress ();
+        ScoreVsHighScore();
         scoreCount = 0;
         hiScoreCount = PlayerPrefs.GetInt("highscore");
         hiScoreText.text = "High Score: " + Mathf.Round(hiScoreCount);
-
-
-        //Gör kod som visar högsta highscore som funnts, och den börjar inte räkna upp förens man nått den
-
     }
 
-
     void Update () {
-        scoreCount += pointsPerSecond * Time.deltaTime * pause.gameSpeed;
+        scoreCount += pointsPerSecond * Time.deltaTime * pause.gameSpeed * speedMultiplier;
 
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
     }
