@@ -5,28 +5,29 @@ using UnityEngine;
 public class HurtPlayer : MonoBehaviour {
     //https://www.youtube.com/watch?time_continue=193&v=a916_lhps04
 
+    public HealthBar healthBar;
     private Movement player;
     private float damageTimer = 0;
     private bool damaged = false;
     public float respawnPosition;
     //public image damageImage;
    
-    //  public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
+    public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
 
-    //AudioSource playerAudio;
-    //Movement movement;
+   AudioSource playerAudio;
+   Movement movement;
 
 
     private void Start()
     {
         player = GetComponent<Movement>();
-       // playerAudio = GetComponent<AudioSource>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     private void Update() {
         if (damaged) {
             damageTimer += Time.deltaTime;
-            //damageImage.color = flashColour;
+       //     damageImage.color = flashColour;
         }
         if (damageTimer > 0.5f) {
             damaged = false;
@@ -48,13 +49,13 @@ public class HurtPlayer : MonoBehaviour {
             if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
                 //Debug.Log(respawnPosition);
                 transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
-
+                healthBar.Damage();
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 damaged = true;
                 player.playerHealth--;
-                //healthbar.value = player.playerHealth; //<-- detta kommer sedan för att ändra healthbar (hundhuvuden)//Märta
+                 // healthbar.value = player.playerHealth; //<-- detta kommer sedan för att ändra healthbar (hundhuvuden)//Märta
                 //Debug.Log(player.playerHealth);'
-                //playerAudio.Play();
+               // playerAudio.Play();
             }
             
         }
