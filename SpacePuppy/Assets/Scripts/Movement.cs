@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
 	public ScoreManager scoreManager;
     public int playerHealth = 3;
     public float speed = 2.0f;
-    //bool isDead = false;
+   // bool isDead = false;
     //public AudioClip deathClip;
 
     private float verticalDirection;
@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
 
     public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouchRH, VerticalTouchLH };
     public ControllerType ctrl;
-   // AudioSource playerAudio;
+    //AudioSource playerAudio;
 
     void Start()
     {
@@ -89,8 +89,8 @@ public class Movement : MonoBehaviour
         if (playerHealth <= 0)
         {
 			scoreManager.scoreVsHighScore();
-            //Death();
-            SceneManager.LoadScene("MainMenu");
+          //  Death();
+           SceneManager.LoadScene("MainMenu");
         }
 
     }
