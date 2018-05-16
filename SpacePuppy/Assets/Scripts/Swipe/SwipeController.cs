@@ -12,6 +12,7 @@ public class SwipeController : MonoBehaviour {
 
     private ScoreManager scoreManager;
     public CountCoins coins;
+    public Pause pause;
 
     private int score;
 
@@ -22,6 +23,9 @@ public class SwipeController : MonoBehaviour {
 
     public void Finish (bool perfect) {
         scoreManager.SwipeScore(coinsCollected, perfect);
+        coinsCollected = 0;
+        coinPositions.Clear();
+        pause.scoreSpeed += 1;
     }
 
     public void AddCoin (Vector3 position) {

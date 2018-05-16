@@ -2444,6 +2444,11 @@ Prefab:
       propertyPath: particles
       value: 
       objectReference: {fileID: 1752133667}
+    - target: {fileID: 114980073890887520, guid: 0c6b5bdc7d364c041b5244a0b65b7412,
+        type: 2}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 2117806932}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c6b5bdc7d364c041b5244a0b65b7412, type: 2}
   m_IsPrefabParent: 0
@@ -2797,10 +2802,11 @@ MonoBehaviour:
   hiScoreText: {fileID: 401541549}
   scoreCount: 0
   hiScoreCount: 0
-  pointsPerSecond: 1
+  pointsPerSecond: 5
   pointsPerSwipePart: 10
   pointsPerBone: 20
   speedMultiplier: 1
+  perfectMultiplier: 2
 --- !u!1 &1374691448
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +6508,11 @@ Prefab:
       propertyPath: particles
       value: 
       objectReference: {fileID: 1752133667}
+    - target: {fileID: 114481581930010220, guid: 0ca73bbe90144e04bac5cbe32bc8c858,
+        type: 2}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 2117806932}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ca73bbe90144e04bac5cbe32bc8c858, type: 2}
   m_IsPrefabParent: 0

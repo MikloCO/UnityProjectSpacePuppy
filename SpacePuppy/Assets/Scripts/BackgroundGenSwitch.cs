@@ -28,12 +28,12 @@ public class BackgroundGenSwitch : MonoBehaviour {
 
 			if (thisChild.transform.position.x < otherChild.transform.position.x)
 			{
-				thisChild.Translate(Vector3.left * speed * pause.gameSpeed * Time.deltaTime);
+				thisChild.Translate(Vector3.left * speed * pause.gameSpeed * pause.scoreSpeed * Time.deltaTime);
 				otherChild.transform.position = new Vector3(thisChild.transform.position.x + 30f, otherChild.transform.position.y, otherChild.transform.position.z);
 			}
 			else
 			{
-				otherChild.Translate(Vector3.left * speed * pause.gameSpeed * Time.deltaTime);
+				otherChild.Translate(Vector3.left * speed * pause.gameSpeed * pause.scoreSpeed * Time.deltaTime);
 				thisChild.transform.position = new Vector3(otherChild.transform.position.x + 30f, thisChild.transform.position.y, thisChild.transform.position.z);
 			}
 

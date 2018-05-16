@@ -1795,11 +1795,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840d6afb4ff936943a224b58e46facc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsPerCollected: 10
   coinPositions: []
   numberOfCoins: 0
   coinsCollected: 0
   coins: {fileID: 114840003350523564}
+  pause: {fileID: 0}
 --- !u!114 &114563486486107070
 MonoBehaviour:
   m_ObjectHideFlags: 1
