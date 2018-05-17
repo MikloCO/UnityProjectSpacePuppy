@@ -16,10 +16,27 @@ public class HurtPlayer : MonoBehaviour {
 
     private AudioSource playerAudio;
     public AudioClip astroids;
+<<<<<<< HEAD
+=======
+=======
+    public AudioSource playerAudio;
+    public AudioClip clip;
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> aaa0f221e43c93630f962dfcf693378ae4fa726c
+    Movement movement;
+>>>>>>> 1293e102bfb8b0b4316e4dea48337ef3ea849054
 
     Movement movement;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3babde9318d31da2c6dbf2a4b8e3b8ee974d7642
+>>>>>>> b4acdc9395f7d7b1c55fa8db0d01736dab0cd367
+>>>>>>> 1293e102bfb8b0b4316e4dea48337ef3ea849054
     public CameraShakePuppyDamage camShake;
 
 
@@ -32,9 +49,6 @@ public class HurtPlayer : MonoBehaviour {
     private void Update () {
         if (damaged) {
             damageTimer += Time.deltaTime;
-            hurtAnim.SetInteger("state", 3);
-            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
-            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
 
             
         }
@@ -53,6 +67,14 @@ public class HurtPlayer : MonoBehaviour {
 
         if (other.CompareTag("Curve") || other.CompareTag("Asteroid"))
         {
+<<<<<<< HEAD
+            hurtAnim.SetInteger("state", 3);
+            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
+            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
+
+            other.GetComponent<AudioSource>().Play();
+=======
+>>>>>>> b4acdc9395f7d7b1c55fa8db0d01736dab0cd367
             transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
            
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
