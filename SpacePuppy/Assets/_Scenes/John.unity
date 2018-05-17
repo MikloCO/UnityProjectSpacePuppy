@@ -2186,8 +2186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f449a064928164baeffaecd4481162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAudio: {fileID: 0}
-  clip: {fileID: 8300000, guid: b926602edde02a1458fd8318504391f9, type: 3}
+  crackers: {fileID: 8300000, guid: b926602edde02a1458fd8318504391f9, type: 3}
 --- !u!95 &680774968
 Animator:
   serializedVersion: 3
