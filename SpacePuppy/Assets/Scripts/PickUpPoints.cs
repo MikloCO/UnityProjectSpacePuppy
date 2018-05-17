@@ -7,10 +7,13 @@ using UnityEngine;
 public class PickUpPoints : MonoBehaviour {
     
 	private ScoreManager scoreManager;
+    public AudioSource playerAudio;
+    public AudioClip clip;
 
-	void Start () {
-		scoreManager = FindObjectOfType<ScoreManager> ();		
-	}
+    void Start () {
+		scoreManager = FindObjectOfType<ScoreManager> ();
+        playerAudio = GetComponent<AudioSource>();
+    }
 	
 	void Update () {
 		
@@ -19,7 +22,8 @@ public class PickUpPoints : MonoBehaviour {
 		if (other.CompareTag("DogCracker")) 
 		{	//takes current points and adds the dogbones bonus points. 
 			scoreManager.BoneScore();
-			Destroy (other.gameObject);
-		}
-	}
+            other.GetComponent<AudioSource>().Play();
+            Destroy (other.gameObject);
+        }
+    } 
 }

@@ -16,6 +16,7 @@ public class HurtPlayer : MonoBehaviour {
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
 
     public AudioSource playerAudio;
+    public AudioClip clip;
     Movement movement;
 
     public CameraShakePuppyDamage camShake;
@@ -51,7 +52,9 @@ public class HurtPlayer : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D other) {
 
-        if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
+        if (other.CompareTag("Curve") || other.CompareTag("Asteroid"))
+        {
+            other.GetComponent<AudioSource>().Play();
             //Debug.Log(respawnPosition);
             transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
             //healthBar.Damage();
