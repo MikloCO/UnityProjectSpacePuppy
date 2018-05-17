@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour {
     // bool isDead = false;
     //public AudioClip deathClip;
 
-    public Transform particleSystem;
+    public Transform fireParticles;
     private float verticalDirection;
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -93,8 +93,8 @@ public class Movement : MonoBehaviour {
         rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
         // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform);
         anim.SetInteger("state", 1);
-        particleSystem.localPosition = new Vector3(-1.79f, 0.15f);
-        particleSystem.localRotation.Set(particleSystem.localRotation.x, particleSystem.localRotation.y, 117.892f,particleSystem.localRotation.w);
+        fireParticles.localPosition = new Vector3(-1.79f, 0.15f);
+        fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 117.892f,fireParticles.localRotation.w);
     }
 
     private void MoveDown () {
@@ -104,8 +104,8 @@ public class Movement : MonoBehaviour {
         rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
         // transform.Translate(Vector3.down * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform)
         anim.SetInteger("state", 2);
-        particleSystem.localPosition = new Vector3(-1.62f, 1.47f);
-        particleSystem.localRotation.Set(particleSystem.localRotation.x, particleSystem.localRotation.y, 47.48f, particleSystem.localRotation.w);
+        fireParticles.localPosition = new Vector3(-1.62f, 1.47f);
+        fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 47.48f, fireParticles.localRotation.w);
     }
 
     //void Death()

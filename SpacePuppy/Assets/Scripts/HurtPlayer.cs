@@ -13,7 +13,7 @@ public class HurtPlayer : MonoBehaviour {
     //public image damageImage;
     private Animator hurtAnim;
 
-    public Transform particleSystem;
+    public Transform fireParticles;
 
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
 
@@ -33,8 +33,8 @@ public class HurtPlayer : MonoBehaviour {
         if (damaged) {
             damageTimer += Time.deltaTime;
             hurtAnim.SetInteger("state", 3);
-            particleSystem.localPosition = new Vector3(-2.2f, 0.8f);
-            particleSystem.localRotation.Set(particleSystem.localRotation.x, particleSystem.localRotation.y, 90f, particleSystem.localRotation.w);
+            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
+            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
 
             //     damageImage.color = flashColour;
         }
@@ -42,8 +42,8 @@ public class HurtPlayer : MonoBehaviour {
             damaged = false;
             damageTimer = 0;
             hurtAnim.SetInteger("state", 0);
-            particleSystem.localPosition = new Vector3(-0.51f, -0.6f);
-            particleSystem.localRotation.Set(particleSystem.localRotation.x, particleSystem.localRotation.y, 157.245f, particleSystem.localRotation.w);
+            fireParticles.localPosition = new Vector3(-0.51f, -0.6f);
+            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 157.245f, fireParticles.localRotation.w);
         }
         //else
         //{
