@@ -4,11 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour {
+
     public Pause pause;
+
+    public void PressedMainMenu()
+    {
+        Invoke("ReturnMenu", 0.4f);
+    }
 
     public void ReturnMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+
+    public void PressedPlayAgain()
+    {
+        Invoke("RunAgain", 0.4f);
     }
 
     public void QuitGame()
