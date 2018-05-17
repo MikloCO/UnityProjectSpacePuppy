@@ -10,6 +10,11 @@ public class Menu : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("Play");
+        Invoke("PlayGameButton", 0.4f);
+    }
+
+    void PlayGameButton()
+    {
         SceneManager.LoadScene("Level 1");
     }
 
