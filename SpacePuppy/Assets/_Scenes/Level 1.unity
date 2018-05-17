@@ -2026,7 +2026,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 584008d987c54a14fbc15be646df7e64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 746d435974bc49d45a5d16235b987d43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2067,7 +2067,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.63, y: 3.38}
+    oldSize: {x: 6.75, y: 4.68}
     newSize: {x: 4.11, y: 3.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2107,7 +2107,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.63, y: 3.38}
+    oldSize: {x: 6.75, y: 4.68}
     newSize: {x: 4.11, y: 3.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2147,6 +2147,7 @@ MonoBehaviour:
   scoreManager: {fileID: 1343278413}
   playerHealth: 999999
   speed: 25
+  particleSystem: {fileID: 1515914744}
   ctrl: 2
 --- !u!114 &680774967
 MonoBehaviour:
@@ -3228,7 +3229,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1797456027
+  randomSeed: -348262796
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6836,7 +6837,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 393515726
+  randomSeed: 1919362739
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -14714,7 +14715,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 211159847
+  randomSeed: 1180547943
   InitialModule:
     serializedVersion: 3
     enabled: 1

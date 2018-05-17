@@ -10,9 +10,10 @@ public class Movement : MonoBehaviour
 	public ScoreManager scoreManager;
     public int playerHealth = 3;
     public float speed = 2.0f;
-   // bool isDead = false;
+    // bool isDead = false;
     //public AudioClip deathClip;
 
+    public Transform particleSystem;
     private float verticalDirection;
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -29,24 +30,23 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(playerHealth);
         verticalDirection = Input.GetAxis("Vertical");
-        rb2d.AddForce(Vector3.up * speed * verticalDirection);
-       // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime * verticalDirection, Camera.main.transform);
+        if(verticalDirection > 0) {
+            MoveUp();
+        }
+        else if (verticalDirection < 0){
+            MoveDown();
+        }
 
         if (ctrl == ControllerType.HorizontalTouchRH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0)) //sköld knappen på höger sida
         {
             if (Input.mousePosition.x > Screen.width / 2)
             {
-                rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
-                // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform);
-                anim.SetInteger("state", 1);
+                MoveUp();
             }
             else
             {
-                rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
-                // transform.Translate(Vector3.down * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform);
-                anim.SetInteger("state", 2);
+                MoveDown();
             }
         }
 
@@ -54,13 +54,11 @@ public class Movement : MonoBehaviour
         {
             if (Input.mousePosition.x < Screen.width / 2)
             {
-                rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
-                anim.SetInteger("state", 1);
+                MoveUp();
             }
             else
             {
-                rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
-                anim.SetInteger("state", 2);
+                MoveDown();
             }
         }
 
@@ -68,13 +66,11 @@ public class Movement : MonoBehaviour
         {
             if (Input.mousePosition.y > Screen.height / 2)
             {
-                rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
-                anim.SetInteger("state", 1);
+                MoveUp();
             }
             else
             {
-                rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
-                anim.SetInteger("state", 2);
+                MoveDown();
             }
         }
 
@@ -82,13 +78,11 @@ public class Movement : MonoBehaviour
         {
             if (Input.mousePosition.y > Screen.height / 2)
             {
-                rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
-                anim.SetInteger("state", 1);
+                MoveUp();
             }
             else
             {
-                rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
-                anim.SetInteger("state", 2);
+                MoveDown();
             }
         }
         if(pause.gameSpeed < 1f) {
@@ -104,6 +98,25 @@ public class Movement : MonoBehaviour
            SceneManager.LoadScene("MainMenu");
         }
 
+    }
+
+    private void MoveUp () {
+        if(rb2d.velocity.y < 0) {
+            rb2d.velocity = new Vector2(0, 0);
+        }
+        rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
+        // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform);
+        //particleSystem.position.y = 1;
+        anim.SetInteger("state", 1);
+    }
+
+    private void MoveDown () {
+        if (rb2d.velocity.y > 0) {
+            rb2d.velocity = new Vector2(0, 0);
+        }
+        rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
+        // transform.Translate(Vector3.down * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform);
+        anim.SetInteger("state", 2);
     }
 
    //void Death()
