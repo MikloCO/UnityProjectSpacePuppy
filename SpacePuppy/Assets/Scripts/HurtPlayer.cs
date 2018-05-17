@@ -13,24 +13,13 @@ public class HurtPlayer : MonoBehaviour {
 
     public Transform fireParticles;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); 
-<<<<<<< HEAD
+
     private AudioSource playerAudio;
     public AudioClip astroids;
-=======
-    public AudioSource playerAudio;
-<<<<<<< HEAD
-//<<<<<<< HEAD
-    public AudioClip clip;
->>>>>>> aaa0f221e43c93630f962dfcf693378ae4fa726c
+
     Movement movement;
 
-//=======
-//>>>>>>> 491f9b6017e752fb318d1c61820f0a58d075ffc9
-=======
-    public AudioClip clip;
-    Movement movement;
 
->>>>>>> 3babde9318d31da2c6dbf2a4b8e3b8ee974d7642
     public CameraShakePuppyDamage camShake;
 
 
@@ -70,7 +59,7 @@ public class HurtPlayer : MonoBehaviour {
             if (!damaged) {
                 damaged = true;
                 player.playerHealth--;
-                healthBar.RemoveHead();
+ //               healthBar.RemoveHead();
             }
             camShake.shakeDuration = 0.5f;
             playerAudio.pitch = Random.Range(0.5f, 1f);
