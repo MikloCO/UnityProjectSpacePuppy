@@ -13,12 +13,15 @@ public class HurtPlayer : MonoBehaviour {
     //public image damageImage;
     private Animator hurtAnim;
 
+    public Transform fireParticles;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
-
     public AudioSource playerAudio;
+<<<<<<< HEAD
     public AudioClip clip;
     Movement movement;
 
+=======
+>>>>>>> 491f9b6017e752fb318d1c61820f0a58d075ffc9
     public CameraShakePuppyDamage camShake;
 
 
@@ -32,12 +35,17 @@ public class HurtPlayer : MonoBehaviour {
         if (damaged) {
             damageTimer += Time.deltaTime;
             hurtAnim.SetInteger("state", 3);
+            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
+            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
 
             //     damageImage.color = flashColour;
         }
         if (damageTimer > 0.5f) {
             damaged = false;
             damageTimer = 0;
+            hurtAnim.SetInteger("state", 0);
+            fireParticles.localPosition = new Vector3(-0.51f, -0.6f);
+            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 157.245f, fireParticles.localRotation.w);
         }
         //else
         //{
