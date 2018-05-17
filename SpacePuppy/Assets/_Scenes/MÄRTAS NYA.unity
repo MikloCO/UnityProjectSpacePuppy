@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a2eac36700b03468c82c3c1c395060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 680774966}
   head1: {fileID: 657585243}
   head2: {fileID: 726982096}
   head3: {fileID: 1697469415}
@@ -2267,7 +2267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230b14f934aeaf84080bf3ee2482c256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 27898583}
   respawnPosition: 0
   fireParticles: {fileID: 1515914744}
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
