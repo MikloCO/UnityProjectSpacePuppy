@@ -12,11 +12,12 @@ public class ScoreManager : MonoBehaviour {
     public Text hiScoreText;
     public float scoreCount;
     public int hiScoreCount;
-    public int pointsPerSecond = 5;
-    public int pointsPerSwipePart = 10;
-    public int pointsPerBone = 20;
-    public int speedMultiplier = 2;
-    public int perfectMultiplier = 2;
+    public float pointsPerSecond = 5.0f;
+    public float pointsPerSwipePart = 10.0f;
+    public float pointsPerBone = 10.0f;
+    public float speedPointMultiplier = 1.0f;
+    public float speedPointMultiplierIncrease = 1.0f;
+    public float perfectMultiplier = 3.0f;
     
     public void ScoreVsHighScore () {
         if (PlayerPrefs.GetInt("highscore") < (int)scoreCount) {
@@ -25,7 +26,7 @@ public class ScoreManager : MonoBehaviour {
     }
     
     public void SwipeScore (int points, bool perfect) {
-        int pointsToAdd = points * pointsPerSwipePart * pause.scoreSpeed * speedMultiplier;
+        float pointsToAdd = points * pointsPerSwipePart * speedPointMultiplier;
         if (perfect) {
             pointsToAdd *= perfectMultiplier;
         }
@@ -33,7 +34,7 @@ public class ScoreManager : MonoBehaviour {
     }
 
     public void BoneScore() {
-        scoreCount += pointsPerBone * pause.scoreSpeed * speedMultiplier;
+        scoreCount += pointsPerBone * speedPointMultiplier;
     }
 
     void Start () {
@@ -41,11 +42,11 @@ public class ScoreManager : MonoBehaviour {
         ScoreVsHighScore();
         scoreCount = 0;
         hiScoreCount = PlayerPrefs.GetInt("highscore");
-        hiScoreText.text = "High Score: " + Mathf.Round(hiScoreCount);
+        hiScoreText.text = "High Score: " + (hiScoreCount);
     }
 
     void Update () {
-        scoreCount += pointsPerSecond * Time.deltaTime *  pause.gameSpeed * pause.scoreSpeed * speedMultiplier;
+        scoreCount += pointsPerSecond * Time.deltaTime *  pause.gameSpeed * speedPointMultiplier;
 
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
     }

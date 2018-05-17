@@ -10,7 +10,7 @@ public class Pause : MonoBehaviour {
     public float[] timeUntilSwipeInterval = { 10f, 15f };
 
     public float gameSpeed = 1.0f;
-    public int scoreSpeed = 1;
+    public float scoreSpeed = 1.0f;
     private float timer = 0f;
     private bool swipeActive = false;
     private float timeUntilSwipe;

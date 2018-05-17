@@ -2145,7 +2145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
   scoreManager: {fileID: 1343278413}
-  playerHealth: 3
+  playerHealth: 999999
   speed: 25
   ctrl: 2
 --- !u!114 &680774967
@@ -2933,11 +2933,12 @@ MonoBehaviour:
   hiScoreText: {fileID: 401541549}
   scoreCount: 0
   hiScoreCount: 0
-  pointsPerSecond: 1
-  pointsPerSwipePart: 10
-  pointsPerBone: 20
-  speedMultiplier: 0
-  perfectMultiplier: 2
+  pointsPerSecond: 5
+  pointsPerSwipePart: 5
+  pointsPerBone: 10
+  speedPointMultiplier: 1
+  speedPointMultiplierIncrease: 1
+  perfectMultiplier: 3
 --- !u!1 &1374691448
 GameObject:
   m_ObjectHideFlags: 0
