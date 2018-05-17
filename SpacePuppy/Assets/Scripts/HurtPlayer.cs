@@ -13,8 +13,8 @@ public class HurtPlayer : MonoBehaviour {
 
     public Transform fireParticles;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); 
-    public AudioSource playerAudio;
-    public AudioClip clip;
+    private AudioSource playerAudio;
+    public AudioClip astroids;
     Movement movement;
 
     public CameraShakePuppyDamage camShake;
@@ -50,7 +50,6 @@ public class HurtPlayer : MonoBehaviour {
 
         if (other.CompareTag("Curve") || other.CompareTag("Asteroid"))
         {
-            other.GetComponent<AudioSource>().Play();
             transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
            
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
@@ -60,7 +59,8 @@ public class HurtPlayer : MonoBehaviour {
                 healthBar.RemoveHead();
             }
             camShake.shakeDuration = 0.5f;
-            playerAudio.Play();
+            playerAudio.pitch = Random.Range(0.5f, 1f);
+            playerAudio.PlayOneShot(astroids, 0.5f);
         }
 
 

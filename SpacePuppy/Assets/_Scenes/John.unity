@@ -850,7 +850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &227392289
 Transform:
   m_ObjectHideFlags: 0
@@ -2155,8 +2155,7 @@ MonoBehaviour:
   respawnPosition: 0
   fireParticles: {fileID: 1515914744}
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  playerAudio: {fileID: 680774970}
-  clip: {fileID: 8300000, guid: 2a0aa908136a1ae4d9a0d5361146195f, type: 3}
+  astroids: {fileID: 8300000, guid: 2a0aa908136a1ae4d9a0d5361146195f, type: 3}
   camShake: {fileID: 46984771}
 --- !u!114 &680774966
 MonoBehaviour:
@@ -2171,7 +2170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
   scoreManager: {fileID: 1343278413}
-  playerHealth: 5
+  playerHealth: 100
   speed: 25
   fireParticles: {fileID: 1515914744}
   ctrl: 2
