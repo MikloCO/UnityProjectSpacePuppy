@@ -16,12 +16,9 @@ public class HurtPlayer : MonoBehaviour {
     public Transform fireParticles;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
     public AudioSource playerAudio;
-<<<<<<< HEAD
     public AudioClip clip;
     Movement movement;
 
-=======
->>>>>>> 491f9b6017e752fb318d1c61820f0a58d075ffc9
     public CameraShakePuppyDamage camShake;
 
 

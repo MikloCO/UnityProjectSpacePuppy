@@ -822,6 +822,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1419694023492840, guid: e44a6693265ce7546b41ee22a51f235e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e44a6693265ce7546b41ee22a51f235e, type: 2}
   m_IsPrefabParent: 0
@@ -1658,19 +1662,23 @@ Prefab:
         type: 0}
     - target: {fileID: 1673991922525272, guid: 65f9b4c8a55374247b683ecda7ace3a0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1205074165845738, guid: 65f9b4c8a55374247b683ecda7ace3a0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1446312089371152, guid: 65f9b4c8a55374247b683ecda7ace3a0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1373701476301262, guid: 65f9b4c8a55374247b683ecda7ace3a0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489932453024832, guid: 65f9b4c8a55374247b683ecda7ace3a0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65f9b4c8a55374247b683ecda7ace3a0, type: 2}
@@ -2145,6 +2153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   respawnPosition: 0
+  fireParticles: {fileID: 1515914744}
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
   playerAudio: {fileID: 680774970}
   clip: {fileID: 8300000, guid: 2a0aa908136a1ae4d9a0d5361146195f, type: 3}
@@ -2162,9 +2171,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 2117806932}
   scoreManager: {fileID: 1343278413}
-  playerHealth: 999999
+  playerHealth: 5
   speed: 25
-  particleSystem: {fileID: 1515914744}
+  fireParticles: {fileID: 1515914744}
   ctrl: 2
 --- !u!114 &680774967
 MonoBehaviour:
