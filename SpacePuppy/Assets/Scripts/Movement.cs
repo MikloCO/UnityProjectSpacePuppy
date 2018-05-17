@@ -81,7 +81,7 @@ public class Movement : MonoBehaviour {
         if (playerHealth <= 0) {
             scoreManager.ScoreVsHighScore();
             //  Death();
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("DeathMenu");
         }
 
     }
