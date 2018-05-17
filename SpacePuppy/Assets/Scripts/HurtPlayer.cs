@@ -14,18 +14,9 @@ public class HurtPlayer : MonoBehaviour {
     public Transform fireParticles;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); 
     public AudioSource playerAudio;
-<<<<<<< HEAD
-//<<<<<<< HEAD
     public AudioClip clip;
-    Movement movement;
-
-//=======
-//>>>>>>> 491f9b6017e752fb318d1c61820f0a58d075ffc9
-=======
-    public AudioClip clip;
-    Movement movement;
-
->>>>>>> 3babde9318d31da2c6dbf2a4b8e3b8ee974d7642
+    
+    
     public CameraShakePuppyDamage camShake;
 
 
@@ -38,9 +29,6 @@ public class HurtPlayer : MonoBehaviour {
     private void Update () {
         if (damaged) {
             damageTimer += Time.deltaTime;
-            hurtAnim.SetInteger("state", 3);
-            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
-            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
 
             
         }
@@ -59,6 +47,10 @@ public class HurtPlayer : MonoBehaviour {
 
         if (other.CompareTag("Curve") || other.CompareTag("Asteroid"))
         {
+            hurtAnim.SetInteger("state", 3);
+            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
+            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
+
             other.GetComponent<AudioSource>().Play();
             transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
            
