@@ -7,19 +7,24 @@ using UnityEngine;
 public class PickUpPoints : MonoBehaviour {
     
 	private ScoreManager scoreManager;
+    private AudioSource myAudioSource;
+    public AudioClip crackers;
 
-	void Start () {
-		scoreManager = FindObjectOfType<ScoreManager> ();		
-	}
-	
-	void Update () {
+    void Start () {
+		scoreManager = FindObjectOfType<ScoreManager> ();
+        myAudioSource = GetComponent<AudioSource>();
+    }
+
+    void Update () {
 		
 	}
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("DogCracker")) 
 		{	//takes current points and adds the dogbones bonus points. 
 			scoreManager.BoneScore();
-			Destroy (other.gameObject);
-		}
-	}
+            myAudioSource.pitch = Random.Range(0.5f, 1.5f);
+            myAudioSource.PlayOneShot(crackers, 0.5f);
+            Destroy (other.gameObject);
+        }
+    } 
 }

@@ -3,23 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HurtPlayer : MonoBehaviour {
-    //https://www.youtube.com/watch?time_continue=193&v=a916_lhps04
 
     public HealthBar healthBar;
     private Movement player;
     private float damageTimer = 0;
     private bool damaged = false;
     public float respawnPosition;
-    //public image damageImage;
     private Animator hurtAnim;
 
     public Transform fireParticles;
-
-    public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //oklart om detta behövs
-
+    public Color flashColour = new Color(1f, 0f, 0f, 0.1f); 
     public AudioSource playerAudio;
+<<<<<<< HEAD
+//<<<<<<< HEAD
+    public AudioClip clip;
     Movement movement;
 
+//=======
+//>>>>>>> 491f9b6017e752fb318d1c61820f0a58d075ffc9
+=======
+    public AudioClip clip;
+    Movement movement;
+
+>>>>>>> 3babde9318d31da2c6dbf2a4b8e3b8ee974d7642
     public CameraShakePuppyDamage camShake;
 
 
@@ -36,7 +42,7 @@ public class HurtPlayer : MonoBehaviour {
             fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
             fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
 
-            //     damageImage.color = flashColour;
+            
         }
         if (damageTimer > 0.5f) {
             damaged = false;
@@ -45,36 +51,24 @@ public class HurtPlayer : MonoBehaviour {
             fireParticles.localPosition = new Vector3(-0.51f, -0.6f);
             fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 157.245f, fireParticles.localRotation.w);
         }
-        //else
-        //{
-        //    damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashspeed * Time.deltaTime);
-        //}
+        
     }
 
-    //public void TakeDamage(int amount)
-    //{
-
-    //}
 
     void OnTriggerEnter2D (Collider2D other) {
 
-        if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
-            //Debug.Log(respawnPosition);
+        if (other.CompareTag("Curve") || other.CompareTag("Asteroid"))
+        {
+            other.GetComponent<AudioSource>().Play();
             transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
-            //healthBar.Damage();
-
+           
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             if (!damaged) {
                 damaged = true;
                 player.playerHealth--;
+                healthBar.RemoveHead();
             }
-
             camShake.shakeDuration = 0.5f;
-
-
-
-            // healthbar.value = player.playerHealth; //<-- detta kommer sedan för att ändra healthbar (hundhuvuden)//Märta
-            //Debug.Log(player.playerHealth);'
             playerAudio.Play();
         }
 
