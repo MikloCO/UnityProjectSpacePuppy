@@ -19,7 +19,10 @@ public class HurtPlayer : MonoBehaviour {
     public AudioClip clip;
     Movement movement;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ef38c5ca558ad2456f8b10b28865aa5776b33904
     public CameraShakePuppyDamage camShake;
 
 
