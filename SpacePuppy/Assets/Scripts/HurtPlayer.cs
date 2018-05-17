@@ -21,19 +21,18 @@ public class HurtPlayer : MonoBehaviour {
     public CameraShakePuppyDamage camShake;
 
 
-    private void Start()
-    {
+    private void Start () {
         player = GetComponent<Movement>();
         playerAudio = GetComponent<AudioSource>();
         hurtAnim = GetComponent<Animator>();
     }
 
-    private void Update() {
+    private void Update () {
         if (damaged) {
             damageTimer += Time.deltaTime;
             hurtAnim.SetInteger("state", 3);
-            
-       //     damageImage.color = flashColour;
+
+            //     damageImage.color = flashColour;
         }
         if (damageTimer > 0.5f) {
             damaged = false;
@@ -51,26 +50,28 @@ public class HurtPlayer : MonoBehaviour {
     //}
 
     void OnTriggerEnter2D (Collider2D other) {
-        if (!damaged) {
-            if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
-                //Debug.Log(respawnPosition);
-                transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
-                //healthBar.Damage();
-                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
+        if (other.CompareTag("Curve") || other.CompareTag("Asteroid")) {
+            //Debug.Log(respawnPosition);
+            transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
+            //healthBar.Damage();
+
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            if (!damaged) {
                 damaged = true;
                 player.playerHealth--;
-
-
-                camShake.shakeDuration = 0.5f;
-
-
-
-                // healthbar.value = player.playerHealth; //<-- detta kommer sedan för att ändra healthbar (hundhuvuden)//Märta
-                //Debug.Log(player.playerHealth);'
-                 playerAudio.Play();
             }
-            
+
+            camShake.shakeDuration = 0.5f;
+
+
+
+            // healthbar.value = player.playerHealth; //<-- detta kommer sedan för att ändra healthbar (hundhuvuden)//Märta
+            //Debug.Log(player.playerHealth);'
+            playerAudio.Play();
         }
+
+
         if (other.CompareTag("Asteroid")) {
             Destroy(other.gameObject);
         }
