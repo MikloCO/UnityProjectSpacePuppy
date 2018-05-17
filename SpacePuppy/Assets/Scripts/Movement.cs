@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour {
     public int playerHealth = 3;
     public float speed = 2.0f;
     // bool isDead = false;
-    //public AudioClip deathClip;
+    
 
     public Transform fireParticles;
     private float verticalDirection;
@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour {
 
     public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouchRH, VerticalTouchLH };
     public ControllerType ctrl;
-    //AudioSource playerAudio;
+    
 
     void Start () {
         rb2d = GetComponent<Rigidbody2D>();
@@ -81,7 +81,7 @@ public class Movement : MonoBehaviour {
         if (playerHealth <= 0) {
             scoreManager.ScoreVsHighScore();
             //  Death();
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("DeathMenu");
         }
 
     }
@@ -107,13 +107,4 @@ public class Movement : MonoBehaviour {
         fireParticles.localPosition = new Vector3(-1.62f, 1.47f);
         fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 47.48f, fireParticles.localRotation.w);
     }
-
-    //void Death()
-    // {
-    //     isDead = true;
-    //     playerAudio.clip = deathClip;
-    //     playerAudio.Play();
-
-    // }
-
 }
