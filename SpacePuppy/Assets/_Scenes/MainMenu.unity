@@ -257,6 +257,11 @@ Prefab:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224664483118619128, guid: d61b285ff508f644885c26db3c26d2c7,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d61b285ff508f644885c26db3c26d2c7, type: 2}
   m_IsPrefabParent: 0
@@ -1867,6 +1872,11 @@ Prefab:
     - target: {fileID: 224489874555994582, guid: 4256a2792b53fce439eb78627a8c4262,
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298398894141010, guid: 4256a2792b53fce439eb78627a8c4262,
+        type: 2}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
