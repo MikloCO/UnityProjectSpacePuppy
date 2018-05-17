@@ -2171,7 +2171,7 @@ MonoBehaviour:
   pause: {fileID: 2117806932}
   scoreManager: {fileID: 1343278413}
   playerHealth: 100
-  speed: 25
+  speed: 20
   fireParticles: {fileID: 1515914744}
   ctrl: 2
 --- !u!114 &680774967
