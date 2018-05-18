@@ -17,7 +17,8 @@ public class PickUpCD : MonoBehaviour {
 			do {
 				clip = clips [Random.Range (0, clips.Length)];
 			} while(clip.Equals(Camera.main.GetComponent<AudioSource> ().clip));
-			Camera.main.GetComponent<AudioSource> ().clip = clip;
+
+            Camera.main.GetComponent<AudioSource> ().clip = clip;
 			Camera.main.GetComponent<AudioSource> ().Play ();
 			Destroy (other.gameObject);
 		}

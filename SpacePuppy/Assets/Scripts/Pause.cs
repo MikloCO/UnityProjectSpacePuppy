@@ -14,6 +14,8 @@ public class Pause : MonoBehaviour {
     public float gameSpeed = 1.0f;
     public float scoreSpeed = 1.0f;
     private float timer = 0f;
+    private float countdownTimer = 0f;
+    private bool countdown = false;
     private bool swipeActive = false;
     private float timeUntilSwipe;
     private GameObject nextSwipe;
@@ -36,10 +38,33 @@ public class Pause : MonoBehaviour {
     void Update () {
         if (!swipeActive) {
             if (timer > timeUntilSwipe) {
-                Activate3();
+                countdown = true;
+                countdowns[0].SetActive(true);
                 swipeActive = true;
             }
             timer += Time.deltaTime * gameSpeed;
+        }
+        if (countdown) {
+            if (countdownTimer >= 1f) {
+                countdowns[0].SetActive(false);
+                countdowns[1].SetActive(true);
+            }
+            if (countdownTimer >= 2f) {
+                countdowns[1].SetActive(false);
+                countdowns[2].SetActive(true);
+            }
+            if(countdownTimer >= 3f) {
+                countdowns[2].SetActive(false);
+                countdowns[3].SetActive(true);
+            }
+            if(countdownTimer >= 4f) {
+                countdowns[3].SetActive(false);
+                gameSpeed = 0.2f;
+                nextSwipe.SetActive(true);
+                countdown = false;
+                countdownTimer = 0;
+            }
+            countdownTimer += Time.deltaTime * gameSpeed;
         }
     }
 
@@ -76,7 +101,10 @@ public class Pause : MonoBehaviour {
         timer = 0;
         swipeActive = false;
         nextSwipe.SetActive(false);
-        nextSwipe = swipes[Random.Range(0, swipes.Count)];
+        GameObject oldSwipe = nextSwipe;
+        do {
+            nextSwipe = swipes[Random.Range(0, swipes.Count)];
+        } while (nextSwipe.Equals(oldSwipe));
         Invoke("ContinueGame", 1f);
     }
 
