@@ -5,9 +5,14 @@ using UnityEngine;
 public class Pause : MonoBehaviour {
 
     public Transform swipeCountdown;
-    public Transform swipe;
 
-    private List<GameObject> swipes = new List<GameObject>();
+    public int difficulty = 1;
+
+    public GameObject[] swipesDifficulty1;
+    public GameObject[] swipesDifficulty2;
+    public GameObject[] swipesDifficulty3;
+    public GameObject[] swipesDifficulty4;
+    public GameObject[] swipesDifficulty5;
 
     public float[] timeUntilSwipeInterval = { 10f, 15f };
 
@@ -19,18 +24,16 @@ public class Pause : MonoBehaviour {
     private bool swipeActive = false;
     private float timeUntilSwipe;
     private GameObject nextSwipe;
+    private GameObject currentSwipe;
     private List<GameObject> countdowns = new List<GameObject>();
 
     void Start () {
         foreach (Transform child in swipeCountdown) {
             countdowns.Add(child.gameObject);
         }
-        foreach (Transform child in swipe) {
-            swipes.Add(child.gameObject);
-        }
 
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
-        nextSwipe = swipes[Random.Range(0, swipes.Count)];
+        nextSwipe = swipesDifficulty1[Random.Range(0, swipesDifficulty1.Length)];
         gameSpeed = 1f;
         timer = 0f;
     }
@@ -60,7 +63,7 @@ public class Pause : MonoBehaviour {
             if(countdownTimer >= 4f) {
                 countdowns[3].SetActive(false);
                 gameSpeed = 0.2f;
-                nextSwipe.SetActive(true);
+                currentSwipe = Instantiate(nextSwipe);
                 countdown = false;
                 countdownTimer = 0;
             }
@@ -71,10 +74,26 @@ public class Pause : MonoBehaviour {
     public void Resume () {
         timer = 0;
         swipeActive = false;
-        nextSwipe.SetActive(false);
+        Destroy(currentSwipe);
         GameObject oldSwipe = nextSwipe;
         do {
-            nextSwipe = swipes[Random.Range(0, swipes.Count)];
+            switch (difficulty) {
+                case 1:
+                    nextSwipe = swipesDifficulty1[Random.Range(0, swipesDifficulty1.Length)];
+                    break;
+                case 2:
+                    nextSwipe = swipesDifficulty2[Random.Range(0, swipesDifficulty2.Length)];
+                    break;
+                case 3:
+                    nextSwipe = swipesDifficulty3[Random.Range(0, swipesDifficulty3.Length)];
+                    break;
+                case 4:
+                    nextSwipe = swipesDifficulty4[Random.Range(0, swipesDifficulty4.Length)];
+                    break;
+                case 5:
+                    nextSwipe = swipesDifficulty5[Random.Range(0, swipesDifficulty5.Length)];
+                    break;
+            }
         } while (nextSwipe.Equals(oldSwipe));
         Invoke("ContinueGame", 1f);
     }

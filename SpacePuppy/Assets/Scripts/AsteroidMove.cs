@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class AsteroidMove : MonoBehaviour {
     public float speed = 2f;
-    public Pause pause;
+    private Pause pause;
     private SpriteRenderer sprite;
 
     // Use this for initialization
     void Start () {
+        pause = FindObjectOfType<Pause>();
         sprite = GetComponent<SpriteRenderer>();
     }
 

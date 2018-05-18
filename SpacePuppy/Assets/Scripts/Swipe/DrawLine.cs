@@ -6,7 +6,7 @@ public class DrawLine : MonoBehaviour {
     
     public CircleCollider2D lineCollider;
     public SwipeController swipeController;
-    public Pause pause;
+    private Pause pause;
 
     public float timeToDraw = 0.2f;
 
@@ -24,6 +24,7 @@ public class DrawLine : MonoBehaviour {
 	public GameObject particles;
 
     private void Start () {
+        pause = FindObjectOfType<Pause>();
         particles.SetActive(false);
     }
 
