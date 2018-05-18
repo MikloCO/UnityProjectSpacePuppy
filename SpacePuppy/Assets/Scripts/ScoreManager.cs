@@ -7,7 +7,7 @@ using System.IO;
 public class ScoreManager : MonoBehaviour {
     //Alla texter och floats och bools e deklaraerade nedan
 
-    public Pause pause;
+    private Pause pause;
     public Text scoreText;
     public Text hiScoreText;
     public float scoreCount;
@@ -38,6 +38,7 @@ public class ScoreManager : MonoBehaviour {
     }
 
     void Start () {
+        pause = FindObjectOfType<Pause>();
         DontDestroyOnLoad(gameObject);
         ScoreVsHighScore();
         scoreCount = 0;

@@ -6,7 +6,7 @@ using System.Linq;
 public class CurvesGenSwitch : MonoBehaviour
 {
     //public bool paused = false;
-    public Pause pause;
+    private Pause pause;
 
     public GameObject[] asteroids;
 
@@ -17,6 +17,7 @@ public class CurvesGenSwitch : MonoBehaviour
 
     void Start()
     {
+        pause = FindObjectOfType<Pause>();
         //   float f = Mathf.Lerp(transform.position.y, asteroids[1].transform.position.y, 0.4f);
 
         // totala längden mellan de två punkternas x-led

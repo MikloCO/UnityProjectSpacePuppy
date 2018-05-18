@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class BackgroundGenSwitch : MonoBehaviour {
 
-	public Pause pause;
+	private Pause pause;
 
 	public float speed = 2f;
 	public float endPosition = -30f;
 	public float resetPosition = 30f;
 
-	void Update()
+    private void Start () {
+        pause = FindObjectOfType<Pause>();
+    }
+
+    void Update()
 	{
 		for (int i = 0; i < 2; i++)
 		{

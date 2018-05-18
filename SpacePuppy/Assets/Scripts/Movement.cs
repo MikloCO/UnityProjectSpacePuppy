@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour {
     //public bool paused = false;
-    public Pause pause;
+    private Pause pause;
     public ScoreManager scoreManager;
     public int playerHealth = 3;
     public float speed = 2.0f;
@@ -22,6 +22,7 @@ public class Movement : MonoBehaviour {
     
 
     void Start () {
+        pause = FindObjectOfType<Pause>();
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }

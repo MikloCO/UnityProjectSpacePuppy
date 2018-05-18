@@ -3,8 +3,12 @@
 public class RotatingScript : MonoBehaviour
 {
 
-    public Pause pause;
+    private Pause pause;
     public float speed = 1f;
+
+    private void Start () {
+        pause = FindObjectOfType<Pause>();
+    }
 
     void Update()
     {

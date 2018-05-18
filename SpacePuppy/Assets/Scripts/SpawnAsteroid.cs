@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnAsteroid : MonoBehaviour {
-
-    public Pause pause;
+    
     public GameObject[] asteroids;
     public float chanceToSpawn = 50F;
 

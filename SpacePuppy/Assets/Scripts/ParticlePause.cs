@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ParticlePause : MonoBehaviour {
 
-    public Pause pause;
+    private Pause pause;
 
     private bool paused = false;
 
-	void Update () {
+    private void Start () {
+        pause = FindObjectOfType<Pause>();
+    }
+    void Update () {
         if (pause.gameSpeed  == 0 && !paused){
             GetComponent<ParticleSystem>().Pause();
             paused = true;

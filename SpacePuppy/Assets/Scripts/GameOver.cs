@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour {
 
-    public Pause pause;
+    private Pause pause;
+
+    private void Start () {
+        pause = FindObjectOfType<Pause>();
+    }
 
     public void PressedMainMenu()
     {

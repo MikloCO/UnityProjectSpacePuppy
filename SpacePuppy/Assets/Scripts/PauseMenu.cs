@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
-    public Pause pause;
+    private Pause pause;
 
+    private void Start () {
+        pause = FindObjectOfType<Pause>();
+    }
     public void ReturnMenu () {
         SceneManager.LoadScene("MainMenu");
     }
