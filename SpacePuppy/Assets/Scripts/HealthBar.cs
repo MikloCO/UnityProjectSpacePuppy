@@ -25,21 +25,14 @@ public class HealthBar : MonoBehaviour {
         switch (player.playerHealth)
         {
             case 2:
-                Debug.Log("2");
                 head3.gameObject.SetActive(false);
                 break;
             case 1:
-                Debug.Log("1");
                 head2.gameObject.SetActive(false);
                 break;
             case 0:
-                Debug.Log("0");
                 head3.gameObject.SetActive(false);
-
-                if (head1 == false && head2 == false && head3 == false)
-                {
-                    SceneManager.LoadScene("DeathScene");
-                }
+                SceneManager.LoadScene("DeathScene");
                 //gameOver.gameObject.SetActive(true);
                 //Time.timeScale = 0;
                 break;

@@ -12,12 +12,13 @@ public class SwipeController : MonoBehaviour {
 
     private ScoreManager scoreManager;
     public CountCoins coins;
-    public Pause pause;
+    private Pause pause;
 
     private int score;
 
     private void Start () {
         scoreManager = FindObjectOfType<ScoreManager>();
+        pause = FindObjectOfType<Pause>();
         numberOfCoins = coins.Coins();
     }
 
@@ -25,8 +26,11 @@ public class SwipeController : MonoBehaviour {
         scoreManager.SwipeScore(coinsCollected, perfect);
         coinsCollected = 0;
         coinPositions.Clear();
-        scoreManager.speedPointMultiplier += scoreManager.speedPointMultiplierIncrease;
-        pause.scoreSpeed += 0.1f;
+        if (pause.difficulty < 5) {
+            scoreManager.difficultyMultiplier += scoreManager.difficultyMultiplierIncrease;
+            pause.difficulty += 1;
+            pause.scoreSpeed += 0.1f;
+        }
     }
 
     public void AddCoin (Vector3 position) {
