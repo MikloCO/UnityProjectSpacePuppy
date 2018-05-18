@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261941834991058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.5, y: 2.96, z: -0.26953125}
+  m_LocalPosition: {x: 15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,12 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   asteroids:
-  - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
-  - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
-  - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
-  - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
-  - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
-  chanceToSpawn: 25
+  - {fileID: 1702150908421918, guid: 72783ac5f30dca14f87ba167639884c4, type: 2}
+  chanceToSpawn: 100
