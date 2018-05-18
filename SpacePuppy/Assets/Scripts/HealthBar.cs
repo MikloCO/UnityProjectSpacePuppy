@@ -32,7 +32,6 @@ public class HealthBar : MonoBehaviour {
                 break;
             case 0:
                 head3.gameObject.SetActive(false);
-                SceneManager.LoadScene("DeathScene");
                 //gameOver.gameObject.SetActive(true);
                 //Time.timeScale = 0;
                 break;
