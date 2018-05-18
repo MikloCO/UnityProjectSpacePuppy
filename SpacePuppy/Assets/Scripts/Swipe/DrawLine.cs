@@ -16,7 +16,6 @@ public class DrawLine : MonoBehaviour {
 
     private bool mousePressed;
     private Vector3 mousePosition;
-    private List<Vector3> vertexList = new List<Vector3>();
 
     private float drawTimer = 0f;
 
@@ -59,9 +58,7 @@ public class DrawLine : MonoBehaviour {
 
     public void SquiggleCollideBig (){
         mousePressed = false;
-        start = false;
-        drawing = false;
-        particles.SetActive(false);
+        Finish();
     }
 
     public void SquiggleCollideSmall () {

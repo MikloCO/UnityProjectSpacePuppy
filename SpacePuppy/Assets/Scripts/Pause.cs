@@ -5,7 +5,9 @@ using UnityEngine;
 public class Pause : MonoBehaviour {
 
     public Transform swipeCountdown;
-    public GameObject[] swipes;
+    public Transform swipe;
+
+    private List<GameObject> swipes = new List<GameObject>();
 
     public float[] timeUntilSwipeInterval = { 10f, 15f };
 
@@ -21,8 +23,12 @@ public class Pause : MonoBehaviour {
         foreach (Transform child in swipeCountdown) {
             countdowns.Add(child.gameObject);
         }
+        foreach (Transform child in swipe) {
+            swipes.Add(child.gameObject);
+        }
+
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
-        nextSwipe = swipes[Random.Range(0, swipes.Length)];
+        nextSwipe = swipes[Random.Range(0, swipes.Count)];
         gameSpeed = 1f;
         timer = 0f;
     }
@@ -70,7 +76,7 @@ public class Pause : MonoBehaviour {
         timer = 0;
         swipeActive = false;
         nextSwipe.SetActive(false);
-        nextSwipe = swipes[Random.Range(0, swipes.Length)];
+        nextSwipe = swipes[Random.Range(0, swipes.Count)];
         Invoke("ContinueGame", 1f);
     }
 
