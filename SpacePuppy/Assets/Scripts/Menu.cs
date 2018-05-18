@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-
+ 
     public void PlayGame()
     {
         Invoke("PlayGameButton", 0.4f);
