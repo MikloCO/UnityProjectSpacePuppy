@@ -16,6 +16,8 @@ public class Pause : MonoBehaviour {
 
     public float[] timeUntilSwipeInterval = { 10f, 15f };
 
+    public bool swiping = false;
+
     public float gameSpeed = 1.0f;
     public float scoreSpeed = 1.0f;
     private float timer = 0f;
@@ -64,6 +66,7 @@ public class Pause : MonoBehaviour {
                 countdowns[3].SetActive(false);
                 gameSpeed = 0.2f;
                 currentSwipe = Instantiate(nextSwipe);
+                swiping = true;
                 countdown = false;
                 countdownTimer = 0;
             }
@@ -74,6 +77,7 @@ public class Pause : MonoBehaviour {
     public void Resume () {
         timer = 0;
         swipeActive = false;
+        swiping = false;
         Destroy(currentSwipe);
         GameObject oldSwipe = nextSwipe;
         do {
