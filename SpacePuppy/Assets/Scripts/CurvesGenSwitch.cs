@@ -5,7 +5,6 @@ using System.Linq;
 
 public class CurvesGenSwitch : MonoBehaviour
 {
-    //public bool paused = false;
     private Pause pause;
 
     public GameObject[] asteroids;
@@ -13,15 +12,12 @@ public class CurvesGenSwitch : MonoBehaviour
     public float speed = 2f;
     public float endPosition = -30f;
     public float resetPosition = 30f;
-    //public float background;
 
     void Start()
     {
         pause = FindObjectOfType<Pause>();
-        //   float f = Mathf.Lerp(transform.position.y, asteroids[1].transform.position.y, 0.4f);
-
-        // totala längden mellan de två punkternas x-led
-        // hur långt har spelaren kommit i x-led från första punktens x-led
+        Instantiate(asteroids[Random.Range(0, asteroids.Length)], this.transform);
+        Instantiate(asteroids[Random.Range(0, asteroids.Length)], new Vector3(30, 0, 0), new Quaternion(), this.transform);
     }
 
 
