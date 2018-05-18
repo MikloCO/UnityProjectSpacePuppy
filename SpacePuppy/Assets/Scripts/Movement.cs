@@ -91,7 +91,7 @@ public class Movement : MonoBehaviour {
         if (rb2d.velocity.y < 0) {
             rb2d.velocity = new Vector2(0, 0);
         }
-        rb2d.AddForce(Vector3.up * speed * pause.gameSpeed);
+        rb2d.AddForce(Vector3.up * speed);
         // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform);
         anim.SetInteger("state", 1);
         fireParticles.localPosition = new Vector3(-1.79f, 0.15f);
@@ -102,7 +102,7 @@ public class Movement : MonoBehaviour {
         if (rb2d.velocity.y > 0) {
             rb2d.velocity = new Vector2(0, 0);
         }
-        rb2d.AddForce(Vector3.down * speed * pause.gameSpeed);
+        rb2d.AddForce(Vector3.down * speed);
         // transform.Translate(Vector3.down * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform)
         anim.SetInteger("state", 2);
         fireParticles.localPosition = new Vector3(-1.62f, 1.47f);

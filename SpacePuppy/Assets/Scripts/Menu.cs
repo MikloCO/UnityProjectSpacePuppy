@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
 
     void PlayGameButton()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level 2");
     }
 
     public void QuitGame()

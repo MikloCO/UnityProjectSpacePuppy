@@ -13,6 +13,7 @@ public class MuteSound : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         menuAudio = GetComponent<AudioSource>();
         menuAudio.PlayOneShot(backMusic, 1f); // bara när jag startar
         
