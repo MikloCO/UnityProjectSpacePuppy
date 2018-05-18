@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-
+ 
     public void PlayGame()
     {
         Invoke("PlayGameButton", 0.4f);
@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
 
     void PlayGameButton()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level 2");
     }
 
     public void QuitGame()
