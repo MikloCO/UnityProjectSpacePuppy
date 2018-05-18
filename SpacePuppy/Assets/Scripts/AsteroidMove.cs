@@ -17,7 +17,6 @@ public class AsteroidMove : MonoBehaviour {
     void Update () {
 
         if (sprite.isVisible) {
-            Debug.Log("Vector.Left " + Vector3.left);
             transform.Translate(Vector3.left * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform);
         }
     }

@@ -20,6 +20,7 @@ public class DrawLine : MonoBehaviour {
     private float drawTimer = 0f;
 
     public bool perfect = true;
+    public bool failed = false;
 
 	public GameObject particles;
 
@@ -51,7 +52,9 @@ public class DrawLine : MonoBehaviour {
 			if(drawTimer >= timeToDraw) {
 				Finish();
 			}
-			mousePressed = false;
+            particles.SetActive(false);
+            drawing = false;
+            mousePressed = false;
 			drawTimer = 0;
 		}
 	}
@@ -59,6 +62,7 @@ public class DrawLine : MonoBehaviour {
 
     public void SquiggleCollideBig (){
         mousePressed = false;
+        failed = true;
         Finish();
     }
 
@@ -73,7 +77,7 @@ public class DrawLine : MonoBehaviour {
         start = false;
         drawing = false;
         particles.SetActive(false);
-        swipeController.Finish(perfect);
+        swipeController.Finish(perfect, failed);
 
         pause.Resume();
     }

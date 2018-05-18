@@ -39,7 +39,6 @@ public class ScoreManager : MonoBehaviour {
 
     void Start () {
         pause = FindObjectOfType<Pause>();
-        DontDestroyOnLoad(gameObject);
         ScoreVsHighScore();
         scoreCount = 0;
         hiScoreCount = PlayerPrefs.GetInt("highscore");

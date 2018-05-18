@@ -6,7 +6,9 @@ public class SquiggleCollisionBig : MonoBehaviour {
 
     void OnTriggerExit2D (Collider2D other) {
         if (other.CompareTag("Line")) {
-            other.transform.parent.GetComponent<DrawLine>().SquiggleCollideBig();
+            if (other.transform.parent.GetComponent<DrawLine>().drawing) {
+                other.transform.parent.GetComponent<DrawLine>().SquiggleCollideBig();
+            }
         }
     }
 }
