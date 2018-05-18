@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour {
             MoveDown();
         }
 
-        if (ctrl == ControllerType.HorizontalTouchRH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0)) //sköld knappen på höger sida
+        if (ctrl == ControllerType.HorizontalTouchRH && !pause.swiping && Input.GetMouseButton(0)) //sköld knappen på höger sida
         {
             if (Input.mousePosition.x > Screen.width / 2) {
                 MoveUp();
@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour {
             }
         }
 
-        if (ctrl == ControllerType.HorizontalTouchLH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0)) //Sköld knappen på vänster sida
+        if (ctrl == ControllerType.HorizontalTouchLH && !pause.swiping && Input.GetMouseButton(0)) //Sköld knappen på vänster sida
         {
             if (Input.mousePosition.x < Screen.width / 2) {
                 MoveUp();
@@ -56,7 +56,7 @@ public class Movement : MonoBehaviour {
             }
         }
 
-        if (ctrl == ControllerType.VerticalTouchRH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0)) {
+        if (ctrl == ControllerType.VerticalTouchRH && !pause.swiping && Input.GetMouseButton(0)) {
             if (Input.mousePosition.y > Screen.height / 2) {
                 MoveUp();
             }
@@ -65,7 +65,7 @@ public class Movement : MonoBehaviour {
             }
         }
 
-        if (ctrl == ControllerType.VerticalTouchLH && pause.gameSpeed > 0.3 && Input.GetMouseButton(0)) {
+        if (ctrl == ControllerType.VerticalTouchLH && !pause.swiping && Input.GetMouseButton(0)) {
             if (Input.mousePosition.y > Screen.height / 2) {
                 MoveUp();
             }
