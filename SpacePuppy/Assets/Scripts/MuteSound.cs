@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MuteSound : MonoBehaviour {
-    Audio.pause = true;
-    AudioListener.volume = 0;
+    //Audio.pause = true;
+    //AudioListener.volume = 0;
 	// Use this for initialization
 	void Start () {
 		
