@@ -6,10 +6,8 @@ using UnityEngine.UI;
 public class SoundButtonChange : MonoBehaviour {
 
     public Button soundButton;
-  
     public Sprite soundOnSprite;
     public Sprite soundOffSprite;
-
 
     private int count = 0;
 
@@ -41,14 +39,14 @@ public class SoundButtonChange : MonoBehaviour {
 
     void Update () {
 
-        //soundButton.onClick.ChangeSprite();
+      //  soundButton.onClick.ChangeButton();
 
     }
 
     public void ChangeButton()
     {
 
-        count++;
+     //   soundButton.onClick()= count++;
 
         if(count%2 == 0)
         {
