@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50254258814200556}
   - component: {fileID: 60208486382843484}
   - component: {fileID: 114474950864854604}
+  - component: {fileID: 95123749421789400}
   m_Layer: 0
   m_Name: Asteroid4
   m_TagString: Asteroid
@@ -128,6 +129,24 @@ PolygonCollider2D:
       - {x: 0.125, y: -1.0799999}
       - {x: 0.21499999, y: -1.06}
       - {x: 0.33499998, y: -1.02}
+--- !u!95 &95123749421789400
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455453310144866}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 846b45a19a0bdd64387eec765772a1e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114474950864854604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  pause: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
 --- !u!212 &212720136897408130
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -154,6 +172,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
