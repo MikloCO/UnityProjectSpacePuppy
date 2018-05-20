@@ -457,7 +457,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5906c97fe7e8c994aab24d0c8d071ee0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5ec510b012323a742af26f02d9cd2721, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -536,10 +536,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 46984765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf5b82b58de35e24ab00f324b548ab9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f6899d66e9e8c469d8e12f603735d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camTransform: {fileID: 46984769}
   shakeDuration: 0
   shakeAmount: 0.1
   decreaseFactor: 1
@@ -2123,7 +2122,8 @@ MonoBehaviour:
   respawnPosition: 0
   fireParticles: {fileID: 1515914744}
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  astroids: {fileID: 0}
+  astroid: {fileID: 8300000, guid: 6e8e2425515a3f64bbde784bf5193eea, type: 3}
+  astroidBelt: {fileID: 8300000, guid: 9990f159a2eed6e4ba2faa24f10a825f, type: 3}
   camShake: {fileID: 46984771}
 --- !u!114 &680774966
 MonoBehaviour:
@@ -2182,11 +2182,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 5906c97fe7e8c994aab24d0c8d071ee0, type: 3}
-  - {fileID: 8300000, guid: 12646ccba7d4948469d5bcbfee1f4374, type: 3}
   - {fileID: 8300000, guid: 24eb5d76538155647ae123148f232ae3, type: 3}
-  - {fileID: 8300000, guid: b66af7fbbc5fe5f41b56a49b19ebe1d2, type: 3}
   - {fileID: 8300000, guid: 715efade3f807954297acaca62b202ef, type: 3}
+  - {fileID: 8300000, guid: 5ec510b012323a742af26f02d9cd2721, type: 3}
+  - {fileID: 8300000, guid: ed6f2cfd93c4359419f2108cce1b2685, type: 3}
 --- !u!82 &680774970
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10431,13 +10430,18 @@ Prefab:
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[0]
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[1]
-      value: 20
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
+        type: 2}
+      propertyPath: voice
+      value: 
+      objectReference: {fileID: 8300000, guid: a3b2c3ec6d9059e4c855c89bdb8296b3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   m_IsPrefabParent: 0

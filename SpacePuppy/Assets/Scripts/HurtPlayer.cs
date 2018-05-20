@@ -15,7 +15,7 @@ public class HurtPlayer : MonoBehaviour {
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); 
 
     private AudioSource playerAudio;
-    public AudioClip astroids;
+    public AudioClip astroid, astroidBelt;
     public CameraShakePuppyDamage camShake;
 
 
@@ -27,9 +27,7 @@ public class HurtPlayer : MonoBehaviour {
 
     private void Update () {
         if (damaged) {
-            damageTimer += Time.deltaTime;
-
-            
+            damageTimer += Time.deltaTime;            
         }
         if (damageTimer > 0.5f) {
             damaged = false;
@@ -44,7 +42,7 @@ public class HurtPlayer : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D other) {
 
-        if (other.CompareTag("Curve") || other.CompareTag("Asteroid"))
+        if (other.CompareTag("Asteroid"))
         {
             hurtAnim.SetInteger("state", 3);
             fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
@@ -60,9 +58,31 @@ public class HurtPlayer : MonoBehaviour {
                healthBar.RemoveHead();
 
             }
-            camShake.shakeDuration = 0.5f;
+            camShake.shakeDuration = 0.3f;
             playerAudio.pitch = Random.Range(0.5f, 1f);
-            playerAudio.PlayOneShot(astroids, 0.5f);
+            playerAudio.PlayOneShot(astroid, 0.7f);
+        }
+
+        if (other.CompareTag("Curve"))
+        {
+            hurtAnim.SetInteger("state", 3);
+            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
+            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
+
+            transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
+
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            if (!damaged)
+            {
+                damaged = true;
+                player.playerHealth--;
+
+                healthBar.RemoveHead();
+
+            }
+            camShake.shakeDuration = 0.7f;
+            playerAudio.pitch = Random.Range(1.5f, 2f);
+            playerAudio.PlayOneShot(astroidBelt, 0.3f);
         }
 
 
