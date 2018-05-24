@@ -17,11 +17,30 @@ public class Movement : MonoBehaviour {
     private Rigidbody2D rb2d;
     private Animator anim;
 
-    public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouchRH, VerticalTouchLH, MoveTowardTouch };
-    public ControllerType ctrl;
-    
+    public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouch, MoveTowardTouch };
+    public static ControllerType ctrl;
+
+    public void SetControllerType(int control) {
+        switch (control) {
+            case 0:
+                ctrl = ControllerType.VerticalTouch;
+                break;
+            case 1:
+                ctrl = ControllerType.MoveTowardTouch;
+                break;
+            case 2:
+                ctrl = ControllerType.HorizontalTouchRH;
+                break;
+            case 3:
+                ctrl = ControllerType.HorizontalTouchLH;
+                break;
+
+        }
+    }
+
 
     void Start () {
+        ctrl = ControllerType.VerticalTouch;
         pause = FindObjectOfType<Pause>();
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -39,10 +58,10 @@ public class Movement : MonoBehaviour {
 
         if(ctrl == ControllerType.MoveTowardTouch && !pause.swiping && Input.GetMouseButton(0))
         {
-            if(Input.mousePosition.x > transform.position.x) {
+            if(Camera.main.ScreenToWorldPoint(Input.mousePosition).y > transform.position.y) {
                 MoveUp();
             }
-            else {
+            else if(Camera.main.ScreenToWorldPoint(Input.mousePosition).y < transform.position.y){
                 MoveDown();
             }
         }
@@ -67,7 +86,7 @@ public class Movement : MonoBehaviour {
             }
         }
 
-        if (ctrl == ControllerType.VerticalTouchRH && !pause.swiping && Input.GetMouseButton(0)) {
+        if (ctrl == ControllerType.VerticalTouch && !pause.swiping && Input.GetMouseButton(0)) {
             if (Input.mousePosition.y > Screen.height / 2) {
                 MoveUp();
             }
@@ -75,15 +94,7 @@ public class Movement : MonoBehaviour {
                 MoveDown();
             }
         }
-
-        if (ctrl == ControllerType.VerticalTouchLH && !pause.swiping && Input.GetMouseButton(0)) {
-            if (Input.mousePosition.y > Screen.height / 2) {
-                MoveUp();
-            }
-            else {
-                MoveDown();
-            }
-        }
+        
         if (pause.gameSpeed < 1f) {
             rb2d.velocity = new Vector2(0, 0);
 
