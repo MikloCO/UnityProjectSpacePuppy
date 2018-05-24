@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &84814814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2172,7 +2172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89e63618522d644db95ae087c53a19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasChange: {fileID: 1870952553}
 --- !u!1 &1580085293
 GameObject:
   m_ObjectHideFlags: 0
@@ -5809,7 +5808,23 @@ Prefab:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 82554243829588916, guid: 03ea189828c5c3b40943fc3468430319,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5906c97fe7e8c994aab24d0c8d071ee0, type: 3}
+    - target: {fileID: 82554243829588916, guid: 03ea189828c5c3b40943fc3468430319,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82554243829588916, guid: 03ea189828c5c3b40943fc3468430319,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114972403949507010, guid: 03ea189828c5c3b40943fc3468430319, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 03ea189828c5c3b40943fc3468430319, type: 2}
   m_IsPrefabParent: 0
 --- !u!82 &1826756222 stripped
@@ -5828,7 +5843,6 @@ GameObject:
   - component: {fileID: 1870952551}
   - component: {fileID: 1870952550}
   - component: {fileID: 1870952549}
-  - component: {fileID: 1870952553}
   m_Layer: 5
   m_Name: Canvas - Landscapemode
   m_TagString: Untagged
@@ -5916,20 +5930,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1870952553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1870952548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94ede866f8ccb944897dd8d85232e6f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoresMenu: {fileID: 304490848}
-  menu: {fileID: 1557635819}
-  title: {fileID: 1613024774}
 --- !u!1 &1892457666
 GameObject:
   m_ObjectHideFlags: 0
@@ -6020,20 +6020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5b82b58de35e24ab00f324b548ab9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1999931653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1999931651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49f6899d66e9e8c469d8e12f603735d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakeDuration: 0
-  shakeAmount: 0.1
-  decreaseFactor: 1
 --- !u!1 &2013260516
 GameObject:
   m_ObjectHideFlags: 0
