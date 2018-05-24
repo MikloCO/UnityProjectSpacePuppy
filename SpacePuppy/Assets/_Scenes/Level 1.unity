@@ -846,6 +846,91 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.04, y: 63.94}
   m_EdgeRadius: 0
+--- !u!1 &270764204 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1558622805770860, guid: ef52e88c7c76c5b40a6a436f405f768a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1641647154}
+--- !u!82 &270764206
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270764204}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &285451122
 GameObject:
   m_ObjectHideFlags: 0
@@ -11101,7 +11186,7 @@ Prefab:
         type: 2}
       propertyPath: voice
       value: 
-      objectReference: {fileID: 8300000, guid: a3b2c3ec6d9059e4c855c89bdb8296b3, type: 3}
+      objectReference: {fileID: 8300000, guid: f13010484c47d79409c1eee61e156201, type: 3}
     - target: {fileID: 1558622805770860, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
       propertyPath: m_Name
       value: SwipeController
