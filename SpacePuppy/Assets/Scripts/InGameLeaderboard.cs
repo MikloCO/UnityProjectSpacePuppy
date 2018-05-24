@@ -11,8 +11,8 @@ public class InGameLeaderboard : MonoBehaviour {
 	void Start(){
 		text = GetComponentInChildren<Text> ();
 		for (int i = 1; i <= 9; i++) {
-			text.text += (i + ". " + PlayerPrefs.GetInt("highscore"+i) + "\n");
+			text.text += (i + " " + ":  " + PlayerPrefs.GetInt("highscore"+i) + "\n");
 		}
-		text.text += ("10. " + PlayerPrefs.GetInt("highscore10"));
+		text.text += ("10 " + ":  " + PlayerPrefs.GetInt("highscore10"));
 	}
 }
