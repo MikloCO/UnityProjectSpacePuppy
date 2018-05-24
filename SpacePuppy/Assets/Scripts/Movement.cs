@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
     public ScoreManager scoreManager;
     public int playerHealth = 3;
     public float speed = 2.0f;
-    // bool isDead = false;
+    bool isDead = false;
     
 
     public Transform fireParticles;
@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour {
     private Rigidbody2D rb2d;
     private Animator anim;
 
-    public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouchRH, VerticalTouchLH };
+    public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouchRH, VerticalTouchLH, MoveTowardTouch };
     public ControllerType ctrl;
     
 
@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour {
         pause = FindObjectOfType<Pause>();
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+		isDead = false;
     }
 
     void Update () {
@@ -34,6 +35,16 @@ public class Movement : MonoBehaviour {
         }
         else if (verticalDirection < 0) {
             MoveDown();
+        }
+
+        if(ctrl == ControllerType.MoveTowardTouch && !pause.swiping && Input.GetMouseButton(0))
+        {
+            if(Input.mousePosition.x > transform.position.x) {
+                MoveUp();
+            }
+            else {
+                MoveDown();
+            }
         }
 
         if (ctrl == ControllerType.HorizontalTouchRH && !pause.swiping && Input.GetMouseButton(0)) //sköld knappen på höger sida
@@ -79,10 +90,11 @@ public class Movement : MonoBehaviour {
         }
         //rb2d.velocity = Vector3.Lerp(Vector3.zero, rb2d.velocity, pause.gameSpeed);
 
-        if (playerHealth <= 0) {
+        if (playerHealth <= 0 && !isDead) {
             scoreManager.ScoreVsHighScore();
             //  Death();
             SceneManager.LoadScene("DeathMenu");
+			isDead = true;
         }
 
     }

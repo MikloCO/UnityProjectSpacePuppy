@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SocialPlatforms;
 
 public class ScoreManager : MonoBehaviour {
     //Alla texter och floats och bools e deklaraerade nedan
@@ -18,11 +19,18 @@ public class ScoreManager : MonoBehaviour {
     public float difficultyMultiplier = 1.0f;
     public float difficultyMultiplierIncrease = 1.0f;
     public float perfectMultiplier = 3.0f;
-    
+	int [] scoreCountArr = new int[10];
+
     public void ScoreVsHighScore () {
-        if (PlayerPrefs.GetInt("highscore") < (int)scoreCount) {
-            PlayerPrefs.SetInt("highscore", (int)scoreCount);
-        }
+		for (int i = 1; i <= 10; i++) {
+			if (PlayerPrefs.GetInt ("highscore"+i) < (int)scoreCount) {
+				for (int j = 10; j > i; j--) {
+					PlayerPrefs.SetInt(("highscore"+(j)), PlayerPrefs.GetInt("highscore"+(j-1)));
+				}
+				PlayerPrefs.SetInt (("highscore"+i), (int)scoreCount);
+				return;
+			}
+		}
     }
     
     public void SwipeScore (int points, bool perfect) {
@@ -38,16 +46,33 @@ public class ScoreManager : MonoBehaviour {
     }
 
     void Start () {
+
+		for (int i = 1; i <= 10; i++) {
+			Debug.Log (PlayerPrefs.GetInt ("highscore" + i));
+		}
+
         pause = FindObjectOfType<Pause>();
-        ScoreVsHighScore();
         scoreCount = 0;
         hiScoreCount = PlayerPrefs.GetInt("highscore");
         hiScoreText.text = "High Score: " + (hiScoreCount);
-    }
 
+
+	}
+
+	
+//	public int FinalScore() {
+
+//	Debug.Log(BonesScore() + SwipeScore() + scoreCount());
+
+//	for (int i = 0; i < 10; i++) {
+//		new[i] = scoreCount;
+//	}
+//	return scoreCount;
+//}
+				
     void Update () {
         scoreCount += pointsPerSecond * Time.deltaTime *  pause.gameSpeed * difficultyMultiplier;
 
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
-    }
+	}
 }
