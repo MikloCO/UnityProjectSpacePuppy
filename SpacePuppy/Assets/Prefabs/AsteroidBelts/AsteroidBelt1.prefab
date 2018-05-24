@@ -1629,24 +1629,33 @@ PolygonCollider2D:
       - {x: -14.88513, y: 5.284052}
       - {x: -14.871179, y: 3.9530566}
       - {x: -14.287939, y: 3.9100401}
-      - {x: -12.815235, y: 4.0385313}
+      - {x: -12.921252, y: 3.8370113}
+      - {x: -12.650433, y: 3.7638607}
+      - {x: -12.444428, y: 3.9002876}
       - {x: -11.649943, y: 4.05785}
       - {x: -10.3638525, y: 4.00819}
+      - {x: -9.200414, y: 3.9983559}
       - {x: -9.094148, y: 3.7163029}
       - {x: -7.5349593, y: 3.1663766}
       - {x: -5.8479805, y: 2.6754544}
+      - {x: -4.505686, y: 2.1985874}
       - {x: -2.9251866, y: 2.0557566}
       - {x: -1.1904675, y: 2.02386}
-      - {x: 0.17109191, y: 2.037449}
+      - {x: 0.665501, y: 1.9550476}
       - {x: 1.3608233, y: 2.3790128}
+      - {x: 2.1498685, y: 2.328928}
       - {x: 3.128849, y: 2.8204668}
-      - {x: 4.422851, y: 3.3981197}
+      - {x: 4.2392592, y: 3.2151241}
+      - {x: 4.8073916, y: 3.4255867}
+      - {x: 5.167332, y: 3.6896343}
+      - {x: 5.540866, y: 3.7267818}
       - {x: 7.156478, y: 4.2781377}
       - {x: 8.084926, y: 4.3368983}
       - {x: 9.192739, y: 3.960853}
       - {x: 10.032922, y: 3.9603486}
       - {x: 10.728853, y: 4.0327616}
       - {x: 11.568885, y: 3.906213}
+      - {x: 12.035495, y: 3.6341362}
       - {x: 12.407967, y: 3.7939916}
       - {x: 13.927945, y: 3.7478557}
       - {x: 14.97393, y: 4.0541253}
@@ -1674,41 +1683,60 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 14.268519, y: -4.4441314}
-      - {x: 13.656464, y: -4.395869}
-      - {x: 13.165901, y: -4.138251}
+    - - {x: 14.268519, y: -4.274928}
+      - {x: 13.787484, y: -4.1010723}
+      - {x: 13.513291, y: -4.1876183}
+      - {x: 13.126854, y: -4.0211096}
       - {x: 12.57713, y: -4.0139318}
-      - {x: 12.265816, y: -3.8224528}
-      - {x: 11.844399, y: -3.751952}
+      - {x: 12.213753, y: -3.8745136}
+      - {x: 11.740273, y: -3.921154}
       - {x: 11.480239, y: -3.6673996}
-      - {x: 9.890519, y: -3.0999162}
+      - {x: 10.748783, y: -3.2996445}
+      - {x: 10.413405, y: -3.3935928}
+      - {x: 10.122309, y: -3.2212925}
+      - {x: 9.810449, y: -3.2089043}
+      - {x: 9.747347, y: -3.1129322}
+      - {x: 9.425276, y: -2.9385586}
       - {x: 9.109301, y: -3.168273}
-      - {x: 7.83049, y: -2.8743103}
+      - {x: 8.642637, y: -2.8676147}
+      - {x: 7.8999395, y: -2.7075157}
+      - {x: 7.5831923, y: -2.535904}
       - {x: 5.8824625, y: -2.3330984}
-      - {x: 4.8935947, y: -2.25341}
-      - {x: 4.2034082, y: -2.449537}
-      - {x: 3.393331, y: -2.3767834}
-      - {x: 2.958014, y: -2.5854485}
-      - {x: 1.506128, y: -2.685929}
-      - {x: 0.35291588, y: -2.9568315}
+      - {x: 5.35248, y: -2.348196}
+      - {x: 4.724391, y: -2.1883316}
+      - {x: 4.1513453, y: -2.358429}
+      - {x: 3.5885663, y: -2.3377361}
+      - {x: 3.2490072, y: -2.533186}
+      - {x: 2.958014, y: -2.338152}
+      - {x: 2.1217666, y: -2.6253624}
+      - {x: 1.6883472, y: -2.5818043}
+      - {x: 1.3968915, y: -2.8990955}
+      - {x: 0.4049785, y: -3.0479412}
       - {x: -0.40744913, y: -3.3136199}
-      - {x: -1.7896699, y: -3.4796154}
-      - {x: -3.143959, y: -3.5557473}
-      - {x: -4.55782, y: -3.67183}
-      - {x: -5.352845, y: -3.3777463}
-      - {x: -5.9850383, y: -3.336665}
-      - {x: -7.911503, y: -2.8772795}
-      - {x: -9.376709, y: -2.7071245}
-      - {x: -10.225682, y: -2.8053591}
-      - {x: -10.876916, y: -2.960023}
+      - {x: -0.8138958, y: -3.6652393}
+      - {x: -1.6495271, y: -3.7005672}
+      - {x: -3.0543637, y: -3.9029293}
+      - {x: -3.9207244, y: -3.8441505}
+      - {x: -4.55782, y: -3.5150375}
+      - {x: -5.185857, y: -3.5758743}
+      - {x: -5.397643, y: -3.265751}
+      - {x: -5.8506403, y: -3.326973}
+      - {x: -6.0589604, y: -3.005947}
+      - {x: -6.6570015, y: -2.8214931}
+      - {x: -7.0787287, y: -3.0137157}
+      - {x: -8.0794935, y: -2.5860958}
+      - {x: -9.432706, y: -2.6063309}
+      - {x: -10.281679, y: -2.9285526}
+      - {x: -10.977712, y: -2.8368282}
       - {x: -11.941589, y: -3.2946687}
-      - {x: -13.088063, y: -3.6712306}
-      - {x: -14.375955, y: -4.0998373}
-      - {x: -14.888123, y: -4.3541255}
+      - {x: -12.830478, y: -3.6152325}
+      - {x: -13.14285, y: -3.8984833}
+      - {x: -14.151967, y: -4.189432}
+      - {x: -14.944119, y: -4.242132}
       - {x: -14.839129, y: -9.954602}
       - {x: 14.849303, y: -9.692075}
-      - {x: 14.945327, y: -4.324313}
-      - {x: 14.530781, y: -4.486666}
+      - {x: 14.978082, y: -4.095028}
+      - {x: 14.517765, y: -4.284276}
 --- !u!114 &114020266466185364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1720,7 +1748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1750,7 +1777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1770,7 +1796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1790,7 +1815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1807,7 +1831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1824,7 +1847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1841,7 +1863,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   asteroids:
   - {fileID: 1360640521389526, guid: 92efdc6dd98959543964214455f599d2, type: 2}
   chanceToSpawn: 10
@@ -1856,7 +1877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1876,7 +1896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1893,7 +1912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1926,7 +1944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1943,7 +1960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1960,7 +1976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1977,7 +1992,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   asteroids:
   - {fileID: 1360640521389526, guid: 92efdc6dd98959543964214455f599d2, type: 2}
   chanceToSpawn: 5
@@ -1992,7 +2006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2022,7 +2035,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -2042,7 +2054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2059,7 +2070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -2079,7 +2089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2096,7 +2105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2113,7 +2121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2130,7 +2137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2147,7 +2153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2187,7 +2192,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7769029476c6766409cd9df888dd5d85, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08b4bf023c22a3b4f81ae7d67ebaeac9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
