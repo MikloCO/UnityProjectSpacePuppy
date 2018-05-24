@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
     public ScoreManager scoreManager;
     public int playerHealth = 3;
     public float speed = 2.0f;
-    // bool isDead = false;
+    bool isDead = false;
     
 
     public Transform fireParticles;
@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour {
         pause = FindObjectOfType<Pause>();
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+		isDead = false;
     }
 
     void Update () {
@@ -79,10 +80,11 @@ public class Movement : MonoBehaviour {
         }
         //rb2d.velocity = Vector3.Lerp(Vector3.zero, rb2d.velocity, pause.gameSpeed);
 
-        if (playerHealth <= 0) {
+        if (playerHealth <= 0 && !isDead) {
             scoreManager.ScoreVsHighScore();
             //  Death();
             SceneManager.LoadScene("DeathMenu");
+			isDead = true;
         }
 
     }
