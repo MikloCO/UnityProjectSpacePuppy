@@ -23,6 +23,7 @@ public class Pause : MonoBehaviour {
     public float scoreSpeedIncrease = 0.1f;
     private float timer = 0f;
     private float countdownTimer = 0f;
+    private int count = 3;
     private bool countdown = false;
     private bool swipeActive = false;
     private float timeUntilSwipe;
@@ -30,11 +31,14 @@ public class Pause : MonoBehaviour {
     private GameObject currentSwipe;
     private List<GameObject> countdowns = new List<GameObject>();
 
-    //private AudioSource myAudioSource;
-   // public AudioClip voice;
+    private AudioSource myAudioSource;
+    public AudioClip three;
+    public AudioClip two;
+    public AudioClip one;
+    public AudioClip swipe;
 
     void Start () {
-       // myAudioSource = GetComponent<AudioSource>();
+        myAudioSource = GetComponent<AudioSource>();
 
         foreach (Transform child in swipeCountdown) {
             countdowns.Add(child.gameObject);
@@ -44,39 +48,48 @@ public class Pause : MonoBehaviour {
         nextSwipe = swipesDifficulty1[Random.Range(0, swipesDifficulty1.Length)];
         gameSpeed = 1f;
         timer = 0f;
+        count = 3;
     }
 
     void Update () {
         if (!swipeActive) {
-            if (timer > timeUntilSwipe) {
+            if (timer > timeUntilSwipe && count == 3) {
+                myAudioSource.pitch = Random.Range(1f, 1f);
+                myAudioSource.PlayOneShot(three, 0.5f);
                 countdown = true;
                 countdowns[0].SetActive(true);
                 swipeActive = true;
+                count = 2;
             }
             timer += Time.deltaTime * gameSpeed;
         }
         if (countdown) {
-            if (countdownTimer >= 1f) {
-              //  myAudioSource.pitch = Random.Range(1f,1f);
-              //  myAudioSource.PlayOneShot(voice, 0.5f);
+            if (countdownTimer >= 1f && count == 2) {
+                myAudioSource.PlayOneShot(two, 0.5f);
                 countdowns[0].SetActive(false);
                 countdowns[1].SetActive(true);
+                count = 1;
             }
-            if (countdownTimer >= 2f) {
+            if (countdownTimer >= 2f && count == 1) {
+                myAudioSource.PlayOneShot(one, 0.5f);
                 countdowns[1].SetActive(false);
                 countdowns[2].SetActive(true);
+                count = 0;
             }
-            if(countdownTimer >= 3f) {
+            if(countdownTimer >= 3f && count == 0) {
+                myAudioSource.PlayOneShot(swipe, 0.5f);
                 countdowns[2].SetActive(false);
                 countdowns[3].SetActive(true);
+                count = -1;
             }
-            if(countdownTimer >= 4f) {
+            if(countdownTimer >= 4f && count == -1) {
                 countdowns[3].SetActive(false);
                 gameSpeed = 0.2f;
                 currentSwipe = Instantiate(nextSwipe);
                 swiping = true;
                 countdown = false;
                 countdownTimer = 0;
+                count = 3;
             }
             countdownTimer += Time.deltaTime * gameSpeed;
         }
