@@ -1549,37 +1549,44 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 14.907936, y: 5.7062106}
+    - - {x: 15.013031, y: 5.781275}
       - {x: -14.959344, y: 5.466928}
-      - {x: -14.972235, y: 3.998752}
-      - {x: -14.66287, y: 3.9322534}
+      - {x: -14.972229, y: 4.0447044}
+      - {x: -14.766266, y: 3.8288593}
       - {x: -14.002171, y: 3.8922725}
-      - {x: -13.186213, y: 3.8274758}
-      - {x: -12.562515, y: 4.030948}
+      - {x: -13.105789, y: 3.9193802}
+      - {x: -12.459137, y: 3.8241634}
       - {x: -11.55134, y: 3.898875}
       - {x: -10.912062, y: 3.9847198}
-      - {x: -10.0406475, y: 3.9107237}
-      - {x: -9.104441, y: 3.7348094}
+      - {x: -10.305603, y: 3.7818222}
+      - {x: -9.983398, y: 3.896408}
+      - {x: -9.679916, y: 3.7906113}
+      - {x: -9.448029, y: 3.935236}
       - {x: -8.563557, y: 3.606631}
-      - {x: -8.363266, y: 3.389785}
-      - {x: -7.6952915, y: 3.1220365}
-      - {x: -6.6216393, y: 2.8316727}
-      - {x: -5.650381, y: 2.397053}
+      - {x: -7.6853943, y: 3.2210846}
+      - {x: -6.7080383, y: 2.7452679}
+      - {x: -5.921936, y: 2.4093971}
+      - {x: -5.1437225, y: 2.1300106}
       - {x: -4.7969437, y: 1.8712944}
-      - {x: -3.9091072, y: 1.4998864}
+      - {x: -3.9091034, y: 1.422493}
       - {x: -2.5366936, y: 0.9753734}
-      - {x: -1.7114372, y: 0.8476385}
+      - {x: -1.9207916, y: 0.7886753}
+      - {x: -1.356247, y: 0.6972408}
+      - {x: -0.96183777, y: 0.4382782}
+      - {x: -0.60980225, y: 0.48625946}
       - {x: 0.35648537, y: 0.27380326}
       - {x: 1.3269768, y: 0.31609407}
       - {x: 2.443821, y: 0.43808016}
       - {x: 3.4950943, y: 0.7117244}
-      - {x: 4.8910866, y: 1.121739}
+      - {x: 4.6847076, y: 1.2507267}
+      - {x: 5.272293, y: 1.6015892}
       - {x: 6.3420067, y: 1.9508559}
+      - {x: 6.481369, y: 2.1308231}
       - {x: 7.6431503, y: 2.608092}
       - {x: 9.541801, y: 3.1286943}
-      - {x: 11.368378, y: 3.5245047}
+      - {x: 11.007217, y: 3.563202}
       - {x: 13.543247, y: 3.9015749}
-      - {x: 14.938892, y: 3.7744107}
+      - {x: 14.9839325, y: 3.789423}
 --- !u!60 &60750886894110904
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -1608,31 +1615,33 @@ PolygonCollider2D:
       - {x: 14.546135, y: -4.3706555}
       - {x: 13.053661, y: -4.237481}
       - {x: 12.585918, y: -4.299064}
-      - {x: 12.004189, y: -4.1249976}
-      - {x: 11.420315, y: -4.133642}
-      - {x: 10.774883, y: -3.874369}
+      - {x: 12.13353, y: -4.2201014}
+      - {x: 11.384811, y: -4.098136}
+      - {x: 10.774887, y: -3.9808884}
       - {x: 10.1647, y: -3.8247252}
-      - {x: 9.739525, y: -3.8279119}
+      - {x: 9.508743, y: -3.650381}
+      - {x: 8.804703, y: -3.4948158}
       - {x: 7.835781, y: -3.432668}
       - {x: 6.471279, y: -3.3683763}
       - {x: 5.078846, y: -3.2589362}
       - {x: 4.167324, y: -3.2739713}
       - {x: 3.7647972, y: -3.3010123}
       - {x: 2.87051, y: -3.1438162}
-      - {x: 1.8732834, y: -3.309564}
-      - {x: 1.0607929, y: -3.170124}
-      - {x: -0.2978859, y: -3.2286367}
+      - {x: 1.9798126, y: -3.2030468}
+      - {x: 0.9187622, y: -3.365406}
+      - {x: -0.27885437, y: -3.4458065}
+      - {x: -1.0585327, y: -3.1725712}
       - {x: -1.3641949, y: -3.287866}
       - {x: -3.2552986, y: -3.0307255}
       - {x: -4.1872845, y: -2.915602}
       - {x: -5.3491554, y: -2.8424664}
       - {x: -6.4714165, y: -2.9354918}
       - {x: -7.83889, y: -3.0420408}
-      - {x: -8.904552, y: -3.193013}
+      - {x: -9.064331, y: -2.9799767}
       - {x: -10.224081, y: -3.2928615}
       - {x: -11.495846, y: -3.553106}
-      - {x: -13.021027, y: -4.177757}
-      - {x: -13.5884495, y: -4.339334}
+      - {x: -12.985519, y: -3.8404522}
+      - {x: -13.570694, y: -4.0907936}
       - {x: -14.962038, y: -4.357047}
       - {x: -15.159357, y: -10.602341}
       - {x: 14.861084, y: -10.610173}
@@ -1648,7 +1657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1665,7 +1673,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1695,7 +1702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1715,7 +1721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1735,7 +1740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1752,7 +1756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a, type: 2}
   asteroids:
   - {fileID: 1360640521389526, guid: 92efdc6dd98959543964214455f599d2, type: 2}
   chanceToSpawn: 20
@@ -1767,7 +1770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1784,7 +1786,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1804,7 +1805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1824,7 +1824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1841,7 +1840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1858,7 +1856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -1891,7 +1888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1908,7 +1904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1925,7 +1920,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1942,7 +1936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1959,7 +1952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1976,7 +1968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -1993,7 +1984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2010,7 +2000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2027,7 +2016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1417109845427578, guid: 2e5b1784294fa9e4b8ba402ae2e6a4fc, type: 2}
   - {fileID: 1698390699985348, guid: 5825af4ca14fb0643b3c86088b4a64d4, type: 2}
@@ -2044,7 +2032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fa2895b3472d48940b43af0bf2f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
   asteroids:
   - {fileID: 1500632204896304, guid: f9448f54e7ce105418cb3a5e15c8a85a, type: 2}
   - {fileID: 1431065357088086, guid: cd543f02765312e43b01de4833190148, type: 2}
@@ -2100,7 +2087,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 293cdd632d3729c45ab65ef093e0000c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 154bd587964db9c4691a846498e004db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
