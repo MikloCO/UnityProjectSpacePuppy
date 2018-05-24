@@ -24,7 +24,7 @@ public class SwipeController : MonoBehaviour {
 
     public void Finish (bool perfect, bool failed) {
         scoreManager.SwipeScore(coinsCollected, perfect);
-        if((float)coinsCollected/(float)numberOfCoins < 0.5f) {
+        if((float)coinsCollected/(float)numberOfCoins <= 0.5f) {
             failed = true;
         }
         coinsCollected = 0;
