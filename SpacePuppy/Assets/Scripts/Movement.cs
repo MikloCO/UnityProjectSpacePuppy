@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour {
     private Rigidbody2D rb2d;
     private Animator anim;
 
-    public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouchRH, VerticalTouchLH };
+    public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouchRH, VerticalTouchLH, MoveTowardTouch };
     public ControllerType ctrl;
     
 
@@ -34,6 +34,16 @@ public class Movement : MonoBehaviour {
         }
         else if (verticalDirection < 0) {
             MoveDown();
+        }
+
+        if(ctrl == ControllerType.MoveTowardTouch && !pause.swiping && Input.GetMouseButton(0))
+        {
+            if(Input.mousePosition.x > transform.position.x) {
+                MoveUp();
+            }
+            else {
+                MoveDown();
+            }
         }
 
         if (ctrl == ControllerType.HorizontalTouchRH && !pause.swiping && Input.GetMouseButton(0)) //sköld knappen på höger sida
