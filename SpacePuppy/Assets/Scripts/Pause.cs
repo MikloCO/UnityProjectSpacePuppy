@@ -31,10 +31,10 @@ public class Pause : MonoBehaviour {
     private List<GameObject> countdowns = new List<GameObject>();
 
     //private AudioSource myAudioSource;
-    //public AudioClip voice;
+   // public AudioClip voice;
 
     void Start () {
-        //myAudioSource = GetComponent<AudioSource>();
+       // myAudioSource = GetComponent<AudioSource>();
 
         foreach (Transform child in swipeCountdown) {
             countdowns.Add(child.gameObject);
@@ -57,8 +57,8 @@ public class Pause : MonoBehaviour {
         }
         if (countdown) {
             if (countdownTimer >= 1f) {
-                //myAudioSource.pitch = Random.Range(1f,1f);
-                //myAudioSource.PlayOneShot(voice, 0.5f);
+              //  myAudioSource.pitch = Random.Range(1f,1f);
+              //  myAudioSource.PlayOneShot(voice, 0.5f);
                 countdowns[0].SetActive(false);
                 countdowns[1].SetActive(true);
             }
