@@ -20,6 +20,7 @@ public class Pause : MonoBehaviour {
 
     public float gameSpeed = 1.0f;
     public float scoreSpeed = 1.0f;
+    public float scoreSpeedIncrease = 0.1f;
     private float timer = 0f;
     private float countdownTimer = 0f;
     private bool countdown = false;
@@ -109,6 +110,11 @@ public class Pause : MonoBehaviour {
         Invoke("ContinueGame", 1f);
     }
 
+    public void IncreaseDifficulty () {
+        difficulty += 1;
+        scoreSpeed += scoreSpeedIncrease;
+    }
+    
     private void ContinueGame () {
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         gameSpeed = 1f;

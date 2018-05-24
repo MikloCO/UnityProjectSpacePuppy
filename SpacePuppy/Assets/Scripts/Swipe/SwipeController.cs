@@ -30,9 +30,8 @@ public class SwipeController : MonoBehaviour {
         coinsCollected = 0;
         coinPositions.Clear();
         if (pause.difficulty < 5 && !failed) {
+            pause.IncreaseDifficulty();
             scoreManager.difficultyMultiplier += scoreManager.difficultyMultiplierIncrease;
-            pause.difficulty += 1;
-            pause.scoreSpeed += 0.1f;
         }
     }
 
