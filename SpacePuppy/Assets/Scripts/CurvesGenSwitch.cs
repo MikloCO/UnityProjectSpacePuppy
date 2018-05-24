@@ -16,7 +16,7 @@ public class CurvesGenSwitch : MonoBehaviour
     void Start()
     {
         pause = FindObjectOfType<Pause>();
-        Instantiate(asteroids[Random.Range(0, asteroids.Length)], this.transform);
+        //Instantiate(asteroids[Random.Range(0, asteroids.Length)], this.transform);
         Instantiate(asteroids[Random.Range(0, asteroids.Length)], new Vector3(30, 0, 0), new Quaternion(), this.transform);
     }
 
