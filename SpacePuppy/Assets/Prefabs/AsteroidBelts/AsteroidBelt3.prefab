@@ -249,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 4660412927644837186, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1351457811970142
 GameObject:
   m_ObjectHideFlags: 1
@@ -778,7 +778,7 @@ GameObject:
   m_Icon: {fileID: 4660412927644837186, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1996939542545892
 GameObject:
   m_ObjectHideFlags: 1
@@ -880,7 +880,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1700727111154868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 60, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4341186473338498}
@@ -1225,7 +1225,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214276175047458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.13, y: 3.27, z: 0}
+  m_LocalPosition: {x: -5.02, y: 2.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4903116551462480}
@@ -1295,7 +1295,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1916915743051612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.59, y: 3.86, z: 0}
+  m_LocalPosition: {x: 4.59, y: 2.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4493931526883050}
@@ -1391,7 +1391,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256625854576466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: -3.23, z: -0.171875}
+  m_LocalPosition: {x: -3.93, y: -3.06, z: -0.171875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4647692336544212}
@@ -1474,7 +1474,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420008348308722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.75, y: -2.78, z: -0.26953125}
+  m_LocalPosition: {x: 11.01, y: -1.45, z: -0.26953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4315752738636580}
@@ -1876,7 +1876,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 40
 --- !u!114 &114145703943284974
 MonoBehaviour:
@@ -1924,7 +1923,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 40
 --- !u!114 &114213131829806064
 MonoBehaviour:
@@ -2191,7 +2189,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 40
 --- !u!114 &114688570721038376
 MonoBehaviour:
@@ -2274,7 +2271,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 40
 --- !u!114 &114873492711167642
 MonoBehaviour:
@@ -2306,7 +2302,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 25
 --- !u!114 &114929891414297192
 MonoBehaviour:
@@ -2325,7 +2320,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 90
 --- !u!212 &212054594845494980
 SpriteRenderer:

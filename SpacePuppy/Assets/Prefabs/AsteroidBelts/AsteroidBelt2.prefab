@@ -635,7 +635,7 @@ GameObject:
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1906323277280438
 GameObject:
   m_ObjectHideFlags: 1
@@ -890,7 +890,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210856969931058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4631410767403836}
@@ -1733,7 +1733,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 90
 --- !u!114 &114215115806648546
 MonoBehaviour:
@@ -1832,7 +1831,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 35
 --- !u!114 &114393625544151280
 MonoBehaviour:
@@ -1915,7 +1913,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 90
 --- !u!114 &114557273469573648
 MonoBehaviour:
@@ -1979,7 +1976,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 35
 --- !u!114 &114739982945774652
 MonoBehaviour:
@@ -2054,7 +2050,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 35
 --- !u!114 &114949496231174364
 MonoBehaviour:
@@ -2073,7 +2068,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 25
 --- !u!212 &212799611484067092
 SpriteRenderer:
