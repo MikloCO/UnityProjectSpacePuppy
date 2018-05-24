@@ -20,6 +20,11 @@ public class PauseMenu : MonoBehaviour {
     }
 
     public void Resume () {
-        pause.gameSpeed = 1f;
+        if (pause.swiping) {
+            pause.gameSpeed = 0.2f;
+        }
+        else {
+            pause.gameSpeed = 1f;
+        }
     }
 }

@@ -106,7 +106,7 @@ GameObject:
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1092749850961840
 GameObject:
   m_ObjectHideFlags: 1
@@ -442,7 +442,7 @@ GameObject:
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1662085361258208
 GameObject:
   m_ObjectHideFlags: 1
@@ -1132,7 +1132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1673595582304410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 90, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4006876985747482}
@@ -1190,7 +1190,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1194874011388876}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1, y: 0.54, z: -0.26953125}
+  m_LocalPosition: {x: 9.73, y: -1.54, z: -0.26953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4003358815780442}
@@ -1268,7 +1268,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1079347631555180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.75, y: -0.02, z: -0.26953125}
+  m_LocalPosition: {x: 12.45, y: -0.02, z: -0.26953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4003358815780442}
@@ -1775,7 +1775,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 25
 --- !u!114 &114275747349017608
 MonoBehaviour:
@@ -1855,7 +1854,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 25
 --- !u!114 &114493971404072908
 MonoBehaviour:
@@ -1935,7 +1933,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 25
 --- !u!114 &114779792215710324
 MonoBehaviour:
@@ -1986,7 +1983,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 25
 --- !u!114 &114813394436609702
 MonoBehaviour:
@@ -2005,7 +2001,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 25
 --- !u!114 &114822722732160570
 MonoBehaviour:
@@ -2024,7 +2019,6 @@ MonoBehaviour:
   - {fileID: 1266189509439490, guid: 94d4ab0a25126a843a7be28251df294a, type: 2}
   - {fileID: 1455453310144866, guid: 77a5752a7909fc848907a7171645019d, type: 2}
   - {fileID: 1612394150306138, guid: 6887f5fb445763d40b9e73466e8f0df3, type: 2}
-  - {fileID: 1444545374628780, guid: 5e6494dec4496d34aa9c042a518323e7, type: 2}
   chanceToSpawn: 25
 --- !u!114 &114893118660458924
 MonoBehaviour:

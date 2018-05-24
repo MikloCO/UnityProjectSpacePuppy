@@ -30,40 +30,44 @@ public class DrawLine : MonoBehaviour {
     }
 
 	void Update () {
-		if (Input.GetMouseButtonDown(0)) {
-			mousePressed = true;
-            particles.SetActive(true);
+        if (pause.gameSpeed != 0) {
+            if (Input.GetMouseButtonDown(0)) {
+                mousePressed = true;
+                particles.SetActive(true);
+            }
+
+            if (mousePressed) {
+                drawTimer += Time.deltaTime;
+                if (!start) {
+                    perfect = false;
+                }
+                drawing = true;
+                mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mousePosition.z = -1.3f;
+
+                transform.position = mousePosition;
+                particles.transform.position = mousePosition;
+            }
+
+            if (Input.GetMouseButtonUp(0)) {
+                if (drawTimer >= timeToDraw) {
+                    Finish();
+                }
+                particles.SetActive(false);
+                drawing = false;
+                mousePressed = false;
+                drawTimer = 0;
+            }
         }
-
-		if (mousePressed) {
-			drawTimer += Time.deltaTime;
-			if(!start) {
-				perfect = false;
-			}
-			drawing = true;
-			mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			mousePosition.z = -1.3f;
-
-            transform.position = mousePosition;
-			particles.transform.position = mousePosition;
-		}
-
-		if (Input.GetMouseButtonUp(0)) {
-			if(drawTimer >= timeToDraw) {
-				Finish();
-			}
-            particles.SetActive(false);
-            drawing = false;
-            mousePressed = false;
-			drawTimer = 0;
-		}
 	}
 
 
     public void SquiggleCollideBig (){
-        mousePressed = false;
-        failed = true;
-        Finish();
+        if (drawTimer >= timeToDraw) {
+            mousePressed = false;
+            failed = true;
+            Finish();
+        }
     }
 
     public void SquiggleCollideSmall () {
