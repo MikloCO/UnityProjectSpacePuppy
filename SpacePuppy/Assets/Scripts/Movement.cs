@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour {
     private Animator anim;
 
     public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouch, MoveTowardTouch };
-    public static ControllerType ctrl;
+    public static ControllerType ctrl = ControllerType.VerticalTouch;
 
     public void SetControllerType(int control) {
         switch (control) {
@@ -40,7 +40,6 @@ public class Movement : MonoBehaviour {
 
 
     void Start () {
-        ctrl = ControllerType.VerticalTouch;
         pause = FindObjectOfType<Pause>();
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
