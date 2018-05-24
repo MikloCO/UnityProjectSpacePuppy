@@ -33,8 +33,9 @@ public class HurtPlayer : MonoBehaviour {
             damaged = false;
             damageTimer = 0;
             hurtAnim.SetInteger("state", 0);
-            fireParticles.localPosition = new Vector3(-0.51f, -0.6f);
-            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 157.245f, fireParticles.localRotation.w);
+            fireParticles.gameObject.SetActive(true);
+            //fireParticles.localPosition = new Vector3(-0.51f, -0.6f);
+            //fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 157.245f, fireParticles.localRotation.w);
         }
         
     }
@@ -42,11 +43,12 @@ public class HurtPlayer : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D other) {
 
-        if (other.CompareTag("Asteroid"))
+        if (other.CompareTag("Asteroid") || other.CompareTag("Curve"))
         {
             hurtAnim.SetInteger("state", 3);
-            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
-            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
+            //fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
+            //fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
+            fireParticles.gameObject.SetActive(false);
 
             transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
            
@@ -58,6 +60,9 @@ public class HurtPlayer : MonoBehaviour {
                healthBar.RemoveHead();
 
             }
+        }
+
+        if (other.CompareTag("Asteroid")) {
             camShake.shakeDuration = 0.3f;
             playerAudio.pitch = Random.Range(0.5f, 1f);
             playerAudio.PlayOneShot(astroid, 0.7f);
@@ -65,21 +70,6 @@ public class HurtPlayer : MonoBehaviour {
 
         if (other.CompareTag("Curve"))
         {
-            hurtAnim.SetInteger("state", 3);
-            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
-            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
-
-            transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
-
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            if (!damaged)
-            {
-                damaged = true;
-                player.playerHealth--;
-
-                healthBar.RemoveHead();
-
-            }
             camShake.shakeDuration = 0.7f;
             playerAudio.pitch = Random.Range(1.5f, 2f);
             playerAudio.PlayOneShot(astroidBelt, 0.3f);
