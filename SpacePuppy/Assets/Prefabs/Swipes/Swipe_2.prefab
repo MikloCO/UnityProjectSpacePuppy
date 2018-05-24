@@ -2086,11 +2086,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineCollider: {fileID: 58413547394281462}
   swipeController: {fileID: 114481581930010220}
-  timeToDraw: 0.4
+  timeToDraw: 0.5
   start: 0
   end: 0
   drawing: 0
   perfect: 1
+  failed: 0
   particles: {fileID: 1528819790494312}
 --- !u!114 &114840003350523564
 MonoBehaviour:
