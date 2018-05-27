@@ -64,15 +64,15 @@ public class HurtPlayer : MonoBehaviour {
 
         if (other.CompareTag("Asteroid")) {
             camShake.shakeDuration = 0.3f;
-            playerAudio.pitch = Random.Range(0.5f, 1f);
-            playerAudio.PlayOneShot(astroid, 0.7f);
+            playerAudio.pitch = Random.Range(0.4f, 0.6f);
+            playerAudio.PlayOneShot(astroid, 0.4f);
         }
 
         if (other.CompareTag("Curve"))
         {
             camShake.shakeDuration = 0.7f;
-            playerAudio.pitch = Random.Range(1.5f, 2f);
-            playerAudio.PlayOneShot(astroidBelt, 0.3f);
+            playerAudio.pitch = Random.Range(0.5f, 0.6f);
+            playerAudio.PlayOneShot(astroidBelt, 0.4f);
         }
 
 

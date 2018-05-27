@@ -918,7 +918,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2668,8 +2668,8 @@ MonoBehaviour:
   respawnPosition: 0
   fireParticles: {fileID: 1515914744}
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  astroid: {fileID: 8300000, guid: 6e8e2425515a3f64bbde784bf5193eea, type: 3}
-  astroidBelt: {fileID: 8300000, guid: 9990f159a2eed6e4ba2faa24f10a825f, type: 3}
+  astroid: {fileID: 8300000, guid: 45fc8e5891c600344a3f044f43c2948a, type: 3}
+  astroidBelt: {fileID: 8300000, guid: 5176b19bac8be024b9cc55398700fcdb, type: 3}
   camShake: {fileID: 46984771}
 --- !u!114 &680774966
 MonoBehaviour:
@@ -2683,7 +2683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1343278413}
-  playerHealth: 3
+  playerHealth: 100
   speed: 22
   fireParticles: {fileID: 1515914744}
 --- !u!114 &680774967
@@ -2697,7 +2697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f449a064928164baeffaecd4481162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crackers: {fileID: 8300000, guid: b22bdef95dcaa3e498e27a7233923466, type: 3}
+  crackers: {fileID: 8300000, guid: ecb66958bf19c6f46918255feb342fd2, type: 3}
 --- !u!95 &680774968
 Animator:
   serializedVersion: 3
@@ -11175,12 +11175,12 @@ Prefab:
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[0]
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[1]
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
