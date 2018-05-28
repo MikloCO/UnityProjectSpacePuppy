@@ -9,8 +9,8 @@ public class Movement : MonoBehaviour {
     public ScoreManager scoreManager;
     public int playerHealth = 3;
     public float speed = 2.0f;
-    bool isDead = false;
-    
+    private bool isDead = false;
+    private bool mouseDown = false;
 
     public Transform fireParticles;
     private float verticalDirection;
@@ -47,54 +47,59 @@ public class Movement : MonoBehaviour {
     }
 
     void Update () {
-        verticalDirection = Input.GetAxis("Vertical");
-        if (verticalDirection > 0) {
-            MoveUp();
-        }
-        else if (verticalDirection < 0) {
-            MoveDown();
+        //verticalDirection = Input.GetAxis("Vertical");
+        //if (verticalDirection > 0) {
+        //    MoveUp();
+        //}
+        //else if (verticalDirection < 0) {
+        //    MoveDown();
+        //}
+
+        if (Input.GetMouseButtonDown(0) && !mouseDown) {
+            mouseDown = true;
+
+            if (ctrl == ControllerType.MoveTowardTouch && !pause.swiping) {
+                if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y > transform.position.y) {
+                    MoveUp();
+                }
+                else if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < transform.position.y) {
+                    MoveDown();
+                }
+            }
+
+            if (ctrl == ControllerType.HorizontalTouchRH && !pause.swiping) {
+                if (Input.mousePosition.x > Screen.width / 2) {
+                    MoveUp();
+                }
+                else {
+                    MoveDown();
+                }
+            }
+
+            if (ctrl == ControllerType.HorizontalTouchLH && !pause.swiping) {
+                if (Input.mousePosition.x < Screen.width / 2) {
+                    MoveUp();
+                }
+                else {
+                    MoveDown();
+                }
+            }
+
+            if (ctrl == ControllerType.VerticalTouch && !pause.swiping) {
+                if (Input.mousePosition.y > Screen.height / 2) {
+                    MoveUp();
+                }
+                else {
+                    MoveDown();
+                }
+            }
         }
 
-        if(ctrl == ControllerType.MoveTowardTouch && !pause.swiping && Input.GetMouseButton(0))
-        {
-            if(Camera.main.ScreenToWorldPoint(Input.mousePosition).y > transform.position.y) {
-                MoveUp();
-            }
-            else if(Camera.main.ScreenToWorldPoint(Input.mousePosition).y < transform.position.y){
-                MoveDown();
-            }
-        }
-
-        if (ctrl == ControllerType.HorizontalTouchRH && !pause.swiping && Input.GetMouseButton(0)) //sköld knappen på höger sida
-        {
-            if (Input.mousePosition.x > Screen.width / 2) {
-                MoveUp();
-            }
-            else {
-                MoveDown();
-            }
-        }
-
-        if (ctrl == ControllerType.HorizontalTouchLH && !pause.swiping && Input.GetMouseButton(0)) //Sköld knappen på vänster sida
-        {
-            if (Input.mousePosition.x < Screen.width / 2) {
-                MoveUp();
-            }
-            else {
-                MoveDown();
-            }
-        }
-
-        if (ctrl == ControllerType.VerticalTouch && !pause.swiping && Input.GetMouseButton(0)) {
-            if (Input.mousePosition.y > Screen.height / 2) {
-                MoveUp();
-            }
-            else {
-                MoveDown();
-            }
+        if (Input.GetMouseButtonUp(0)) {
+            mouseDown = false;
         }
         
-        if (pause.gameSpeed < 1f) {
+        if (pause.gameSpeed == 0f) {
             rb2d.velocity = new Vector2(0, 0);
 
         }

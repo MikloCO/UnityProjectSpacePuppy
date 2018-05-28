@@ -8,8 +8,6 @@ public class DrawLine : MonoBehaviour {
     public SwipeController swipeController;
     private Pause pause;
 
-    public float timeToDraw = 0.2f;
-
     public bool start = false;
     public bool end = false;
     public bool drawing = false;
@@ -50,7 +48,7 @@ public class DrawLine : MonoBehaviour {
             }
 
             if (Input.GetMouseButtonUp(0)) {
-                if (drawTimer >= timeToDraw) {
+                if (swipeController.coinsCollected > 1) {
                     Finish();
                 }
                 particles.SetActive(false);
@@ -63,7 +61,7 @@ public class DrawLine : MonoBehaviour {
 
 
     public void SquiggleCollideBig (){
-        if (drawTimer >= timeToDraw) {
+        if (swipeController.coinsCollected > 1) {
             mousePressed = false;
             failed = true;
             Finish();
