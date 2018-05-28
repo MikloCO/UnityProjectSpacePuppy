@@ -159,6 +159,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.Grupp19.SpacePupper
+    Standalone: com.Facebook.SpacePupperUnity
   buildNumber: {}
   AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
