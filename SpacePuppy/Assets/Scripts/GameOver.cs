@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour {
 
     private Pause pause;
+    public Text scoreText;
+   
 
     private void Start () {
-        pause = FindObjectOfType<Pause>();
+       pause = FindObjectOfType<Pause>();
+       scoreText.text = "" + Mathf.Round(ScoreManager.scoreCount);        
     }
 
     public void PressedMainMenu()

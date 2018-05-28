@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour {
     private Pause pause;
     public Text scoreText;
     public Text hiScoreText;
-    public float scoreCount;
+    public static float scoreCount;
     public int hiScoreCount;
     public float pointsPerSecond = 5.0f;
     public float pointsPerSwipePart = 10.0f;
