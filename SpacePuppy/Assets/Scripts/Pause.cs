@@ -23,9 +23,11 @@ public class Pause : MonoBehaviour {
     public float scoreSpeedIncrease = 0.1f;
     private float timer = 0f;
     private float countdownTimer = 0f;
+    private float afterSwipeTimer = 0f;
     private int count = 3;
     private bool countdown = false;
     private bool swipeActive = false;
+    private bool afterSwipe = false;
     private float timeUntilSwipe;
     private GameObject nextSwipe;
     private GameObject currentSwipe;
@@ -93,6 +95,14 @@ public class Pause : MonoBehaviour {
             }
             countdownTimer += Time.deltaTime * gameSpeed;
         }
+        if (afterSwipe) {
+            afterSwipeTimer += Time.deltaTime;
+            if(afterSwipeTimer > 1f) {
+                afterSwipe = false;
+                afterSwipeTimer = 0f;
+                ContinueGame();
+            }
+        }
     }
 
     public void Resume () {
@@ -120,7 +130,7 @@ public class Pause : MonoBehaviour {
                     break;
             }
         } while (nextSwipe.Equals(oldSwipe));
-        Invoke("ContinueGame", 1f);
+        afterSwipe = true;
     }
 
     public void IncreaseDifficulty () {
