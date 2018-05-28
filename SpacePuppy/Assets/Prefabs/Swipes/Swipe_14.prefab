@@ -813,7 +813,7 @@ Transform:
   m_GameObject: {fileID: 1323831542559386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.495, y: -0.751, z: 0}
-  m_LocalScale: {x: 0.77649313, y: 0.77649313, z: 0.77649313}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 4838737038208938}
   m_RootOrder: 4
@@ -930,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 1741327702604528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.291, y: -0.624, z: 0}
-  m_LocalScale: {x: 0.77982986, y: 0.77982986, z: 0.77982986}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 4838737038208938}
   m_RootOrder: 6
@@ -1129,7 +1129,7 @@ Transform:
   m_GameObject: {fileID: 1981404221664658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.638, y: -0.702, z: 0}
-  m_LocalScale: {x: 0.77649313, y: 0.77649313, z: 0.77649313}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4890495343897622}
   - {fileID: 4467363080094602}
@@ -1266,7 +1266,7 @@ Transform:
   m_GameObject: {fileID: 1864081970393962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 10, z: 1}
+  m_LocalScale: {x: 20, y: 11, z: 1}
   m_Children: []
   m_Father: {fileID: 4838737038208938}
   m_RootOrder: 0
@@ -1383,7 +1383,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1159918510452896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.31398433, y: -0.10289562, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4680339007721744}
@@ -2689,19 +2689,15 @@ PolygonCollider2D:
       - {x: 0.41, y: 3.23}
       - {x: 0.29999998, y: 3.3899999}
       - {x: 0.07, y: 3.6299999}
-      - {x: -0.08, y: 3.74}
-      - {x: -0.17999999, y: 3.79}
-      - {x: -0.29, y: 3.9199998}
-      - {x: -0.51, y: 4.13}
-      - {x: -0.66999996, y: 4.2599998}
-      - {x: -0.71, y: 4.35}
-      - {x: -0.96, y: 4.63}
-      - {x: -1.06, y: 4.7}
-      - {x: -1.1, y: 4.85}
-      - {x: -1.11, y: 4.9}
+      - {x: -0.03644381, y: 3.8053336}
+      - {x: -0.24644382, y: 4.0071115}
+      - {x: -0.49577624, y: 4.347111}
+      - {x: -0.78577644, y: 4.717111}
       - {x: -1.23, y: 5.12}
       - {x: -1.36, y: 5.2999997}
       - {x: -1.4699999, y: 5.4}
+      - {x: -2.1055305, y: 5.813622}
+      - {x: -3.1217928, y: 5.762559}
       - {x: -3.59, y: 5.4}
       - {x: -3.6999998, y: 5.2999997}
       - {x: -3.83, y: 5.12}
@@ -2791,6 +2787,9 @@ PolygonCollider2D:
       - {x: -5.2599998, y: 5.0099998}
       - {x: -5.39, y: 5.19}
       - {x: -5.6099997, y: 5.4}
+      - {x: -5.8955517, y: 5.6754317}
+      - {x: -6.4507446, y: 5.7295985}
+      - {x: -6.99958, y: 5.6922584}
       - {x: -7.52, y: 5.4}
       - {x: -7.5299997, y: 5.39}
       - {x: -7.74, y: 5.23}

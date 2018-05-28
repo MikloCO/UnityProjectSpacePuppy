@@ -40,6 +40,9 @@ public class Pause : MonoBehaviour {
     public AudioClip two;
     public AudioClip one;
     public AudioClip swipe;
+    public AudioClip badS;
+    public AudioClip goodS;
+    public AudioClip perfectS;
 
     void Start () {
         myAudioSource = GetComponent<AudioSource>();
@@ -139,12 +142,15 @@ public class Pause : MonoBehaviour {
         afterSwipe = true;
         if (perfect) {
             results[0].SetActive(true);
+            myAudioSource.PlayOneShot(perfectS, 0.5f);
         }
         else if (failed) {
             results[2].SetActive(true);
+            myAudioSource.PlayOneShot(badS, 0.5f);
         }
         else {
             results[1].SetActive(true);
+            myAudioSource.PlayOneShot(goodS, 0.5f);
         }
     }
 

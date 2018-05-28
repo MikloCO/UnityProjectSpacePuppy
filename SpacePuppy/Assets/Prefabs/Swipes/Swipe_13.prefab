@@ -1019,7 +1019,7 @@ Transform:
   m_GameObject: {fileID: 1274144249416040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.91, y: -0.44, z: 0}
-  m_LocalScale: {x: 0.77642703, y: 0.77642703, z: 0.77642703}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 4829574106881784}
   m_RootOrder: 4
@@ -1257,7 +1257,7 @@ Transform:
   m_GameObject: {fileID: 1048098661923388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.544, y: -0.423, z: 0}
-  m_LocalScale: {x: 0.7895162, y: 0.7895162, z: 0.7895162}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 4829574106881784}
   m_RootOrder: 6
@@ -1269,7 +1269,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270593313037610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.31398433, y: -0.10289562, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4944095060852294}
@@ -1329,7 +1329,7 @@ Transform:
   m_GameObject: {fileID: 1078396574286652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 10, z: 1}
+  m_LocalScale: {x: 20, y: 11, z: 1}
   m_Children: []
   m_Father: {fileID: 4829574106881784}
   m_RootOrder: 0
@@ -1381,7 +1381,7 @@ Transform:
   m_GameObject: {fileID: 1996452893409396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.97700006, y: -0.54, z: 0}
-  m_LocalScale: {x: 0.77642703, y: 0.77642703, z: 0.77642703}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4993461504026952}
   - {fileID: 4550150978041338}
@@ -2239,6 +2239,9 @@ PolygonCollider2D:
       - {x: 2.28, y: 5.17}
       - {x: 2.2, y: 5.29}
       - {x: 2.1, y: 5.4}
+      - {x: 1.2853101, y: 6.053933}
+      - {x: -0.27607685, y: 6.26836}
+      - {x: -1.4527347, y: 6.067162}
       - {x: -2.6299999, y: 5.4}
       - {x: -2.6799998, y: 5.38}
       - {x: -2.76, y: 5.33}
@@ -2340,6 +2343,9 @@ PolygonCollider2D:
       - {x: -6.5899997, y: 5.24}
       - {x: -6.69, y: 5.37}
       - {x: -6.73, y: 5.4}
+      - {x: -7.1234765, y: 5.767187}
+      - {x: -7.97896, y: 5.821434}
+      - {x: -8.658126, y: 5.762877}
       - {x: -9.07, y: 5.4}
       - {x: -9.11, y: 5.37}
       - {x: -9.2, y: 5.24}

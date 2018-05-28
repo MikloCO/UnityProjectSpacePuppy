@@ -51,4 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810045fdec26f2543a80a4cb8d341578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickBurst: {fileID: 0}
+  clickBurst: {fileID: 1099730498338352, guid: ca87daba9a848534a92200c976371143, type: 2}
