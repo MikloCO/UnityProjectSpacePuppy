@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour {
         //    MoveDown();
         //}
 
-        if (Input.GetMouseButtonDown(0) && !mouseDown) {
+        if (Input.GetMouseButtonDown(0) && !mouseDown && pause.gameSpeed > 0) {
             mouseDown = true;
 
             if (ctrl == ControllerType.MoveTowardTouch && !pause.swiping) {
