@@ -68,6 +68,6 @@ public class ScoreManager : MonoBehaviour {
     void Update () {
         scoreCount += pointsPerSecond * Time.deltaTime *  pause.gameSpeed * difficultyMultiplier;
 
-        scoreText.text = "Score: " + Mathf.Round(scoreCount);
+        scoreText.text = " " + Mathf.Round(scoreCount);
 	}
 }

@@ -3,7 +3,8 @@ guid: d0fd3f6cb834de54a829e3931088ee75
 timeCreated: 1527517923
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SCORE_pLAY_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
@@ -99,8 +100,26 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: SCORE_pLAY_0
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 893
+        width: 1215
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -633.41077, y: -439.79755}
+      - {x: -633.41077, y: -65.39282}
+      - {x: 674.4414, y: -65.39282}
+      - {x: 674.4414, y: -439.79755}
     physicsShape: []
   spritePackingTag: 
   userData: 
