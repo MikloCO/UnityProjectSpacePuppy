@@ -46,11 +46,6 @@ public class ScoreManager : MonoBehaviour {
     }
 
     void Start () {
-
-		for (int i = 1; i <= 10; i++) {
-			Debug.Log (PlayerPrefs.GetInt ("highscore" + i));
-		}
-
         pause = FindObjectOfType<Pause>();
         scoreCount = 0;
         hiScoreCount = PlayerPrefs.GetInt("highscore");
