@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour {
     private Pause pause;
     public Text scoreText;
     public Text hiScoreText;
-    public float scoreCount;
+    public static float scoreCount;
     public int hiScoreCount;
     public float pointsPerSecond = 5.0f;
     public float pointsPerSwipePart = 10.0f;
@@ -46,11 +46,6 @@ public class ScoreManager : MonoBehaviour {
     }
 
     void Start () {
-
-		for (int i = 1; i <= 10; i++) {
-			Debug.Log (PlayerPrefs.GetInt ("highscore" + i));
-		}
-
         pause = FindObjectOfType<Pause>();
         scoreCount = 0;
         hiScoreCount = PlayerPrefs.GetInt("highscore");
@@ -73,6 +68,6 @@ public class ScoreManager : MonoBehaviour {
     void Update () {
         scoreCount += pointsPerSecond * Time.deltaTime *  pause.gameSpeed * difficultyMultiplier;
 
-        scoreText.text = "Score: " + Mathf.Round(scoreCount);
+        scoreText.text = " " + Mathf.Round(scoreCount);
 	}
 }

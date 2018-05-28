@@ -47,6 +47,8 @@ public class Movement : MonoBehaviour {
     }
 
     void Update () {
+        Debug.Log(rb2d.velocity.y);
+        anim.SetFloat("velocity", rb2d.velocity.y);
         //verticalDirection = Input.GetAxis("Vertical");
         //if (verticalDirection > 0) {
         //    MoveUp();
@@ -120,7 +122,7 @@ public class Movement : MonoBehaviour {
         }
         rb2d.AddForce(Vector3.up * speed);
         // transform.Translate(Vector3.up * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform);
-        anim.SetInteger("state", 1);
+        
         fireParticles.localPosition = new Vector3(-1.79f, 0.15f);
         fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 117.892f,fireParticles.localRotation.w);
     }
@@ -131,7 +133,7 @@ public class Movement : MonoBehaviour {
         }
         rb2d.AddForce(Vector3.down * speed);
         // transform.Translate(Vector3.down * speed * pause.gameSpeed * Time.deltaTime, Camera.main.transform)
-        anim.SetInteger("state", 2);
+        
         fireParticles.localPosition = new Vector3(-1.62f, 1.47f);
         fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 47.48f, fireParticles.localRotation.w);
     }
