@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pause : MonoBehaviour {
 
     public Transform swipeCountdown;
+    public Transform swipeResult;
 
     public int difficulty = 1;
 
@@ -32,6 +33,7 @@ public class Pause : MonoBehaviour {
     private GameObject nextSwipe;
     private GameObject currentSwipe;
     private List<GameObject> countdowns = new List<GameObject>();
+    private List<GameObject> results = new List<GameObject>();
 
     private AudioSource myAudioSource;
     public AudioClip three;
@@ -44,6 +46,10 @@ public class Pause : MonoBehaviour {
 
         foreach (Transform child in swipeCountdown) {
             countdowns.Add(child.gameObject);
+        }
+
+        foreach (Transform child in swipeResult) {
+            results.Add(child.gameObject);
         }
 
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
@@ -105,7 +111,7 @@ public class Pause : MonoBehaviour {
         }
     }
 
-    public void Resume () {
+    public void Resume (bool perfect, bool failed) {
         timer = 0;
         swipeActive = false;
         swiping = false;
@@ -131,6 +137,15 @@ public class Pause : MonoBehaviour {
             }
         } while (nextSwipe.Equals(oldSwipe));
         afterSwipe = true;
+        if (perfect) {
+            results[0].SetActive(true);
+        }
+        else if (failed) {
+            results[2].SetActive(true);
+        }
+        else {
+            results[1].SetActive(true);
+        }
     }
 
     public void IncreaseDifficulty () {
@@ -139,6 +154,9 @@ public class Pause : MonoBehaviour {
     }
     
     private void ContinueGame () {
+        foreach(GameObject g in results) {
+            g.SetActive(false);
+        }
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         gameSpeed = 1f;
     }

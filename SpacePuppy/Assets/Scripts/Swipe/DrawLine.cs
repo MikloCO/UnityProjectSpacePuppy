@@ -79,8 +79,8 @@ public class DrawLine : MonoBehaviour {
         start = false;
         drawing = false;
         particles.SetActive(false);
-        swipeController.Finish(perfect, failed);
+        failed = swipeController.Finish(perfect, failed);
 
-        pause.Resume();
+        pause.Resume(perfect, failed);
     }
 }

@@ -22,7 +22,7 @@ public class SwipeController : MonoBehaviour {
         numberOfCoins = coins.Coins();
     }
 
-    public void Finish (bool perfect, bool failed) {
+    public bool Finish (bool perfect, bool failed) {
         scoreManager.SwipeScore(coinsCollected, perfect);
         if((float)coinsCollected/(float)numberOfCoins <= 0.5f) {
             failed = true;
@@ -33,6 +33,7 @@ public class SwipeController : MonoBehaviour {
             pause.IncreaseDifficulty();
             scoreManager.difficultyMultiplier += scoreManager.difficultyMultiplierIncrease;
         }
+        return failed;
     }
 
     public void AddCoin (Vector3 position) {
