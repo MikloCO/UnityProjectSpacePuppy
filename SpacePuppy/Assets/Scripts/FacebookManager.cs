@@ -19,7 +19,7 @@ public class FacebookManager : MonoBehaviour
             if (_instance == null)
             {
                 GameObject fbm = new GameObject("FBManager");
-                fbm.AddComponent<FacebookManager>();
+                fbm.AddComponent<FacebookManager>(); 
             }
             return _instance;
         }
@@ -28,7 +28,7 @@ public class FacebookManager : MonoBehaviour
     public bool IsLoggedIn { get; set; }
     public string ProfileName { get; set; }
     public Sprite ProfilePic { get; set; }
-    public string AppLinkUrl { get; set; }
+    public string AppLinkURL { get; set; }
 
     void Awake()
     {
@@ -39,7 +39,7 @@ public class FacebookManager : MonoBehaviour
 
     }
 
-    public void InitFB()
+    public void InitFB() //klagar
     {
         if (!FB.IsInitialized)
         {
@@ -80,7 +80,7 @@ public class FacebookManager : MonoBehaviour
     {
         FB.API("/me?fields=first_name", HttpMethod.GET, DisplayUsername);
         FB.API("me/picture?type=square&height=128&width=128", HttpMethod.GET, DisplayProfilePic);
-		FB.GetAppLink(DealWithAppLink);/*Type in fb app url and erase method DealWithAppLink if it crashes app*/
+		FB.GetAppLink(DealWithAppLink);/*Type in fb app url and erase method DealWithAppLink if it crashes app*/ //Klagar
     }
     void DisplayUsername(IResult result)
     {
@@ -101,29 +101,32 @@ public class FacebookManager : MonoBehaviour
         {
             ProfilePic = Sprite.Create(result.Texture, new Rect(0, 0, 120, 120), new Vector2());
         }
-    }
     //35:35 video
+    }
+   
+    
+    void DealWithAppLink(IAppLinkResult result) {
 
-    void DealWithAppLink(IAppLinkResult result)
-    {
-		if (!string.IsNullOrEmpty(result.Url))
+     if (!string.IsNullOrEmpty(result.Url))
         {
-			AppLinkUrl = "" + result.Url + "";/*result.Url + ""*/
-			Debug.Log("I am an if error of DeadAppLink");
+            AppLinkURL = "" + result.Url + "";
+            Debug.Log("I am an if error of DeadAppLink");
         }
         else
         {
-            AppLinkUrl = "http://play.google.com";
+            AppLinkURL = "http://play.google.com";
 			Debug.Log ("I am an else error");
-        }
-    }
+        }    
+
+
+    }  
     public void Share()
     {
         FB.FeedShare(
         string.Empty,
-			new Uri(AppLinkUrl),/*Replace AppLinkUrl with a string "of the app url"*/
-        "Space Pupper",
-        "This is the caption",
+			new Uri(AppLinkURL),/*Replace AppLinkUrl with a string "of the app url"*/
+        "SpacePupper",
+        "I just scored " + ScoreManager.scoreCount + "!",
         "Check out this game!",
 			new Uri("https://lh3.googleusercontent.com/ST0idtisfVKWTpDoOCMMSrPumpIT7OBS8ydBJaXjJOTXI4xLCd1EszlaAPeEEJ9VusmC=s180-rw"),/*Either put in an image URL of our app here, OR a screenshoot.*/
         //    string mediaSource = "";,/*You can insert video here!*/
@@ -141,7 +144,7 @@ public class FacebookManager : MonoBehaviour
         {
             Debug.Log("Error on share!");
         }
-        else if (!string.IsNullOrEmpty(result.Error))
+        else if (!string.IsNullOrEmpty(result.RawResult))
         {
             Debug.Log("Sucess on share!");
         }
@@ -151,7 +154,7 @@ public class FacebookManager : MonoBehaviour
     public void Invite()
     {
         FB.Mobile.AppInvite(
-			new Uri("https://play.google.com/store/apps/details?id=com.Grupp19.SpacePupper"),/*Ändra till appens verkliga URL*/
+			new Uri(AppLinkURL),/*Ändra till appens verkliga URL*/
         new Uri("https://randomImageFromWebsite.jpg"),
             InviteCallback
         );
@@ -166,7 +169,7 @@ public class FacebookManager : MonoBehaviour
         {
             Debug.Log("Error on invite");
         }
-        else if (!string.IsNullOrEmpty(result.Error))
+        else if (!string.IsNullOrEmpty(result.RawResult))
         {
             Debug.Log("Sucess on Invite");
         }
@@ -197,7 +200,7 @@ public class FacebookManager : MonoBehaviour
         {
             Debug.Log("Error on invite");
         }
-        else if (!string.IsNullOrEmpty(result.Error))
+        else if (!string.IsNullOrEmpty(result.RawResult))
         {
             Debug.Log("Sucess on Invite");
         }
