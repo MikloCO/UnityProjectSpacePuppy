@@ -227,15 +227,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619acfbb746a34340b107fcdb84155d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroids:
-  - {fileID: 1092586953131642, guid: 15476a14f22a66841bde11c244cdc99f, type: 2}
-  - {fileID: 1210856969931058, guid: e44a6693265ce7546b41ee22a51f235e, type: 2}
-  - {fileID: 1700727111154868, guid: f2a7f97ffa6abad40a51fd948f818b7f, type: 2}
-  - {fileID: 1673595582304410, guid: 05af3ffae0fb7cc46a477f3156b376d2, type: 2}
-  - {fileID: 1065796396603992, guid: b486ef8db2d7ec54e9144a7ad934923c, type: 2}
-  - {fileID: 1937155210341060, guid: 65f9b4c8a55374247b683ecda7ace3a0, type: 2}
-  - {fileID: 1488085289219764, guid: d1ea8afd21a5a8747afb2b69684b9cb8, type: 2}
-  - {fileID: 1216277158958622, guid: 4466bd033326e2f49944d4007918b18a, type: 2}
+  asteroidBeltDifficulty1: []
+  asteroidBeltDifficulty2: []
+  asteroidBeltDifficulty3: []
+  asteroidBeltDifficulty4: []
+  asteroidBeltDifficulty5: []
   speed: 3
   endPosition: -30
   resetPosition: 30
@@ -1960,6 +1956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd38ed728c08b9744ba05492f74310b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!114 &547400362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,6 +2566,8 @@ MonoBehaviour:
   respawnPosition: 0
   fireParticles: {fileID: 1515914744}
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  hurtAnimTime: 0.5
+  invulnTime: 2
   astroid: {fileID: 8300000, guid: 45fc8e5891c600344a3f044f43c2948a, type: 3}
   astroidBelt: {fileID: 8300000, guid: 5176b19bac8be024b9cc55398700fcdb, type: 3}
   camShake: {fileID: 46984771}
@@ -3478,7 +3477,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 633933944}
   hiScoreText: {fileID: 401541549}
-  scoreCount: 0
   hiScoreCount: 0
   pointsPerSecond: 1
   pointsPerSwipePart: 5
@@ -11284,6 +11282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 1679519961}
+  button: {fileID: 0}
 --- !u!1 &1739527910
 GameObject:
   m_ObjectHideFlags: 0
