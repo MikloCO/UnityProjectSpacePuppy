@@ -45,6 +45,7 @@ public class Pause : MonoBehaviour {
     public AudioClip badS;
     public AudioClip goodS;
     public AudioClip perfectS;
+    public AudioClip stressfull;
 
     void Start () {
         myAudioSource = GetComponent<AudioSource>();
@@ -68,7 +69,6 @@ public class Pause : MonoBehaviour {
     void Update () {
         if (!swipeActive) {
             if (timer > timeUntilSwipe && count == 3) {
-                myAudioSource.pitch = Random.Range(1f, 1f);
                 myAudioSource.PlayOneShot(three, 0.5f);
                 countdown = true;
                 countdowns[0].SetActive(true);
@@ -97,6 +97,7 @@ public class Pause : MonoBehaviour {
                 count = -1;
             }
             if(countdownTimer >= 4f && count == -1) {
+                myAudioSource.PlayOneShot(stressfull, 0.5f);
                 countdowns[3].SetActive(false);
                 gameSpeed = 0.2f;
                 movement.SwipeSlow();
