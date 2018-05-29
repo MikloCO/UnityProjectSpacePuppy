@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
+    public GameObject loadScreen;
     //public CanvasTransferToScene canvasChange;
 
     public void PlayGame()
@@ -15,6 +17,7 @@ public class Menu : MonoBehaviour
 
     void PlayGameButton()
     {
+        loadScreen.SetActive(true);
         //canvasChange.MoveToNextScene();
         SceneManager.LoadScene("Level 1");
     }
