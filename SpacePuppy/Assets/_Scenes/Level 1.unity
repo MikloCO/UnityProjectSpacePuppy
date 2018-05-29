@@ -3381,6 +3381,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648027eb08adf174a93d0f19163d595b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  buttons: []
+  selectedSprites: []
+=======
+  buttons:
+  - {fileID: 894269043}
+  - {fileID: 658548622}
+  - {fileID: 521647751}
+  - {fileID: 1864064236}
+  selectedSprites:
+  - {fileID: 894269044}
+  - {fileID: 658548623}
+  - {fileID: 521647752}
+  - {fileID: 1864064237}
+>>>>>>> 6f351e2cad7810513c4aad391720baa16212ca5d
+=======
+>>>>>>> parent of 16bc8e1... controlmenu
 --- !u!114 &1021322466 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114714728734110092, guid: 51bf7dcba0c64594caf21476e67eca7d,
