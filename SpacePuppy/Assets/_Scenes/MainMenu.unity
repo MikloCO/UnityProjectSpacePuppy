@@ -736,7 +736,6 @@ MonoBehaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 189864952}
   m_Enabled: 1
-<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -765,7 +764,6 @@ MonoBehaviour:
   m_Text: Vertical Touch
 --- !u!222 &189864956
 CanvasRenderer:
-=======
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b79b225433f9e8e43af355983e4b851f, type: 2}
   m_CullingMode: 0
@@ -777,7 +775,6 @@ CanvasRenderer:
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &515874255
 GameObject:
->>>>>>> 2d03a62de5d802fe3fc07ff9176a03108054ec1f
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3905,9 +3902,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 222703060223626560, guid: 9d80241f848bd8846adbacdc73acb8e0,
     type: 2}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1474258571}
-=======
   m_GameObject: {fileID: 1471070833}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
@@ -3919,7 +3914,6 @@ CanvasRenderer:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
->>>>>>> 2d03a62de5d802fe3fc07ff9176a03108054ec1f
 --- !u!1001 &1499028532
 Prefab:
   m_ObjectHideFlags: 0
@@ -4387,7 +4381,6 @@ ParticleSystem:
     scalar: 0
     minScalar: 0
     maxCurve:
-<<<<<<< HEAD
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
@@ -4406,7 +4399,6 @@ ParticleSystem:
       m_PostInfinity: 2
       m_RotationOrder: 4
     minCurve:
-=======
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
@@ -4636,7 +4628,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     startSizeY:
->>>>>>> 2d03a62de5d802fe3fc07ff9176a03108054ec1f
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
@@ -4735,8 +4726,6 @@ ParticleSystem:
           outSlope: 0
           tangentMode: 0
         - serializedVersion: 2
-<<<<<<< HEAD
-=======
           time: 1
           value: 1
           inSlope: 0
@@ -4905,7 +4894,6 @@ ParticleSystem:
           outSlope: 0
           tangentMode: 0
         - serializedVersion: 2
->>>>>>> 2d03a62de5d802fe3fc07ff9176a03108054ec1f
           time: 1
           value: 1
           inSlope: 0
@@ -4914,7 +4902,6 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-<<<<<<< HEAD
     startColor:
       serializedVersion: 2
       minMaxState: 0
@@ -4979,7 +4966,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     startSize:
-=======
   ShapeModule:
     serializedVersion: 5
     enabled: 1
@@ -5098,7 +5084,6 @@ ParticleSystem:
     enabled: 1
     serializedVersion: 4
     rateOverTime:
->>>>>>> 2d03a62de5d802fe3fc07ff9176a03108054ec1f
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.45
@@ -5727,7 +5712,6 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 2
-<<<<<<< HEAD
           time: 0
           value: 0
           inSlope: 0
@@ -6097,8 +6081,6 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 2
-=======
->>>>>>> 2d03a62de5d802fe3fc07ff9176a03108054ec1f
           time: 0
           value: 0
           inSlope: 0
