@@ -1,39 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ControlButtonSelect : MonoBehaviour {
-    /*
-    public Sprite[] gos;
+
+    public Button[] buttons;
+    public Image[] selectedSprites;
 
     void Start()
     {
         switch (Movement.ctrl)
         {
             case Movement.ControllerType.HorizontalTouchRH:
-                gos[0].SetActive(true);
-                StartCoroutine(RemoveSelectedSprite(1, 2, 3));
+                buttons[0].image = selectedSprites[0];
                 break;
             case Movement.ControllerType.HorizontalTouchLH:
-                gos[1].SetActive(true);
-                StartCoroutine(RemoveSelectedSprite(0, 2, 3));
+                buttons[1].image = selectedSprites[1];
                 break;
             case Movement.ControllerType.VerticalTouch:
-                gos[2].SetActive(true);
-                StartCoroutine(RemoveSelectedSprite(0, 1, 3));
+                buttons[2].image = selectedSprites[2];
                 break;
             case Movement.ControllerType.MoveTowardTouch:
-                gos[3].SetActive(true);
-                StartCoroutine(RemoveSelectedSprite(0, 1, 2));
+                buttons[3].image = selectedSprites[3];
                 break;
         }
     }
+    
 
-    IEnumerator RemoveSelectedSprite(int i, int i2, int i3)
-    {
-        yield return new WaitForSeconds(0);
-        gos[i]
-    }
-
-    */
+    
 }

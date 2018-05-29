@@ -2579,6 +2579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crackers: {fileID: 8300000, guid: ecb66958bf19c6f46918255feb342fd2, type: 3}
+  bark: {fileID: 8300000, guid: c4ca632d104e49342b27b2956f5f275a, type: 3}
+  pickUpTime: 1.5
 --- !u!95 &680774968
 Animator:
   serializedVersion: 3
@@ -3341,7 +3343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1002079990
 RectTransform:
   m_ObjectHideFlags: 0

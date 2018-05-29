@@ -47,7 +47,6 @@ public class Movement : MonoBehaviour {
     }
 
     void Update () {
-        Debug.Log(rb2d.velocity.y);
         anim.SetFloat("velocity", rb2d.velocity.y);
         //verticalDirection = Input.GetAxis("Vertical");
         //if (verticalDirection > 0) {
