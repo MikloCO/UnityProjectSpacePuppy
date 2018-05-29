@@ -244,8 +244,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/alish/Documents/GitHub/UnityProjectSpacePuppy/SpacePuppy/user.keystore
-  AndroidKeyaliasName: spacepupper
+  AndroidKeystoreName: //GOOFY2/HT17/olmi3646/Desktop/user.keystore
+  AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
