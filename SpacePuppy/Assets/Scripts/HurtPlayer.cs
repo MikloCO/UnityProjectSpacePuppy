@@ -51,18 +51,17 @@ public class HurtPlayer : MonoBehaviour {
         {
             //fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
             //fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
-
-            transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
-           
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                       
             if (!damaged) {
+                transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
+                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
                 anim.SetBool("hurt", true);
                 fireParticles.gameObject.SetActive(false);
                 damaged = true;
                 player.playerHealth--;
                 GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
                 healthBar.RemoveHead();
-
             }
         }
 
