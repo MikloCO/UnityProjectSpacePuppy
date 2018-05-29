@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour {
     public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouch, MoveTowardTouch };
     public static ControllerType ctrl;
 
-    public void SetControllerType (int control) {
+    public static void SetControllerType (int control) {
         switch (control) {
             case 0:
                 ctrl = ControllerType.VerticalTouch;

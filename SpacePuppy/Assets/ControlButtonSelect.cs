@@ -27,6 +27,8 @@ public class ControlButtonSelect : MonoBehaviour {
         }
     }
     
-
+    public void SetControllerType (int control) {
+        Movement.SetControllerType(control);
+    }
     
 }
