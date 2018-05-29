@@ -44,14 +44,34 @@ public class HurtPlayer : MonoBehaviour {
         
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Curve"))
+        {
+            if (!damaged)
+            {
+                transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
+                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
+                anim.SetBool("hurt", true);
+                fireParticles.gameObject.SetActive(false);
+                damaged = true;
+                player.playerHealth--;
+                GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+                healthBar.RemoveHead();
+
+                camShake.shakeDuration = 0.7f;
+                playerAudio.pitch = Random.Range(0.5f, 0.6f);
+                playerAudio.PlayOneShot(astroidBelt, 0.4f);
+            
+        }
+        }
+    }
 
     void OnTriggerEnter2D (Collider2D other) {
 
-        if (other.CompareTag("Asteroid") || other.CompareTag("Curve"))
-        {
-            //fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
-            //fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
-                       
+        if (other.CompareTag("Asteroid"))
+        {               
             if (!damaged) {
                 transform.position = new Vector3(transform.position.x, respawnPosition, 0f);
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
@@ -63,23 +83,9 @@ public class HurtPlayer : MonoBehaviour {
                 GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
                 healthBar.RemoveHead();
             }
-        }
-
-        if (other.CompareTag("Asteroid")) {
             camShake.shakeDuration = 0.3f;
             playerAudio.pitch = Random.Range(0.4f, 0.6f);
             playerAudio.PlayOneShot(astroid, 0.4f);
-        }
-
-        if (other.CompareTag("Curve"))
-        {
-            camShake.shakeDuration = 0.7f;
-            playerAudio.pitch = Random.Range(0.5f, 0.6f);
-            playerAudio.PlayOneShot(astroidBelt, 0.4f);
-        }
-
-
-        if (other.CompareTag("Asteroid")) {
             Destroy(other.gameObject);
         }
     }
