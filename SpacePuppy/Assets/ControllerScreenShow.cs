@@ -10,12 +10,12 @@ public class ControllerScreenShow : MonoBehaviour {
         switch (Movement.ctrl)
         {
             case Movement.ControllerType.HorizontalTouchRH:
-                gos[0].SetActive(true);
-                StartCoroutine(SetGoInactive(0));
-                break;
-            case Movement.ControllerType.HorizontalTouchLH:
                 gos[1].SetActive(true);
                 StartCoroutine(SetGoInactive(1));
+                break;
+            case Movement.ControllerType.HorizontalTouchLH:
+                gos[0].SetActive(true);
+                StartCoroutine(SetGoInactive(0));
                 break;
             case Movement.ControllerType.VerticalTouch:
                 gos[2].SetActive(true);

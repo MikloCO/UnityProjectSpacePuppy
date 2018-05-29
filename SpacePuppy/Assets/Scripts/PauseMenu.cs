@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour {
     public Pause pause;
     public Button button;
+    public GameObject loadScreen;
 
     public void ReturnMenu () {
+        loadScreen.SetActive(true);
         SceneManager.LoadScene("MainMenu");
     }
 
