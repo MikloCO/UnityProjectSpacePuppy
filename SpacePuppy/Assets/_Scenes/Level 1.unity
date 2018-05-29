@@ -2541,7 +2541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1343278413}
   playerHealth: 3
-  speed: 250
+  speed: 150
   fireParticles: {fileID: 1515914744}
 --- !u!114 &680774967
 MonoBehaviour:

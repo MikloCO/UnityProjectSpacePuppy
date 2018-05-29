@@ -7,6 +7,8 @@ public class Pause : MonoBehaviour {
     public Transform swipeCountdown;
     public Transform swipeResult;
 
+    private Movement movement;
+
     public int difficulty = 1;
 
     public GameObject[] swipesDifficulty1;
@@ -55,6 +57,7 @@ public class Pause : MonoBehaviour {
             results.Add(child.gameObject);
         }
 
+        movement = FindObjectOfType<Movement>();
         timeUntilSwipe = Random.Range(timeUntilSwipeInterval[0], timeUntilSwipeInterval[1]);
         nextSwipe = swipesDifficulty1[Random.Range(0, swipesDifficulty1.Length)];
         gameSpeed = 1f;
@@ -96,6 +99,7 @@ public class Pause : MonoBehaviour {
             if(countdownTimer >= 4f && count == -1) {
                 countdowns[3].SetActive(false);
                 gameSpeed = 0.2f;
+                movement.SwipeSlow();
                 currentSwipe = Instantiate(nextSwipe);
                 swiping = true;
                 countdown = false;

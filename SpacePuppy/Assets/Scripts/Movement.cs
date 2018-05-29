@@ -116,6 +116,11 @@ public class Movement : MonoBehaviour {
 
     }
 
+    public void SwipeSlow()
+    {
+        rb2d.velocity = rb2d.velocity / 2;
+    }
+
     private void MoveUp () {
         if (rb2d.velocity.y < 0) {
             rb2d.velocity = new Vector2(0, 0);
