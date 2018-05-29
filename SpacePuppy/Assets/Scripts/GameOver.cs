@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour {
 
     private Pause pause;
     public Text scoreText;
+    public GameObject loadScene;
    
 
     private void Start () {
@@ -44,6 +45,7 @@ public class GameOver : MonoBehaviour {
 
     public void RunAgain()
     {
+        loadScene.SetActive(true);
         SceneManager.LoadScene("Level 1");
     }
 }
