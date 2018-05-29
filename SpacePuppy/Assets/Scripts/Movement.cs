@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour {
     private Animator anim;
 
     public enum ControllerType { HorizontalTouchRH, HorizontalTouchLH, VerticalTouch, MoveTowardTouch };
-    public static ControllerType ctrl = ControllerType.VerticalTouch;
+    public static ControllerType ctrl;
 
     public void SetControllerType(int control) {
         switch (control) {
