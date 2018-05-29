@@ -2,25 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpCD : MonoBehaviour {
-	public AudioClip[] clips;
-	void Start () {	
-	}
+public class PickUpCD : MonoBehaviour
+{
+    public AudioClip[] clips;
+    private Movement player;
+    public HealthBar healthBar;
 
-	void Update () {
+    void Start()
+    {
+        player = GetComponent<Movement>();
+    }
 
-	}
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.CompareTag("CD")) 
-		{
-			AudioClip clip;
-			do {
-				clip = clips [Random.Range (0, clips.Length)];
-			} while(clip.Equals(Camera.main.GetComponent<AudioSource> ().clip));
+    void Update()
+    {
 
-            Camera.main.GetComponent<AudioSource> ().clip = clip;
-			Camera.main.GetComponent<AudioSource> ().Play ();
-			Destroy (other.gameObject);
-		}
-	}
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("CD"))
+        {
+            AudioClip clip;
+            do
+            {
+                clip = clips[Random.Range(0, clips.Length)];
+            } while (clip.Equals(Camera.main.GetComponent<AudioSource>().clip));
+
+            Camera.main.GetComponent<AudioSource>().clip = clip;
+            Camera.main.GetComponent<AudioSource>().Play();
+            Destroy(other.gameObject);
+
+            if (player.playerHealth < 3)
+            {
+                player.playerHealth++;
+                healthBar.AddHead();
+
+            }
+        }
+    }
 }
+
