@@ -147,7 +147,7 @@ public class Pause : MonoBehaviour {
         } while (nextSwipe.Equals(oldSwipe));
         afterSwipe = true;
 
-        results[3].GetComponent<Text>().text = "" + score;
+        results[3].GetComponent<Text>().text = "+" + score;
         results[3].SetActive(true);
 
         if (perfect) {

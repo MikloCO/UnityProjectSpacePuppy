@@ -2648,7 +2648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1343278413}
   playerHealth: 3
-  speed: 150
+  speed: 120
   moveTowardSpeed: 3
   fireParticles: {fileID: 1515914744}
 --- !u!114 &680774967
@@ -13904,7 +13904,7 @@ Prefab:
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
       propertyPath: timeUntilSwipeInterval.Array.data[1]
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 114692029444951160, guid: ef52e88c7c76c5b40a6a436f405f768a,
         type: 2}
