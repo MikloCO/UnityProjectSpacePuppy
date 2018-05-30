@@ -29,8 +29,8 @@ public class PickUpPoints : MonoBehaviour
     {
         if (timerStart)
         {
-            Debug.Log("Timer:" + timer);
-            Debug.Log("Collected: " + collected);
+           // Debug.Log("Timer:" + timer);
+           //Debug.Log("Collected: " + collected);
             timer += Time.deltaTime * pause.gameSpeed;
             if (timer <= pickUpTime && collected >= 5)
             {
