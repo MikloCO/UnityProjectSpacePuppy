@@ -14,8 +14,6 @@ public class PickUpPoints : MonoBehaviour
     public AudioClip bark;
     public float pickUpTime = 1f;
 
-    public GameObject crackerParticles;
-
     private bool timerStart = false;
     private int collected = 0;
     private float timer = 0f;
@@ -63,7 +61,18 @@ public class PickUpPoints : MonoBehaviour
             scoreManager.BoneScore();
             myAudioSource.pitch = Random.Range(0.5f, 1.5f);
             myAudioSource.PlayOneShot(crackers, 0.5f);
-            Destroy(other.gameObject);
+
+            other.transform.Find("CrackerParticleSystem").GetComponent<ParticleSystem>().Play();
+            other.GetComponent<SpriteRenderer>().enabled = false;
+            other.GetComponent<PolygonCollider2D>().enabled = false;
+            StartCoroutine(RemoveCracker(other.gameObject));
         }
     }
+
+    IEnumerator RemoveCracker(GameObject obj)
+    {
+        yield return new WaitForSeconds(4f);
+        Destroy(obj);
+    }
+
 }

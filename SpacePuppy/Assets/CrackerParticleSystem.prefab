@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1698390699985348}
+  m_RootGameObject: {fileID: 1596988568582020}
   m_IsPrefabParent: 1
---- !u!1 &1316130065780638
+--- !u!1 &1596988568582020
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4781588502094808}
-  - component: {fileID: 198178349324602586}
-  - component: {fileID: 199742466872975196}
+  - component: {fileID: 4823249787484542}
+  - component: {fileID: 198380553545870084}
+  - component: {fileID: 199583431130983088}
   m_Layer: 0
   m_Name: CrackerParticleSystem
   m_TagString: Untagged
@@ -28,148 +28,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1698390699985348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4876851049033840}
-  - component: {fileID: 212418978960515788}
-  - component: {fileID: 60492608437818440}
-  - component: {fileID: 95277293764857314}
-  m_Layer: 0
-  m_Name: DockCrackersBlue
-  m_TagString: DogCracker
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4781588502094808
+--- !u!4 &4823249787484542
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1316130065780638}
+  m_GameObject: {fileID: 1596988568582020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.86, y: -1.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4876851049033840}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!4 &4876851049033840
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1698390699985348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
-  m_Children:
-  - {fileID: 4781588502094808}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60492608437818440
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1698390699985348}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.04, y: 1.17}
-    newSize: {x: 2.04, y: 1.17}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.56, y: -0.555}
-      - {x: 0.76, y: -0.555}
-      - {x: 0.96, y: -0.45499998}
-      - {x: 0.98999995, y: -0.285}
-      - {x: 0.98999995, y: -0.114999995}
-      - {x: 0.93, y: -0.044999998}
-      - {x: 0.98999995, y: 0.105}
-      - {x: 0.98999995, y: 0.355}
-      - {x: 0.84, y: 0.515}
-      - {x: 0.76, y: 0.545}
-      - {x: 0.53999996, y: 0.545}
-      - {x: 0.41, y: 0.42499998}
-      - {x: 0.32999998, y: 0.33499998}
-      - {x: -0.38, y: 0.375}
-      - {x: -0.5, y: 0.515}
-      - {x: -0.57, y: 0.53499997}
-      - {x: -0.78999996, y: 0.545}
-      - {x: -0.88, y: 0.48499998}
-      - {x: -1, y: 0.33499998}
-      - {x: -0.98999995, y: 0.145}
-      - {x: -0.96999997, y: 0.095}
-      - {x: -0.94, y: 0.035}
-      - {x: -1, y: -0.114999995}
-      - {x: -1, y: -0.375}
-      - {x: -0.89, y: -0.49499997}
-      - {x: -0.78999996, y: -0.555}
-      - {x: -0.56, y: -0.555}
-      - {x: -0.42, y: -0.435}
-      - {x: -0.38, y: -0.345}
-      - {x: 0.41, y: -0.435}
-    - - {x: 0.39999998, y: -0.044999998}
-      - {x: 0.41, y: 0.035}
-      - {x: 0.48999998, y: 0.005}
-      - {x: 0.45999998, y: -0.055}
-    - - {x: -0.44, y: 0.044999998}
-      - {x: -0.37, y: 0.024999999}
-      - {x: -0.38, y: -0.035}
-      - {x: -0.42999998, y: -0.044999998}
-    - - {x: -0.04, y: 0.015}
-      - {x: 0.06, y: 0.015}
-      - {x: 0.04, y: -0.044999998}
-      - {x: -0.01, y: -0.055}
---- !u!95 &95277293764857314
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1698390699985348}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a963e5393c199d54bb354057fb6a2111, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!198 &198178349324602586
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!198 &198380553545870084
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1316130065780638}
+  m_GameObject: {fileID: 1596988568582020}
   serializedVersion: 5
   lengthInSec: 1
-  simulationSpeed: 4
+  simulationSpeed: 3
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -289,8 +173,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 1
+      scalar: 5
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -342,8 +226,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0, g: 0.7411765, b: 0.45098042, a: 1}
-      maxColor: {r: 0.882353, g: 0.9960785, b: 0.26666668, a: 1}
+      minColor: {r: 0.7960785, g: 0.1254902, b: 0.8941177, a: 1}
+      maxColor: {r: 0.32156864, g: 0.8313726, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -406,7 +290,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.5
-      minScalar: 0.3
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4688,13 +4572,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &199742466872975196
+--- !u!199 &199583431130983088
 ParticleSystemRenderer:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1316130065780638}
+  m_GameObject: {fileID: 1596988568582020}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4743,49 +4627,4 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
-  m_MaskInteraction: 0
---- !u!212 &212418978960515788
-SpriteRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1698390699985348}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: 584008d987c54a14fbc15be646df7e64, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.04, y: 1.17}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
