@@ -6,23 +6,25 @@ public class ControllerScreenShow : MonoBehaviour {
 
     public GameObject[] gos;
 
+	void Start () {
+        switch (PlayerPrefs.GetInt("Controls"))
     public void Start()
     {
         switch (Movement.ctrl)
         {
-            case Movement.ControllerType.HorizontalTouchRH:
+            case 2:
                 gos[1].SetActive(true);
                 StartCoroutine(SetGoInactive(1));
                 break;
-            case Movement.ControllerType.HorizontalTouchLH:
+            case 3:
                 gos[0].SetActive(true);
                 StartCoroutine(SetGoInactive(0));
                 break;
-            case Movement.ControllerType.VerticalTouch:
+            case 0:
                 gos[2].SetActive(true);
                 StartCoroutine(SetGoInactive(2));
                 break;
-            case Movement.ControllerType.MoveTowardTouch:
+            case 1:
                 gos[3].SetActive(true);
                 StartCoroutine(SetGoInactive(3));
                 break;

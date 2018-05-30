@@ -69,6 +69,7 @@ public class Movement : MonoBehaviour {
         //else if (verticalDirection < 0) {
         //    MoveDown();
         //}
+
         if (ctrl == ControllerType.MoveTowardTouch && pause.gameSpeed > 0) {
             if (Input.GetMouseButton(0) && !pause.swiping) {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -76,6 +77,21 @@ public class Movement : MonoBehaviour {
                 target.x = transform.position.x;
             }
             var delta = moveTowardSpeed * Time.deltaTime;
+
+            anim.SetFloat("velocity", target.y - transform.position.y);
+
+            if ( target.y - transform.position.y > 1f) {
+                fireParticles.localPosition = new Vector3(-1.79f, 0.15f);
+                fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 117.892f, fireParticles.localRotation.w);
+            }
+            else if (target.y -transform.position.y < -1f) {
+                fireParticles.localPosition = new Vector3(-1.62f, 1.47f);
+                fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 47.48f, fireParticles.localRotation.w);
+            }
+            else {
+                fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
+                fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
+            }
 
             transform.position = Vector3.MoveTowards(transform.position, target, delta);
         }
