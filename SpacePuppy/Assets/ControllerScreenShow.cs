@@ -6,9 +6,8 @@ public class ControllerScreenShow : MonoBehaviour {
 
     public GameObject[] gos;
 
-	void Start () {
-    {
     void Start () {
+        switch (PlayerPrefs.GetInt("Controls")) {
             case 2:
                 gos[1].SetActive(true);
                 StartCoroutine(SetGoInactive(1));
