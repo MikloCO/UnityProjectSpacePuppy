@@ -22,18 +22,17 @@ public class SwipeController : MonoBehaviour {
         numberOfCoins = coins.Coins();
     }
 
-    public bool Finish (bool perfect, bool failed) {
-        scoreManager.SwipeScore(coinsCollected, perfect);
+    public void Finish (bool perfect, bool failed) {
         if((float)coinsCollected/(float)numberOfCoins <= 0.5f) {
             failed = true;
         }
+        scoreManager.SwipeScore(coinsCollected, perfect, failed);
         coinsCollected = 0;
         coinPositions.Clear();
         if (pause.difficulty < 5 && !failed) {
             pause.IncreaseDifficulty();
             scoreManager.difficultyMultiplier += scoreManager.difficultyMultiplierIncrease;
         }
-        return failed;
     }
 
     public void AddCoin (Vector3 position) {

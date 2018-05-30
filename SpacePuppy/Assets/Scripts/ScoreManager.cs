@@ -33,11 +33,16 @@ public class ScoreManager : MonoBehaviour {
 		}
     }
     
-    public void SwipeScore (int points, bool perfect) {
+    public void SwipeScore (int points, bool perfect, bool failed) {
         float pointsToAdd = points * pointsPerSwipePart * difficultyMultiplier;
         if (perfect) {
             pointsToAdd *= perfectMultiplier;
         }
+        if(pause.difficulty < 5 && !failed) {
+            pause.IncreaseDifficulty();
+            difficultyMultiplier += difficultyMultiplierIncrease;
+        }
+        pause.Resume((int)Mathf.Round(pointsToAdd), perfect, failed);
         scoreCount += pointsToAdd;
     }
 

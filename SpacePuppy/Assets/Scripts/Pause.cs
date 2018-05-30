@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pause : MonoBehaviour {
 
@@ -119,7 +120,7 @@ public class Pause : MonoBehaviour {
         }
     }
 
-    public void Resume (bool perfect, bool failed) {
+    public void Resume (int score, bool perfect, bool failed) {
         timer = 0;
         swipeActive = false;
         swiping = false;
@@ -145,6 +146,10 @@ public class Pause : MonoBehaviour {
             }
         } while (nextSwipe.Equals(oldSwipe));
         afterSwipe = true;
+
+        results[3].GetComponent<Text>().text = "" + score;
+        results[3].SetActive(true);
+
         if (perfect) {
             results[0].SetActive(true);
             myAudioSource.PlayOneShot(perfectS, 0.5f);
