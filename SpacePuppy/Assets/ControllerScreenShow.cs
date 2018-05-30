@@ -7,11 +7,8 @@ public class ControllerScreenShow : MonoBehaviour {
     public GameObject[] gos;
 
 	void Start () {
-        switch (PlayerPrefs.GetInt("Controls"))
-    public void Start()
     {
-        switch (Movement.ctrl)
-        {
+    void Start () {
             case 2:
                 gos[1].SetActive(true);
                 StartCoroutine(SetGoInactive(1));
@@ -31,8 +28,7 @@ public class ControllerScreenShow : MonoBehaviour {
         }
     }
 
-    IEnumerator SetGoInactive(int i)
-    {
+    IEnumerator SetGoInactive (int i) {
         yield return new WaitForSeconds(5);
         gos[i].SetActive(false);
     }
