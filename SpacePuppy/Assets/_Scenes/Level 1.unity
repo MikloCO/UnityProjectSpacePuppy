@@ -1772,7 +1772,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 680774966}
+      - m_Target: {fileID: 1002079991}
         m_MethodName: SetControllerType
         m_Mode: 3
         m_Arguments:
@@ -2304,7 +2304,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 680774966}
+      - m_Target: {fileID: 1002079991}
         m_MethodName: SetControllerType
         m_Mode: 3
         m_Arguments:
@@ -3377,7 +3377,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 680774966}
+      - m_Target: {fileID: 1002079991}
         m_MethodName: SetControllerType
         m_Mode: 3
         m_Arguments:
@@ -12246,7 +12246,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 680774966}
+      - m_Target: {fileID: 1002079991}
         m_MethodName: SetControllerType
         m_Mode: 3
         m_Arguments:
