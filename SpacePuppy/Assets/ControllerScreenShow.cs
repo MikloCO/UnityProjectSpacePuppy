@@ -6,7 +6,8 @@ public class ControllerScreenShow : MonoBehaviour {
 
     public GameObject[] gos;
 
-	void Start () {
+    public void Start()
+    {
         switch (Movement.ctrl)
         {
             case Movement.ControllerType.HorizontalTouchRH:

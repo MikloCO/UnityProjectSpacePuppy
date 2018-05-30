@@ -25,15 +25,19 @@ public class Movement : MonoBehaviour {
     public static void SetControllerType (int control) {
         switch (control) {
             case 0:
+                PlayerPrefs.SetInt("Controls", 0);
                 ctrl = ControllerType.VerticalTouch;
                 break;
             case 1:
+                PlayerPrefs.SetInt("Controls", 1);
                 ctrl = ControllerType.MoveTowardTouch;
                 break;
             case 2:
+                PlayerPrefs.SetInt("Controls", 2);
                 ctrl = ControllerType.HorizontalTouchRH;
                 break;
             case 3:
+                PlayerPrefs.SetInt("Controls", 3);
                 ctrl = ControllerType.HorizontalTouchLH;
                 break;
 
@@ -42,6 +46,7 @@ public class Movement : MonoBehaviour {
 
 
     void Start () {
+        SetControllerType(PlayerPrefs.GetInt("Controls"));
         pause = FindObjectOfType<Pause>();
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -51,6 +56,12 @@ public class Movement : MonoBehaviour {
 
     void Update () {
         anim.SetFloat("velocity", rb2d.velocity.y);
+
+        if(rb2d.velocity.y < 1 && rb2d.velocity.y > -1) {
+            fireParticles.localPosition = new Vector3(-2.2f, 0.8f);
+            fireParticles.localRotation.Set(fireParticles.localRotation.x, fireParticles.localRotation.y, 90f, fireParticles.localRotation.w);
+        }
+
         //verticalDirection = Input.GetAxis("Vertical");
         //if (verticalDirection > 0) {
         //    MoveUp();
