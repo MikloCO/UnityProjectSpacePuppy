@@ -1171,6 +1171,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1344799657213236, guid: 8e26a7ad2a534d74c860ffb2141640dd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e26a7ad2a534d74c860ffb2141640dd, type: 2}
   m_IsPrefabParent: 0
@@ -8048,6 +8052,7 @@ MonoBehaviour:
   scoreManager: {fileID: 1343278413}
   playerHealth: 100
   speed: 100
+  moveTowardSpeed: 3
   fireParticles: {fileID: 1515914744}
 --- !u!114 &680774967
 MonoBehaviour:
@@ -8097,6 +8102,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 715efade3f807954297acaca62b202ef, type: 3}
   - {fileID: 8300000, guid: 5ec510b012323a742af26f02d9cd2721, type: 3}
   - {fileID: 8300000, guid: ed6f2cfd93c4359419f2108cce1b2685, type: 3}
+  healthBar: {fileID: 0}
 --- !u!82 &680774970
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34070,6 +34076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 1679519961}
   button: {fileID: 0}
+  loadScreen: {fileID: 0}
 --- !u!1 &1739527910
 GameObject:
   m_ObjectHideFlags: 0
