@@ -14,6 +14,8 @@ public class PickUpPoints : MonoBehaviour
     public AudioClip bark;
     public float pickUpTime = 1f;
 
+    public GameObject crackerParticles;
+
     private bool timerStart = false;
     private int collected = 0;
     private float timer = 0f;
