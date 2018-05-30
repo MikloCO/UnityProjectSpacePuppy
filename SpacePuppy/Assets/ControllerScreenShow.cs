@@ -8,6 +8,9 @@ public class ControllerScreenShow : MonoBehaviour {
 
 	void Start () {
         switch (PlayerPrefs.GetInt("Controls"))
+    public void Start()
+    {
+        switch (Movement.ctrl)
         {
             case 2:
                 gos[1].SetActive(true);
