@@ -20,6 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/FB_SDK 1.unity
     guid: d1958a882d6bc094a85395e96dac3c1f
+  m_configObjects: {}
