@@ -16,10 +16,10 @@ public class ScoreManager : MonoBehaviour {
     public float pointsPerSecond = 5.0f;
     public float pointsPerSwipePart = 10.0f;
     public float pointsPerBone = 10.0f;
+    public float bonusPointsForFiveBones = 10.0f;
     public float difficultyMultiplier = 1.0f;
     public float difficultyMultiplierIncrease = 1.0f;
     public float perfectMultiplier = 3.0f;
-	int [] scoreCountArr = new int[10];
 
     public void ScoreVsHighScore () {
 		for (int i = 1; i <= 10; i++) {
@@ -43,6 +43,10 @@ public class ScoreManager : MonoBehaviour {
 
     public void BoneScore() {
         scoreCount += pointsPerBone * difficultyMultiplier;
+    }
+
+    public void BonusBoneScore () {
+        scoreCount += bonusPointsForFiveBones * difficultyMultiplier;
     }
 
     void Start () {

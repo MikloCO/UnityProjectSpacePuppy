@@ -32,6 +32,7 @@ public class PickUpPoints : MonoBehaviour
             timer += Time.deltaTime * pause.gameSpeed;
             if (timer <= pickUpTime && collected >= 5)
             {
+                scoreManager.BonusBoneScore();
                 myAudioSource.pitch = Random.Range(0.5f, 1.5f);
                 myAudioSource.PlayOneShot(bark, 0.5f);
                 collected = 0;
